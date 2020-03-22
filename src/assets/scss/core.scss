@@ -1,0 +1,29 @@
+// ==================================
+// External Settings / Mixins
+// ==================================
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+//object-fit mixing | how to use >> @include object-fit();
+//This ensures that the IE11 fallback plugin kicks in and saves writing it out each time.
+@mixin object-fit($fit: cover, $position: center) {
+  font-family: 'object-fit: #{$fit}; object-position: #{$position};';
+  object-fit: $fit;
+  object-position: $position;
+}
+
+$grid-breakpoints: map-merge(
+  (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1500px,
+  ),
+  $grid-breakpoints
+);
+
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints);
