@@ -1,0 +1,14 @@
+.primary-navigation {
+    background-color: lime;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      padding: 17px 15px 16px;
+  
+      @include media-breakpoint-up(md) {
+        padding: 20px 44px 22px 36px;
+      }
+    }
+  }
+  
