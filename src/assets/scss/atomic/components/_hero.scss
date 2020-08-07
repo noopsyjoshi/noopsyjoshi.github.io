@@ -1,0 +1,14 @@
+.hero {
+    height: 100vh;
+
+    &__heading-wrapper {
+
+    }
+
+    &__heading {
+        color: $c-white;
+    font-size: 110px;
+    font-family: 'poppins-black';
+    }
+}
+

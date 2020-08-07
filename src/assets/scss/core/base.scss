@@ -1,9 +1,13 @@
-// ==================================
-//  HELPER UTILITIES
-// ==================================
-@import '../../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
-@import '../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
-@import '../../../node_modules/bootstrap/scss/utilities/_visibility.scss';
+@import './../../../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import './../../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import './../../../../node_modules/bootstrap/scss/utilities/_visibility.scss';
 
-@import 'generic/gen-type';
-@import 'generic/gen-animations';
+@import './settings/set-colors';
+@import './settings/set-fonts';
+@import './settings/set-images';
+
+@import './generic/gen-animations';
+@import './generic/gen-style';
+
+
+
