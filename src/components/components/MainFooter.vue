@@ -1,19 +1,10 @@
 <template>
-  <nav class="footer" role="footer">
-    <div class="footer">
-      <h1>This is the footer</h1>
-    </div>
-    <div class="footer__links"></div>
-  </nav>
+  <footer class="footer" role="footer">
+    <p class="footer__body">Designed and developed by Noopur Joshi</p>
+    <img class="footer__icon" src="../../assets/images/unicorn.png" alt="Unicorn Emoji" />
+  </footer>
 </template>
 
-<script>
-export default {
-  components: {},
-  props: {}
-}
-</script>
-
 <style lang="scss">
-@import "../../assets/scss/atomic/components/_footer.scss";
+@import '../../assets/scss/atomic/components/_footer.scss';
 </style>

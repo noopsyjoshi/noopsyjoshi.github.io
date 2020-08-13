@@ -1,0 +1,34 @@
+.contact {
+  min-height: 100vh;
+  height: 100%;
+  border: 1px solid white;
+  padding: 200px 0;
+
+  &__heading {
+    font-size: 6rem;
+    color: $c-white;
+    font-family: 'poppins-regular';
+    font-weight: normal;
+    margin-bottom: 60px;
+  }
+
+  &__block {
+    margin-bottom: 50px;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    fill: $c-white;
+
+    path {
+      fill: $c-white;
+    }
+  }
+
+  &__link {
+    color: $c-white;
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+}

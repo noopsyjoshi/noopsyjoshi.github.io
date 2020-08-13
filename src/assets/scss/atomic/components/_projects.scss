@@ -1,0 +1,38 @@
+.projects {
+  height: 100%;
+  border: 1px solid white;
+  padding: 200px 0;
+
+  &__project {
+    margin-bottom: 200px;
+
+    &:nth-child(even) {
+      display: flex;
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+  }
+}
+
+.project {
+  &__title {
+    font-size: 6rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+
+    &--number {
+      color: $c-grey;
+    }
+  }
+
+  &__image {
+    @include object-fit;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-size: 2rem;
+    // max-width: 80%;
+  }
+}

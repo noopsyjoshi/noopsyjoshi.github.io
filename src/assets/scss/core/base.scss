@@ -4,10 +4,12 @@
 
 @import './settings/set-colors';
 @import './settings/set-fonts';
-@import './settings/set-images';
 
 @import './generic/gen-animations';
 @import './generic/gen-style';
 
-
-
+@import './mixins/flex';
+@import './mixins/images';
+@import './mixins/placeholder'; // Remove if not used
+@import './mixins/z-index';
+@import './mixins/reset-button';

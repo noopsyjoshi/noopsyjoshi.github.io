@@ -1,0 +1,14 @@
+.footer {
+  padding: 50px 0;
+  @include flex-pos(center, center);
+
+  &__body {
+    font-size: 1.6rem;
+    margin-right: 10px;
+  }
+
+  &__icon {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}

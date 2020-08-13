@@ -1,14 +1,28 @@
 // Base copy
 html {
-    font-size: 62.5%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-  
-  body {
-    // font-family: $font-poppins-black;
-    font-size: 10px;
-    font-size: 1rem;
-    background-color: $c-black;
-  }
-  
+
+body {
+  font-size: 10px;
+  font-size: 1rem;
+  background-color: $c-grey-dark;
+  color: $c-white;
+  font-family: 'poppins-regular';
+}
+
+p {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $c-white;
+  border-radius: 0;
+}

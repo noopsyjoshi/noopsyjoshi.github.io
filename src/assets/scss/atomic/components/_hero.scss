@@ -1,14 +1,43 @@
 .hero {
-    height: 100vh;
+  min-height: 100vh;
+  height: 100%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-    &__heading-wrapper {
-
+  &__heading {
+    line-height: 7.6rem;
+    margin-bottom: 50px;
+    
+    @include media-breakpoint-up(xl) {
+      margin-top: 100px;
+      color: $c-white;
+      font-family: 'poppins-medium';
+      font-weight: 600;
+      font-size: 12rem;
+      margin-bottom: 100px;
+      line-height: 16rem;
+      margin-top: 100px;
     }
 
-    &__heading {
-        color: $c-white;
-    font-size: 110px;
-    font-family: 'poppins-black';
+    > span {
+      display: block;
     }
+  }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+
+    &--top {
+      transform: rotate(180deg);
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 70px;
+      height: 70px;
+      fill: $c-white;
+    }
+  }
 }
-

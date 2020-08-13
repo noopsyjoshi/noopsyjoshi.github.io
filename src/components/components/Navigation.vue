@@ -1,19 +1,22 @@
 <template>
   <nav class="navigation" role="navigation">
     <div class="navigation__icon">
-      <h1>nj</h1>
+      <h1 class="navigation__logo">n.</h1>
     </div>
-    <div class="navigation__links"></div>
+    <ul class="navigation__links">
+      <li class="navigation__link">
+        <a class="navigation__anchor" href="#projects">Projects</a>
+      </li>
+      <li class="navigation__link">
+        <a class="navigation__anchor" href="#about">About</a>
+      </li>
+      <li class="navigation__link">
+        <a class="navigation__anchor" href="#contact">Contact</a>
+      </li>
+    </ul>
   </nav>
 </template>
 
-<script>
-export default {
-  components: {},
-  props: {}
-}
-</script>
-
 <style lang="scss">
-@import "../../assets/scss/atomic/components/_navigation.scss";
+@import '../../assets/scss/atomic/components/_navigation.scss';
 </style>
