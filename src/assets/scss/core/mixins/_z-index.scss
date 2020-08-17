@@ -7,9 +7,7 @@
     @return null;
   }
 }
-$z-indexes: (
- 'cursor', 'navigation'
-);
+$z-indexes: ('cursor', 'navigation-toggle', 'navigation');
 
 /* Usage example
   .header {

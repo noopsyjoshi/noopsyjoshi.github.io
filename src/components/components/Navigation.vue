@@ -5,7 +5,7 @@
         <div class="navigation__icon">
           <h1 class="navigation__logo">n.</h1>
         </div>
-        <!-- <div @click="toggleNav">
+        <div class="navigation__toggle-btn" @click="toggleNav">
           <svg :class="{ active: isActive }" class="navigation__toggle navigation__toggle--rotate" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
             <path
                 class="navigation__toggle-line navigation__toggle-line--top"
@@ -20,17 +20,17 @@
                 d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
             />
           </svg>
-        </div> -->
+        </div>
         <div :class="{ active: isActive }" class="navigation__block">
           <ul class="navigation__links">
-            <li class="navigation__link">
-              <a class="navigation__anchor" href="#projects">Projects</a>
+            <li class="navigation__link reveal-text-wrapper">
+              <a class="navigation__anchor" :class="{ 'reveal-text': isActive, 'reveal-text-reverse': !isActive }" href="#projects">Projects</a>
             </li>
-            <li class="navigation__link">
-              <a class="navigation__anchor" href="#about">About</a>
+            <li class="navigation__link reveal-text-wrapper">
+              <a class="navigation__anchor" :class="{ 'reveal-text': isActive, 'reveal-text-reverse': !isActive }" href="#about">About</a>
             </li>
-            <li class="navigation__link">
-              <a class="navigation__anchor" href="#contact">Contact</a>
+            <li class="navigation__link reveal-text-wrapper">
+              <a class="navigation__anchor" :class="{ 'reveal-text': isActive, 'reveal-text-reverse': !isActive }" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
