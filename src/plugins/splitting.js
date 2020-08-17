@@ -1,3 +1,10 @@
-import Splitting from 'splitting'
+// import Splitting from 'splitting';
 
-Splitting()
+
+// Splitting({
+//   target: '[data-splitting]',
+//   by: 'chars',
+//   key: null,
+// });
+
+

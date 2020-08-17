@@ -2,11 +2,7 @@
   <section class="hero">
     <div class="col-10 offset-1">
       <div class="hero__heading-wrapper">
-        <h1 class="hero__heading">
-          <span>Hi, I'm Noops</span>
-          <span>Frontend Developer</span>
-          <span>and Chai Lover</span>
-        </h1>
+        <h1 class="hero__heading" data-splitting>Hi, I'm Noops<br>Frontend Developer<br>and Chai Lover</h1>
       </div>
       <Arrow class="hero__arrow" />
     </div>
