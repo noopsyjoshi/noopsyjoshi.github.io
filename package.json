@@ -11,6 +11,7 @@
     "bootstrap": "^4.5.2",
     "core-js": "^3.6.4",
     "gsap": "^3.4.2",
+    "locomotive-scroll": "^3.5.4",
     "lodash": "^4.17.19",
     "sass-resources-loader": "^2.0.3",
     "splitting": "^1.0.6",

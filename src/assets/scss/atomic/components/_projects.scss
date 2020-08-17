@@ -1,38 +1,60 @@
 .projects {
   height: 100%;
   border: 1px solid white;
-  padding: 200px 0;
+  padding: 100px 0;
+
+  @include media-breakpoint-up(xl) {
+    padding: 200px 0;
+  }
 
   &__project {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 
-    &:nth-child(even) {
-      display: flex;
-      flex-direction: row-reverse;
-      text-align: right;
+    @include media-breakpoint-up(xl) {
+      max-width: 70%;
+      margin-bottom: 200px;
+
+      &:nth-child(even) {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: right;
+      }
     }
   }
-}
 
-.project {
-  &__title {
-    font-size: 6rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+  &__link {
+    color: $c-grey;
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__project-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: $c-white;
 
     &--number {
       color: $c-grey;
     }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 4.6rem;
+    }
   }
 
-  &__image {
+  &__project-image {
     @include object-fit;
     width: 100%;
     margin-bottom: 20px;
   }
 
-  &__description {
+  &__project-description {
     font-size: 2rem;
-    // max-width: 80%;
+    color: $c-grey;
+    max-width: 80%;
   }
 }

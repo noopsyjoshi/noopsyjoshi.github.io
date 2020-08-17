@@ -1,20 +1,18 @@
 <template>
   <section id="projects" class="projects">
-    <div class="col-10 offset-1">
+    <div class="col-12 col-md-10 offset-md-1">
       <div v-for="(item, index) in projects" :key="index" class="projects__project">
-        <router-link :to="item.path">
-          <div class="col-7">
-            <div class="project__title-wrapper">
-              <h2 class="project__title">
-                <span class="project__title project__title--number">{{ item.number }}</span>
-                {{ item.title }}
-              </h2>
-              <div class="project__image-wrapper">
-                <img class="project__image" :src="require('../../static/paperlondon.jpg')" :alt="item.image.alt">
-              </div>
-              <div class="project__description-wrapper">
-                <p class="project__description">Sustainable fashion Shopify E-commerce project</p>
-              </div>
+        <router-link :to="item.path" class="projects__link">
+          <div class="projects__project-title-wrapper">
+            <h2 class="projects__project-title">
+              <span class="projects__project-title projects__project-title--number">{{ item.number }}</span>
+              {{ item.title }}
+            </h2>
+            <div class="projects__project-image-wrapper">
+              <img class="projects__project-image" :src="require('../../static/paperlondon.jpg')" :alt="item.image.alt">
+            </div>
+            <div class="projects__project-description-wrapper">
+              <p class="projects__project-description">Sustainable fashion Shopify E-commerce project</p>
             </div>
           </div>
         </router-link>
@@ -36,7 +34,7 @@ export default {
             number: '01',
             title: 'Paper London',
             image: {
-              url: './../assets/images/paperlondon.jpg',
+              url: '@/assets/images/paperlondon.jpg',
               alt: 'Paper London Image',
             },
             description: 'Sustainable fashion Shopify c-commerce project.',
@@ -46,7 +44,7 @@ export default {
             number: '02',
             title: 'The Collective',
             image: {
-              url: '../../static/paperlondon.jpg',
+              url: '@/assets/images/thecollective.jpg',
               alt: 'Image of The Collective website',
             },
             description: 'Co-living spaces website built in Vue.js.',
@@ -56,7 +54,7 @@ export default {
             number: '03',
             title: 'Thanos Hotels',
             image: {
-              url: '../../static/paperlondon.jpg',
+              url: '@/assets/images/almyra.jpg',
               alt: 'Image of Thanos Hotels website',
             },
             description:

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div data-scroll-container class="home">
     <!-- <div id="app"> -->
     <custom-cursor />
     <homepage-hero />
