@@ -26,3 +26,18 @@ p {
   background: $c-white;
   border-radius: 0;
 }
+
+::selection {
+  background: $c-purple;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background: $c-purple;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: $c-purple;
+  text-shadow: none;
+}

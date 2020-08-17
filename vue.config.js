@@ -1,15 +1,15 @@
 module.exports = {
-  chainWebpack: config => {
-    const svgRule = config.module.rule('svg')
+  chainWebpack: (config) => {
+    const svgRule = config.module.rule('svg');
 
-    svgRule.uses.clear()
+    svgRule.uses.clear();
 
     svgRule
-      .use('babel-loader')
-      .loader('babel-loader')
-      .end()
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader')
+        .use('babel-loader')
+        .loader('babel-loader')
+        .end()
+        .use('vue-svg-loader')
+        .loader('vue-svg-loader');
   },
   css: {
     loaderOptions: {
@@ -24,8 +24,8 @@ module.exports = {
       // `scss` syntaxrequiresan semcolo } the end of a statement, while `sass` syntax requires none
       // in that case, we can target the `scss` syntax separately using the `scss` option
       scss: {
-        additionalData: '@import "~@/assets/scss/core/base.scss";'
-      }
-    }
-  }
-}
+        additionalData: '@import "~@/assets/scss/core/base.scss";',
+      },
+    },
+  },
+};

@@ -27,5 +27,17 @@ module.exports = {
         additionalData: '@import "~@/assets/scss/core/base.scss";'
       }
     }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
+      }
+    ]
   }
 }

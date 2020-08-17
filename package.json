@@ -13,7 +13,9 @@
     "gsap": "^3.4.2",
     "lodash": "^4.17.19",
     "sass-resources-loader": "^2.0.3",
+    "splitting": "^1.0.6",
     "vue": "^2.6.11",
+    "vue-router": "^3.4.3",
     "vue-svg-loader": "^0.16.0"
   },
   "devDependencies": {

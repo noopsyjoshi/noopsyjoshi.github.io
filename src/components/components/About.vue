@@ -63,8 +63,8 @@
 <script>
 export default {
   components: {},
-  props: {}
-}
+  props: {},
+};
 </script>
 
 <style lang="scss">

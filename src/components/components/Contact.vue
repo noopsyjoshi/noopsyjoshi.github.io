@@ -32,15 +32,15 @@
 </style>
 
 <script>
-import Arrow from '../../assets/icons/down-arrow.svg'
-import Email from '../../assets/icons/email.svg'
-import GitHub from '../../assets/icons/github.svg'
-import LinkedIn from '../../assets/icons/linkedin.svg'
-import Location from '../../assets/icons/location.svg'
+import Arrow from '../../assets/icons/down-arrow.svg';
+import Email from '../../assets/icons/email.svg';
+import GitHub from '../../assets/icons/github.svg';
+import LinkedIn from '../../assets/icons/linkedin.svg';
+import Location from '../../assets/icons/location.svg';
 
 export default {
   components: {
-    Arrow, Email, GitHub, LinkedIn, Location
-  }
-}
+    Arrow, Email, GitHub, LinkedIn, Location,
+  },
+};
 </script>

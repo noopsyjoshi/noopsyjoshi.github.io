@@ -4,6 +4,7 @@
   top: 0;
   pointer-events: none;
   border-radius: 50%;
+   z-index: z('cursor');
   
   &--outer {
      width: 50px;
@@ -15,10 +16,10 @@
   }
 
   &--inner {
-    width: 10px;
-    height: 10px;
-    left: -5px;
-    top: -5px;
+    width: 14px;
+    height: 14px;
+    left: -7px;
+    top: -7px;
     background: $c-white;
   }
 }

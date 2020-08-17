@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import Arrow from '../../assets/icons/down-arrow.svg'
+import Arrow from '../../assets/icons/down-arrow.svg';
 
 export default {
   components: {
-    Arrow
-  }
-}
+    Arrow,
+  },
+};
 </script>
 
 <style lang="scss">
