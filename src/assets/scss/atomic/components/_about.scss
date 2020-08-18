@@ -2,17 +2,31 @@
   min-height: 100vh;
   height: 100%;
   border: 1px solid white;
-  padding: 200px 0;
+  padding: 100px 0;
+
+  @include media-breakpoint-up(xl) {
+    padding: 200px 0;
+  }
 
   &__body {
-    font-size: 3rem;
+    font-size: 2rem;
     color: $c-white;
     font-family: 'poppins-regular';
-    margin-bottom: 150px;
+    margin-bottom: 30px;
 
     @include media-breakpoint-up(md) {
-    font-size: 5.6rem;
+      font-size: 2.6rem;
+    }
+
+    &--large {
+      @include media-breakpoint-up(md) {
+        font-size: 5.6rem;
+      }
+    }
   }
+
+  &__timeline {
+    margin-top: 100px;
   }
 
   &__block {
@@ -26,6 +40,12 @@
 
   &__date {
     text-align: left;
+    font-size: 1.6rem;
+    margin: 0;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 2rem;
+    }
   }
 
   &__role {
@@ -33,10 +53,11 @@
   }
 
   &__location {
-    text-align: right;
+    @include media-breakpoint-up(xl) {
+      text-align: right;
+    }
   }
 
-  &__date,
   &__role,
   &__location {
     font-size: 2rem;

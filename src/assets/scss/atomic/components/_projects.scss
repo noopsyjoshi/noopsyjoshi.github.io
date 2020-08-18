@@ -4,26 +4,24 @@
   padding: 100px 0;
 
   @include media-breakpoint-up(xl) {
-    padding: 200px 0;
+    padding: 150px 0;
   }
 
   &__project {
     margin-bottom: 100px;
 
     @include media-breakpoint-up(xl) {
-      max-width: 70%;
       margin-bottom: 200px;
-
-      &:nth-child(even) {
-        display: flex;
-        flex-direction: row-reverse;
-        text-align: right;
-      }
     }
   }
 
   &__link {
-    color: $c-grey;
+    color: $c-white;
+    display: block;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 70%;
+    }
 
     &:hover {
       color: inherit;
@@ -34,7 +32,7 @@
   &__project-title {
     font-size: 3rem;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: $c-white;
 
     &--number {
@@ -48,13 +46,128 @@
 
   &__project-image {
     @include object-fit;
-    width: 100%;
-    margin-bottom: 20px;
+    // width: 100%;
+    // margin-bottom: 20px;
   }
 
   &__project-description {
     font-size: 2rem;
-    color: $c-grey;
+    color: $c-white;
     max-width: 80%;
+
+    @include media-breakpoint-up(lg) {
+      max-width: none;
+    }
+  }
+}
+
+@media screen {
+  .landscape-wrapper {
+    position: relative;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 66.6%;
+  }
+
+  .landscape-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  #page-wrap {
+    position: relative;
+  }
+
+  #canvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    z-index: z('canvas');
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+
+  .planes-loaded #canvas {
+    opacity: 1;
+  }
+
+  #content {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  #planes {
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+
+      &:nth-child(even) {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+  }
+
+  .planes-loaded #planes {
+    opacity: 1;
+  }
+
+  .plane-wrapper {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 200px;
+
+    @include media-breakpoint-up(lg) {
+      width: 70vw;
+    }
+  }
+
+  .plane-inner {
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  .plane {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .plane img {
+    display: none;
+  }
+
+  #add-more-planes-wrapper {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  /*** handling errors ***/
+
+  .no-curtains .plane-title {
+    z-index: 1;
+  }
+
+  .no-curtains .plane img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .plane-wrapper {
+    width: 100%;
+    float: none;
+    margin-bottom: 10px;
   }
 }

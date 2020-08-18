@@ -1,7 +1,6 @@
 .hero {
   min-height: 100vh;
   height: 100%;
-  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -12,6 +11,12 @@
     font-size: 5.6rem;
     font-family: 'poppins-medium';
     font-weight: 600;
+
+    @include media-breakpoint-up(md) {
+    line-height: 11rem;
+    margin-bottom: 50px;
+    font-size: 10rem;
+    }
     
     @include media-breakpoint-up(xl) {
       margin-top: 100px;

@@ -1,21 +1,32 @@
 <template>
   <section id="projects" class="projects">
     <div class="col-12 col-md-10 offset-md-1">
-      <div v-for="(item, index) in projects" :key="index" class="projects__project">
-        <router-link :to="item.path" class="projects__link">
-          <div class="projects__project-title-wrapper">
-            <h2 class="projects__project-title">
-              <span class="projects__project-title projects__project-title--number">{{ item.number }}</span>
-              {{ item.title }}
-            </h2>
-            <div class="projects__project-image-wrapper">
-              <img class="projects__project-image" :src="require('../../static/paperlondon.jpg')" :alt="item.image.alt">
-            </div>
-            <div class="projects__project-description-wrapper">
-              <p class="projects__project-description">Sustainable fashion Shopify E-commerce project</p>
-            </div>
+      <div id="page-wrap">
+        <div id="canvas" />
+        <div id="content">
+          <div v-for="(item, index) in projects" id="planes" :key="index" class="projects__project">
+            <router-link :to="item.path" class="plane-wrapper projects__link">
+              <div class="projects__project-title-wrapper">
+                <h2 class="projects__project-title">
+                  <span class="projects__project-title projects__project-title--number">{{ item.number }}</span>
+                  {{ item.title }}
+                </h2>
+              </div>
+              <div class="plane-inner">
+                <div class="landscape-wrapper">
+                  <div class="landscape-inner">
+                    <div class="plane projects__project-image-wrapper">
+                      <img data-sampler="planeTexture" class="" :src="require('@/assets/images/paperlondon.jpg')" :alt="item.image.alt">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="projects__project-description-wrapper">
+                <p class="projects__project-description">Sustainable fashion Shopify E-commerce project</p>
+              </div>
+            </router-link>
           </div>
-        </router-link>
+        </div>
       </div>
     </div>
     <router-view />
@@ -34,11 +45,11 @@ export default {
             number: '01',
             title: 'Paper London',
             image: {
-              url: '@/assets/images/paperlondon.jpg',
+              url: '@/assets/images/almyra.jpg',
               alt: 'Paper London Image',
             },
             description: 'Sustainable fashion Shopify c-commerce project.',
-            path: '/paperlondon',
+            path: '/almyra',
           },
           {
             number: '02',
@@ -65,7 +76,7 @@ export default {
             number: '04',
             title: 'Space Invaders',
             image: {
-              url: '../../static/paperlondon.jpg',
+              url: '@/assets/images/almyra.jpg',
               alt: 'Image of Thanos Hotels website',
             },
             description: 'Game created during a 3 month coding bootcamp using HTML, CSS and JavaScript.',
@@ -79,5 +90,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/scss/atomic/components/_projects.scss';
+@import '@/assets/scss/atomic/components/_projects.scss';
 </style>

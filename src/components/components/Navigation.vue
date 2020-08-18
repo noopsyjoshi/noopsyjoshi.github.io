@@ -23,15 +23,11 @@
         </div>
         <div :class="{ active: isActive }" class="navigation__block">
           <ul class="navigation__links">
-            <li class="navigation__link reveal-text-wrapper">
-              <a class="navigation__anchor" :class="{ 'reveal-text': isActive, 'reveal-text-reverse': !isActive }" href="#projects">Projects</a>
-            </li>
-            <li class="navigation__link reveal-text-wrapper">
-              <a class="navigation__anchor" :class="{ 'reveal-text': isActive, 'reveal-text-reverse': !isActive }" href="#about">About</a>
-            </li>
-            <li class="navigation__link reveal-text-wrapper">
-              <a class="navigation__anchor" :class="{ 'reveal-text': isActive, 'reveal-text-reverse': !isActive }" href="#contact">Contact</a>
-            </li>
+            <div v-for="(link, index) in links" :key="index">
+              <li class="navigation__link reveal-text-wrapper">
+                <a class="navigation__anchor" :class="{ 'reveal-link': isActive, 'reveal-link-close': !isActive }" :href="link.path">{{ link.name }}</a>
+              </li>
+            </div>
           </ul>
         </div>
       </div>
@@ -45,6 +41,27 @@
 
 <script>
 export default {
+  props: {
+    links: {
+      type: Array,
+      default() {
+        return [
+          {
+            name: 'Projects',
+            path: '#projects',
+          },
+          {
+            name: 'About',
+            path: '#about',
+          },
+          {
+            name: 'Contact',
+            path: '#contact',
+          },
+        ];
+      },
+    },
+  },
   data() {
     return {
       isActive: false,

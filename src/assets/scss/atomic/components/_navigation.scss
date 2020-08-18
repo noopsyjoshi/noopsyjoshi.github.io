@@ -14,24 +14,22 @@ $height: 70px;
   }
 
   &__block {
-    // visibility: hidden;
-    height: 100vh;
-    background: $c-purple;
-    width: 100vw;
-    position: fixed;
-    left: 0;
-    top: 0;
-    transition: transform 1s 1.7s cubic-bezier(1, 0, 0.3, 0.9);
-    transform: translateY(-100%);
+    @include media-breakpoint-down(lg) {
+      // visibility: hidden;
+      height: 100vh;
+      background: $c-purple;
+      width: 100vw;
+      position: fixed;
+      left: 0;
+      top: 0;
+      transition: transform 1s 1.7s cubic-bezier(1, 0, 0.3, 0.9);
+      transform: translateY(-100%);
 
-    @include media-breakpoint-up(xl) {
-      visibility: visible;
-    }
-
-    &.active {
-      // visibility: visible;
-      transition: transform 1s cubic-bezier(1, 0, 0.3, 0.9);
-      transform: translateY(0);
+      &.active {
+        // visibility: visible;
+        transition: transform 1s cubic-bezier(1, 0, 0.3, 0.9);
+        transform: translateY(0);
+      }
     }
   }
 
@@ -60,17 +58,6 @@ $height: 70px;
   }
 
   &__link {
-    // &:nth-child(2) {
-    //   a {
-    //     animation-delay: 1s;
-    //   }
-    // }
-
-    // &:nth-child(3) {
-    //   a {
-    //     animation-delay: 2s;
-    //   }
-    // }
   }
 
   &__anchor {
@@ -85,10 +72,37 @@ $height: 70px;
       color: inherit;
       text-decoration: none;
     }
+
+    &.reveal-link {
+      @include media-breakpoint-down(lg) {
+        transform: translateY(100%);
+        animation: reveal 1.7s 1s cubic-bezier(1, 0, 0.3, 0.9) forwards;
+      }
+
+      &.reveal-link-close {
+        @include media-breakpoint-down(lg) {
+          animation: reveal-reverse 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
+        }
+
+        @include media-breakpoint-up(lg) {
+          animation: reveal 1.7s 1s cubic-bezier(1, 0, 0.3, 0.9) forwards;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+    font-size: 1.6rem;
+    margin: 0 20px;
+    }
   }
 
   &__toggle-btn {
     z-index: z('navigation-toggle');
+    display: block;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
   }
 
   &__toggle {
