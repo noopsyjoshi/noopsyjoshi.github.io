@@ -1,0 +1,28 @@
+.close {
+  border: 2px solid $c-black;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+
+  &:after {
+    content: '';
+    height: 40px;
+    border-left: 2px solid $c-black;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(45deg);
+    left: 50%;
+    top: 50%;
+  }
+
+  &:before {
+    content: '';
+    height: 40px;
+    border-left: 2px solid $c-black;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    left: 50%;
+    top: 50%;
+  }
+}

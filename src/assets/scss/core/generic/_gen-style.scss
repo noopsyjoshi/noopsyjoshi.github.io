@@ -30,14 +30,17 @@ p {
 ::selection {
   background: $c-purple;
   text-shadow: none;
+  color: $c-white;
 }
 
 ::-webkit-selection {
   background: $c-purple;
   text-shadow: none;
+  color: $c-white;
 }
 
 ::-moz-selection {
   background: $c-purple;
   text-shadow: none;
+  color: $c-white;
 }

@@ -5,10 +5,12 @@ import PaperLondon from './views/PaperLondon';
 import TheCollective from './views/TheCollective';
 import Thanos from './views/Thanos';
 import SpaceInvaders from './views/SpaceInvaders';
+import ErrorPage from './views/Error';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -35,5 +37,11 @@ export default new Router({
       name: 'spaceinvaders',
       component: SpaceInvaders,
     },
+    {
+      path: '*',
+      name: '404',
+      component: ErrorPage,
+    },
   ],
 });
+

@@ -1,5 +1,5 @@
 <template>
-  <div class="cursor">
+  <div class="cursor" :class="`cursor--${cursorColor}`">
     <div ref="cursorInner" class="cursor cursor--inner" />
     <div ref="cursorOuter" class="cursor cursor--outer" />
   </div>
@@ -13,6 +13,13 @@
 import { TweenMax } from 'gsap/all';
 
 export default {
+  props: {
+    // eslint-disable-next-line vue/require-default-prop
+    cursorColor: {
+      type: String,
+      // default: 'white',
+    },
+  },
   created() {
     window.addEventListener('mousemove', this.moveCursor);
   },

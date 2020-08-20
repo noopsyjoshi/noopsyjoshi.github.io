@@ -4,7 +4,6 @@
       <p class="about__body about__body--large">I’m Noopur Joshi, a frontend developer living in London, fuelled by ramen, chai, glitter & pixel perfection.</p>
       <p class="about__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <p class="about__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    
       <div class="about__timeline">
         <div v-for="(item, index) in items" :key="index">
           <div class="about__block">

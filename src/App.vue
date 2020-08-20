@@ -1,8 +1,7 @@
 <template>
-  <div id="app" data-scroll-container>
+  <div id="app">
     <div id="page-wrap">
-      <navigation />
-      <custom-cursor />
+      <!-- <custom-cursor /> -->
       <!-- <home /> -->
     </div>
     <router-view />
@@ -10,16 +9,13 @@
 </template>
 
 <script>
-import Navigation from '@/components/components/Navigation.vue';
-import CustomCursor from '@/components/elements/CustomCursor.vue';
-
+// import CustomCursor from '@/components/elements/CustomCursor.vue';
 // import Home from '@/views/Home.vue';
 
 export default {
   name: 'App',
   components: {
-    Navigation,
-    CustomCursor,
+    // CustomCursor,
     // Home,
   },
 };

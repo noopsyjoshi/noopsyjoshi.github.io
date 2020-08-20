@@ -49,7 +49,7 @@ export default {
               alt: 'Paper London Image',
             },
             description: 'Sustainable fashion Shopify c-commerce project.',
-            path: '/almyra',
+            path: '/paperlondon',
           },
           {
             number: '02',

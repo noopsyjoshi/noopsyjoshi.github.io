@@ -1,0 +1,22 @@
+.error {
+    height: 100vh;
+    @include flex-pos;
+    flex-direction: column;
+
+  &__title {
+    font-size: 10rem;
+    font-family: 'poppins-regular';
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+
+  &__image {
+    margin-bottom: 50px;
+  }
+
+  &__body {
+    font-size: 2rem;
+    font-family: 'poppins-regular';
+    font-weight: 600;
+  }
+}

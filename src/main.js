@@ -3,8 +3,7 @@ import App from './App.vue';
 import router from './router';
 import Splitting from 'splitting';
 import { Curtains } from 'curtainsjs';
-// import LocomotiveScroll from 'locomotive-scroll';
-// import 'locomotive-scroll/dist/locomotive-scroll.min.css';
+
 
 Vue.config.productionTip = false;
 
@@ -13,21 +12,15 @@ new Vue({
   render: (h) => h(App),
 }).$mount('#app');
 
-
-Splitting({
-  target: '[data-splitting]',
-  by: 'chars',
-  key: null,
+const animateText = Array.from(document.querySelectorAll('.data-splitting'));
+animateText.forEach((text) => {
+  Splitting({
+    target: text,
+    by: 'chars',
+    key: null,
+  });
 });
 
-
-// window.onload = function() {
-//   const scroll = new LocomotiveScroll({
-//     el: document.querySelector('[data-scroll-container]'),
-//     smooth: true,
-//   });
-//   scroll.init();
-// };
 
 window.addEventListener('load', function() {
 
