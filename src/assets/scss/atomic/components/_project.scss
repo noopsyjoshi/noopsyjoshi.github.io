@@ -1,6 +1,10 @@
 .project {
   padding: 200px 0;
 
+  &__close-wrapper {
+    @include flex-pos(center, flex-end);
+  }
+
   &__intro-block {
     margin-bottom: 100px;
   }
@@ -9,6 +13,7 @@
     font-size: 10rem;
     font-family: 'poppins-regular';
     font-weight: 600;
+    line-height: 100%;
   }
 
   &__image {
@@ -21,19 +26,6 @@
       height: 600px;
       width: 100%;
       margin-bottom: 100px;
-
-      &:before {
-        position: absolute;
-        // transform: translateX(0);
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        border: 1px solid lime;
-       display: inline-block;
-        content: '';
-      }
     }
 
     &:nth-child(1) {
@@ -62,12 +54,6 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 100px);
     grid-gap: 15px;
-    margin-bottom: 200px;
-  }
-
-  &__body {
-    font-size: 2rem;
-    font-family: 'poppins-medium';
     margin-bottom: 200px;
   }
 

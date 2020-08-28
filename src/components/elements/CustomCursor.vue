@@ -2,11 +2,12 @@
   <div class="cursor" :class="`cursor--${cursorColor}`">
     <div ref="cursorInner" class="cursor cursor--inner" />
     <div ref="cursorOuter" class="cursor cursor--outer" />
+    <div ref="cursorText" class="cursor cursor--text">GO</div>
   </div>
 </template>
 
 <style lang="scss">
-@import '../../assets/scss/atomic/elements/_cursor.scss';
+@import '@/assets/scss/atomic/elements/_cursor.scss';
 </style>
 
 <script>
@@ -14,10 +15,9 @@ import { TweenMax } from 'gsap/all';
 
 export default {
   props: {
-    // eslint-disable-next-line vue/require-default-prop
     cursorColor: {
       type: String,
-      // default: 'white',
+      default: () => '',
     },
   },
   created() {
@@ -31,7 +31,9 @@ export default {
   mounted() {
     this.cursorInner = this.$refs.cursorInner;
     this.cursorOuter = this.$refs.cursorOuter;
-    this.navigations = Array.from(document.querySelectorAll('.navigation__anchor'));
+    this.cursorText = this.$refs.cursorText;
+
+    this.navigations = Array.from(document.querySelectorAll('.link'));
     this.projects = Array.from(document.querySelectorAll('.projects__project-image'));
 
     this.navigations.forEach((nav) => {
@@ -53,6 +55,8 @@ export default {
 
   methods: {
     moveCursor() {
+      console.log('created');
+
       TweenMax.to(this.cursorInner, 0.3, {
         x: event.clientX,
         y: event.clientY,
@@ -62,8 +66,14 @@ export default {
         x: event.clientX,
         y: event.clientY,
       });
+
+      TweenMax.to(this.cursorText, 0.5, {
+        x: event.clientX,
+        y: event.clientY,
+      });
     },
 
+    // Navigation
     hoverCursor() {
       TweenMax.to(this.cursorInner, 0.3, {
         opacity: 1,
@@ -89,17 +99,22 @@ export default {
       });
     },
 
+    // Projects
     hoverCursorProject() {
       console.log('hovering');
       TweenMax.to(this.cursorInner, 0.3, {
         opacity: 1,
         scale: 0,
       });
+
+      TweenMax.to(this.cursorText, 0.3, {
+        scale: 3,
+        opacity: 1,
+      });
       
       TweenMax.to(this.cursorOuter, 0.3, {
         scale: 4,
         opacity: 1,
-        backgroundColor: 'rgba(90, 0, 204, 1)',
         borderColor: 'rgba(90, 0, 204, 1)',
       });
     },
@@ -114,6 +129,11 @@ export default {
         scale: 1,
         opacity: .4,
         backgroundColor: 'transparent',
+      });
+
+      TweenMax.to(this.cursorText, 0.3, {
+        opacity: 0,
+        scale: 0,
       });
     },
   },

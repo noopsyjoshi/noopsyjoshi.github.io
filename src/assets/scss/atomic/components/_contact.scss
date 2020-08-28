@@ -1,24 +1,24 @@
 .contact {
   min-height: 100vh;
   height: 100%;
-  border: 1px solid white;
-  padding: 200px 0;
+  background-color: $c-grey-dark;
+  color: $c-white;
+  padding: 50px 0;
 
   &__heading {
-    font-size: 6rem;
-    color: $c-white;
-    font-family: 'poppins-regular';
-    font-weight: normal;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    font-size: 2.6rem;
+    line-height: 3rem;
   }
 
   &__block {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    @include flex-pos(center, flex-start);
   }
 
   &__icon {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     fill: $c-white;
 
     path {
@@ -27,8 +27,9 @@
   }
 
   &__link {
-    color: $c-white;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-left: 20px;
+    color: $c-white;
+    line-height: 2.5rem;
   }
 }

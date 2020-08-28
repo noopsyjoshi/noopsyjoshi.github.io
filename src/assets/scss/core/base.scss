@@ -1,14 +1,13 @@
+// @import './../../../../node_modules/aos/dist/aos.css';
 @import './../../../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
 @import './../../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
 @import './../../../../node_modules/bootstrap/scss/utilities/_visibility.scss';
-// @import '@/../node_modules/locomotive-scroll/dist/locomotive-scroll.css';
-// @import './../../../../node_modules/splitting/dist/splitting.css';
-
 
 @import './settings/set-colors';
 @import './settings/set-fonts';
 
 @import './generic/gen-animations';
+@import './generic/gen-typography';
 @import './generic/gen-style';
 @import './generic/gen-cursor';
 @import './generic/gen-close';

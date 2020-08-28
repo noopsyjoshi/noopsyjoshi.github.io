@@ -1,40 +1,29 @@
 <template>
-  <div class="home">
-    <!-- <div id="app"> -->
-    <custom-cursor />
-    <navigation />
+  <div class="scroll-container home">
+    <!-- <custom-cursor cursor-color="white" /> -->
     <homepage-hero />
     <projects />
     <about />
     <contact />
-    <main-footer />
   </div>
 </template>
 
 <script>
-import CustomCursor from '@/components/elements/CustomCursor.vue';
-import Navigation from '@/components/components/Navigation.vue';
+// import CustomCursor from '@/components/elements/CustomCursor.vue';
 import HomepageHero from '@/components/components/HomepageHero.vue';
 import Projects from '@/components/components/Projects.vue';
 import About from '@/components/components/About.vue';
 import Contact from '@/components/components/Contact.vue';
-import MainFooter from '@/components/components/MainFooter.vue';
-
-
 export default {
   // name: 'App',
   components: {
-    CustomCursor,
-    Navigation,
+    // CustomCursor,
     HomepageHero,
     Projects,
     About,
     Contact,
-    MainFooter,
   },
-
   created() {
-    if (document.body.classList.contains('bg--white')) document.body.classList.remove('bg--white');
   },
 };
 </script>

@@ -1,22 +1,69 @@
 .error {
-    height: 100vh;
-    @include flex-pos;
-    flex-direction: column;
+  height: 100vh;
+  @include flex-pos;
+  flex-direction: column;
+  text-align: center;
+
+  &__view {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
 
   &__title {
-    font-size: 10rem;
     font-family: 'poppins-regular';
     font-weight: 600;
     margin-bottom: 50px;
+    font-size: 4.6rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 5.2rem;
+      margin-bottom: 75px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 8rem;
+    }
   }
 
-  &__image {
+  &__image,
+  &__video {
     margin-bottom: 50px;
+    width: 300px;
+    height: 200px;
+    @include object-fit;
+
+    @include media-breakpoint-up(md) {
+      width: 400px;
+      height: 250px;
+      margin-bottom: 75px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 500px;
+      height: 350px;
+    }
   }
 
-  &__body {
-    font-size: 2rem;
-    font-family: 'poppins-regular';
-    font-weight: 600;
+  &__link {
+    color: $c-white;
+    position: relative;
+
+    &:after {
+      content: '';
+      bottom: -3px;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      background: $c-white;
+      position: absolute;
+      display: inline-block;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $c-white;
+    }
   }
 }

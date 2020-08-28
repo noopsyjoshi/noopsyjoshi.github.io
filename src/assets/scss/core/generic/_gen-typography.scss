@@ -1,0 +1,116 @@
+@mixin h1 {
+  font-family: roc-grotesk-wide, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4.6rem;
+  line-height: 5rem;
+  margin: 0;
+
+  @include media-breakpoint-up(md) {
+    line-height: 8.4rem;
+    font-size: 9rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    line-height: 11rem;
+    font-size: 12rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 12rem;
+    line-height: 11rem;
+  }
+}
+
+@mixin h2 {
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  margin: 0;
+  font-family: roc-grotesk-wide, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  @include media-breakpoint-up(md) {
+    // font-size: $size-xx-large; // 45px
+    // line-height: 5.8rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    // font-size: $size-bigger; // 70px
+    // line-height: 7.5rem;
+  }
+}
+
+@mixin h3 {
+  //   font-family: $font-header;
+  //   font-size: $size-large; // 30px
+  //   font-weight: $weight-medium;
+  //   line-height: 3.9rem;
+  //   text-transform: lowercase;
+
+  @include media-breakpoint-up(md) {
+    // font-size: $size-xx-large; // 45px
+    // line-height: 5.8rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    // font-size: $size-big; // 55px
+  }
+}
+
+@mixin h4 {
+  //   font-family: $font-header;
+  //   font-size: $size-large; // 30px
+  //   font-weight: $weight-medium;
+  //   letter-spacing: 0;
+  //   line-height: 3.9rem;
+  //   text-transform: lowercase;
+
+  @include media-breakpoint-up(md) {
+    // font-size: $size-xx-large; // 45px
+    // line-height: 5.8rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    // font-size: $size-bigger; // 70px
+    // line-height: 7.5rem;
+  }
+}
+
+@mixin h5 {
+  //   font-family: $font-header;
+  //   font-size: $size-large; // 30px
+  //   font-weight: $weight-medium;
+  //   letter-spacing: .04rem;
+  //   line-height: 3.2rem;
+  //   text-transform: lowercase;
+}
+
+@mixin h6 {
+  //   font-family: $font-header;
+  //   font-size: $size-x-small; // 14px
+  //   font-weight: $weight-medium;
+  //   letter-spacing: .23rem;
+
+  @include media-breakpoint-up(md) {
+    // font-size: $size-x-medium; // 20px
+    // line-height: 2.9rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $size-xx-medium; // 26px
+  }
+}
+
+@mixin h7 {
+  //   font-family: $font-header;
+  //   font-size: $size-x-small; // 14px
+  //   font-weight: $weight-medium;
+  //   letter-spacing: .28rem;
+  //   line-height: 2.2rem;
+
+  @include media-breakpoint-up(lg) {
+    // font-size: $size-x-medium; // 20px
+    // line-height: 3.1rem;
+  }
+}

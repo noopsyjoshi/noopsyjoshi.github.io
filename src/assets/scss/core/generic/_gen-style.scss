@@ -5,17 +5,67 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section, footer {
+  margin-top: -1px;
+}
+
+.section {
+  &__title {
+    position: relative;
+    margin-bottom: 70px;
+
+    &:after {
+      content: '';
+      height: 2px;
+      background-color: $c-white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      transition: width 2s 1s ease;
+    }
+
+    &.aos-animate {
+      &:after {
+        width: 100%;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 2.6rem;
+      line-height: 4rem;
+      margin-bottom: 100px;
+    }
+  }
+}
+
 body {
   font-size: 10px;
   font-size: 1rem;
-  background-color: $c-grey-dark;
-  color: $c-white;
   font-family: 'poppins-regular';
+  overflow-x: hidden;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
 }
 
 p {
-  font-weight: normal;
+  font-weight: 500;
   margin-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.8rem;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -44,3 +94,5 @@ p {
   text-shadow: none;
   color: $c-white;
 }
+
+

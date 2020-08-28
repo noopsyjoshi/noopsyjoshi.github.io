@@ -1,22 +1,19 @@
 <template>
   <div id="app">
-    <div id="page-wrap">
-      <!-- <custom-cursor /> -->
-      <!-- <home /> -->
-    </div>
+    <navigation />
     <router-view />
+    <main-footer />
   </div>
 </template>
 
 <script>
-// import CustomCursor from '@/components/elements/CustomCursor.vue';
-// import Home from '@/views/Home.vue';
+import Navigation from '@/components/components/Navigation.vue';
+import MainFooter from '@/components/components/MainFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    // CustomCursor,
-    // Home,
+    Navigation, MainFooter,
   },
 };
 </script>

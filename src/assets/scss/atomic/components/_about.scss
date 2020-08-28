@@ -1,27 +1,60 @@
 .about {
   min-height: 100vh;
   height: 100%;
-  border: 1px solid white;
   padding: 100px 0;
+  background-color: $c-grey-dark;
+  color: $c-white;
 
   @include media-breakpoint-up(xl) {
     padding: 200px 0;
   }
 
-  &__body {
-    font-size: 2rem;
-    color: $c-white;
-    font-family: 'poppins-regular';
-    margin-bottom: 30px;
+  &__title-wrapper {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    line-height: 7rem;
+    margin-bottom: 50px;
+    font-size: 5.6rem;
+    font-family: 'poppins-medium';
+    font-weight: 600;
 
     @include media-breakpoint-up(md) {
-      font-size: 2.6rem;
+      line-height: 11rem;
+      margin-bottom: 50px;
+      font-size: 10rem;
     }
 
-    &--large {
-      @include media-breakpoint-up(md) {
-        font-size: 5.6rem;
-      }
+    @include media-breakpoint-up(xl) {
+      margin-top: 100px;
+      color: $c-white;
+      font-size: 12rem;
+      line-height: 14rem;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__body {
+    margin-bottom: 60px;
+  }
+
+  &__clients {
+    @include flex-pos(flex-start, center);
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  &__client {
+    font-size: 2.6rem;
+    margin-bottom: 5px;
+    line-height: 4.2rem;
+    display: block;
+    margin-bottom: 5px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 5rem;
     }
   }
 
@@ -30,17 +63,21 @@
   }
 
   &__block {
-    border-top: 1px solid $c-grey;
-    padding: 30px 0;
+    border-bottom: 1px solid $c-white;
+    padding: 20px 0;
 
-    &:nth-last-child(1) {
-      border-bottom: 1px solid $c-grey;
+    &.first {
+      border-top: 1px solid $c-white;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 30px 0;
     }
   }
 
   &__date {
     text-align: left;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: 0;
 
     @include media-breakpoint-up(xl) {
@@ -60,7 +97,14 @@
 
   &__role,
   &__location {
-    font-size: 2rem;
     margin: 0;
   }
+
+  &__subtitle {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
 }
+
+

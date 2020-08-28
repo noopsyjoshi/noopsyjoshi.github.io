@@ -1,0 +1,35 @@
+@keyframes loadIn {
+  0% {
+    transform: translate3d(0, 50%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes loadOut {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.loader {
+  animation: loadIn .3s forwards cubic-bezier(.165, .84, .44, 1);
+  background: $c-black;
+  height: 200%;
+  left: 0;
+  position: fixed;
+  transform: translate3d(0, 50%, 0);
+  width: 100%;
+  z-index: z('loader');
+
+  &--loaded {
+    animation: loadOut .4s forwards cubic-bezier(.165, .84, .44, 1);
+    transform: translate3d(0, -50%, 0);
+  }
+}

@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^4.5.2",
     "core-js": "^3.6.4",
     "curtainsjs": "^6.2.2",
@@ -15,9 +16,12 @@
     "locomotive-scroll": "^3.5.4",
     "lodash": "^4.17.19",
     "sass-resources-loader": "^2.0.3",
+    "scroll-entrance": "^1.0.0",
+    "smooth-scrollbar": "^8.5.2",
     "splitting": "^1.0.6",
     "vue": "^2.6.11",
     "vue-router": "^3.4.3",
+    "vue-scroll-reveal": "^1.0.11",
     "vue-svg-loader": "^0.16.0"
   },
   "devDependencies": {

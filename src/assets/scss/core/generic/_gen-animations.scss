@@ -1,19 +1,142 @@
-.splitting .char {
-  animation: slideIn 1.6s cubic-bezier(0.2, 0, 0.1, 1) both;
-  animation-delay: calc(40ms * var(--char-index));
-  will-change: transform;
-  transform-origin: top left;
+.char,
+.word,
+.lines {
+  animation-delay: var(--del);
+  animation-direction: var(--dir, forwards);
+  animation-duration: var(--dur);
+  animation-iteration-count: var(--it, 1);
+  animation-name: var(--name);
+  animation-timing-function: var(--tf);
+  animation-fill-mode: var(--fill, forwards);
+  display: inline-block;
+  position: relative;
+  transform-origin: 50% 100%;
+  z-index: 1;
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateY(20px) scaleY(1.2);
-    opacity: 0;
+.word, .whitespace {
+  overflow: hidden;
+}
+
+[data-aos='slide-up-text'] {
+  &.aos-init {
+    .char {
+      transition: color 4s ease;
+      transform: translateY(100%);
+      opacity: 0;
+    }
   }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0) scaleY(1);
+  &.aos-animate {
+    .char {
+      animation: slideIn 1.6s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation-delay: calc(40ms * var(--char-index));
+      will-change: transform;
+      transform-origin: top left;
+    }
+
+    .word {
+      animation: slideIn 1.6s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation-delay: calc(40ms * var(--word-index));
+      will-change: transform;
+      transform-origin: top left;
+    }
+  }
+}
+
+[data-aos='slide-up-body'] {
+  &.aos-init {
+    .char {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+
+  &.aos-animate {
+    .char {
+      animation: slideIn 1s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation-delay: calc(6ms * var(--char-index));
+      will-change: transform;
+      transform-origin: top left;
+    }
+
+    .word {
+      animation: slideIn 1s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation-delay: calc(6ms * var(--word-index));
+      will-change: transform;
+      transform-origin: top left;
+    }
+  }
+}
+
+[data-aos='reveal-text'] {
+  &.aos-init {
+    transform: translateY(100%);
+  }
+
+  &.aos-animate {
+    animation: reveal 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
+  }
+}
+
+[data-aos='zoom-image'] {
+  &.aos-init {
+    transform: scale(1);
+  }
+
+  &.aos-animate {
+    animation: zoomImage 2s ease forwards;
+  }
+}
+
+[data-aos='reveal-image-right'] {
+  &.aos-init {
+    &.reveal-image-right {
+      &:after {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &.aos-animate {
+    &.reveal-image-right {
+      &:after {
+        animation: revealImageRight 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+      }
+    }
+  }
+}
+
+.reveal-image-right {
+  // overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+
+  &--light {
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $c-white;
+    }
+  }
+
+  &--dark {
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $c-grey-dark;
+    }
   }
 }
 
@@ -22,12 +145,11 @@
 }
 
 .reveal-text {
-  transform: translateY(100%);
-  animation: reveal 1.7s 1s cubic-bezier(1, 0, 0.3, 0.9) forwards;
+  margin: 0;
 }
 
 .reveal-text-reverse {
-  animation: reveal-reverse 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
+  animation: revealReverse 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
 }
 
 @keyframes reveal {
@@ -40,9 +162,7 @@
   }
 }
 
-
-
-@keyframes reveal-reverse {
+@keyframes revealReverse {
   0% {
     transform: translateY(0);
   }
@@ -51,3 +171,55 @@
     transform: translateY(100%);
   }
 }
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealImageRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes zoomImage {
+  0% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.d-split {
+     .char {
+      transition: color 4s ease;
+      transform: translateY(100%);
+      opacity: 0;
+  }
+
+  &.is-inview {
+    .char {
+      animation: slideIn 1.6s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation-delay: calc(40ms * var(--char-index));
+      will-change: transform;
+      transform-origin: top left;
+    }
+  }
+}
+
+
+
