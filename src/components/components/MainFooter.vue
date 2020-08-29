@@ -1,7 +1,7 @@
 <template>
   <footer class="footer" role="footer">
     <div class="row">
-      <div class="col-10 offset-1">
+      <div class="col-12">
         <p class="footer__body">Designed and developed by Noopur Joshi</p>
         <img class="footer__icon" src="../../assets/icons/unicorn.png" alt="Unicorn Emoji">
       </div>

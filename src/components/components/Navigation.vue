@@ -4,7 +4,7 @@
       <div class="col-10 offset-1">
         <div class="navigation__flex">
           <div class="navigation__icon">
-            <h1 data-aos="slide-up-body" class="d-split navigation__logo">n.</h1>
+            <h1 class="navigation__logo">n.</h1>
           </div>
           <div class="navigation__block">
             <ul class="navigation__links">

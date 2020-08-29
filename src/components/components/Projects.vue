@@ -25,7 +25,7 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="projects__project-description-wrapper">
-                  <p data-aos="slide-up-body" class="d-split projects__project-description">{{ item.description }}</p>
+                  <p data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="750" data-aos-delay="300" class="projects__project-description">{{ item.description }}</p>
                 </div>
               </router-link>
             </div>

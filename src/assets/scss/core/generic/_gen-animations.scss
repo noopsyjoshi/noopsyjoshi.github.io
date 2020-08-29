@@ -14,7 +14,8 @@
   z-index: 1;
 }
 
-.word, .whitespace {
+.word,
+.whitespace {
   overflow: hidden;
 }
 
@@ -59,13 +60,6 @@
       will-change: transform;
       transform-origin: top left;
     }
-
-    .word {
-      animation: slideIn 1s cubic-bezier(0.2, 0, 0.1, 1) both;
-      animation-delay: calc(6ms * var(--word-index));
-      will-change: transform;
-      transform-origin: top left;
-    }
   }
 }
 
@@ -107,8 +101,28 @@
   }
 }
 
+[data-aos='fade-in'] {
+  &.aos-init {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos] {
+  body[data-aos-easing="smooth"] &,
+  &[data-aos][data-aos-easing="smooth"] {
+    transition-timing-function: cubic-bezier(0.2, 0, 0.1, 1);
+  }
+}
+
+
 .reveal-image-right {
-  // overflow: hidden;
+  overflow: hidden;
   position: relative;
   display: inline-block;
   margin-bottom: 0;
@@ -172,6 +186,16 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes slideIn {
   0% {
     transform: translateY(100%);
@@ -205,10 +229,10 @@
 }
 
 .d-split {
-     .char {
-      transition: color 4s ease;
-      transform: translateY(100%);
-      opacity: 0;
+  .char {
+    transition: color 4s ease;
+    transform: translateY(100%);
+    opacity: 0;
   }
 
   &.is-inview {
@@ -220,6 +244,3 @@
     }
   }
 }
-
-
-

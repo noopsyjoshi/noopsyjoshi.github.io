@@ -5,23 +5,26 @@
         <div class="reveal-text-wrapper">
           <h2 data-aos="slide-up-text" class="d-split section__title">Contact</h2>
         </div>
-        <div class="contact__heading-wrapper">
-          <p data-aos="slide-up-text" class="d-split contact__heading">Drop me a line</p>
-        </div>
         <div class="contact__links">
-          <div data-aos="slide-up-text" class="d-split contact__block">
+          <div data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="1000" class="contact__block">
             <Email class="contact__icon" />
-            <a class="contact__link" href="mailto:noopur.joshi13@gmail.com">noopur.joshi13@gmail.com</a>
+            <p>  
+              <a class="contact__link" href="mailto:noopur.joshi13@gmail.com">noopur.joshi13@gmail.com</a>
+            </p>
           </div>
-          <div data-aos="slide-up-text" class="d-split contact__block">
-            <GitHub class="contact__icon" />
-            <a class="contact__link" href="github.com/noopsyjoshi/">github.com/noopsyjoshi/</a>
+          <div data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="1000" class="contact__block">
+            <p>
+              <GitHub class="contact__icon" />
+              <a class="contact__link" href="github.com/noopsyjoshi/">github.com/noopsyjoshi/</a>
+            </p>
           </div>
-          <div data-aos="slide-up-text" class="d-split contact__block">
-            <LinkedIn class="contact__icon" />
-            <a class="contact__link" href="https://www.linkedin.com/in/noopurjoshi/">linkedin.com/in/noopurjoshi/</a>
+          <div data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="1000" class="contact__block">
+            <p>
+              <LinkedIn class="contact__icon" />
+              <a class="contact__link" href="https://www.linkedin.com/in/noopurjoshi/">linkedin.com/in/noopurjoshi/</a>
+            </p>
           </div>
-          <div data-aos="slide-up-text" class="d-split contact__block">
+          <div data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="1000" class="contact__block">
             <Location class="contact__icon" />
             <p class="contact__link">London</p>
           </div>

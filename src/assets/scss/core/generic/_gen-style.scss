@@ -5,7 +5,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-section, footer {
+section,
+footer {
   margin-top: -1px;
 }
 
@@ -36,6 +37,11 @@ section, footer {
       line-height: 4rem;
       margin-bottom: 100px;
     }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3.6rem;
+      line-height: 4.6rem;
+    }
   }
 }
 
@@ -55,17 +61,7 @@ h2 {
 }
 
 p {
-  font-weight: 500;
-  margin-bottom: 0;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-
-  @include media-breakpoint-up(md) {
-    font-size: 1.8rem;
-    font-family: poppins, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  @include text--body;
 }
 
 ::-webkit-scrollbar {
@@ -94,5 +90,3 @@ p {
   text-shadow: none;
   color: $c-white;
 }
-
-

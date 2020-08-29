@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-10 offset-1">
         <div class="hero__heading-wrapper">
-          <h1 data-scroll data-aos="slide-up-text" class="d-split hero__heading">Hi, I'm Noops, Frontend Developer and Chai Lover</h1>
+          <h1 data-scroll data-aos="slide-up-text" class="d-split hero__heading">Hi, I'm Noops, Frontend Developer & Chai Lover</h1>
         </div>
       </div>
     </div>
