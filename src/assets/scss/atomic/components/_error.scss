@@ -12,18 +12,10 @@
   }
 
   &__title {
-    font-family: 'poppins-regular';
-    font-weight: 600;
     margin-bottom: 50px;
-    font-size: 4.6rem;
 
     @include media-breakpoint-up(md) {
-      font-size: 5.2rem;
       margin-bottom: 75px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      font-size: 8rem;
     }
   }
 

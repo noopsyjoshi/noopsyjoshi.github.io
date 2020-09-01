@@ -38,6 +38,9 @@ export default {
       default: () => [],
     },
   },
+  beforeCreate: function() {
+    document.body.className = 'bg--dark';
+  },
   created() {
     this.number = Math.round(Math.random());
   },

@@ -21,7 +21,6 @@ export default {
     },
   },
   created() {
-    window.addEventListener('mousemove', this.moveCursor);
   },
 
   destroyed() {
@@ -29,6 +28,7 @@ export default {
   },
 
   mounted() {
+    window.addEventListener('mousemove', this.moveCursor);
     this.cursorInner = this.$refs.cursorInner;
     this.cursorOuter = this.$refs.cursorOuter;
     this.cursorText = this.$refs.cursorText;
@@ -55,22 +55,22 @@ export default {
 
   methods: {
     moveCursor() {
-      console.log('created');
+      if (this.cursorInner && this.cursorOuter && this.cursorText) {
+        TweenMax.to(this.cursorInner, 0.3, {
+          x: event.clientX,
+          y: event.clientY,
+        });
 
-      TweenMax.to(this.cursorInner, 0.3, {
-        x: event.clientX,
-        y: event.clientY,
-      });
+        TweenMax.to(this.cursorOuter, 0.5, {
+          x: event.clientX,
+          y: event.clientY,
+        });
 
-      TweenMax.to(this.cursorOuter, 0.5, {
-        x: event.clientX,
-        y: event.clientY,
-      });
-
-      TweenMax.to(this.cursorText, 0.5, {
-        x: event.clientX,
-        y: event.clientY,
-      });
+        TweenMax.to(this.cursorText, 0.5, {
+          x: event.clientX,
+          y: event.clientY,
+        });
+      }
     },
 
     // Navigation
@@ -129,6 +129,7 @@ export default {
         scale: 1,
         opacity: .4,
         backgroundColor: 'transparent',
+        borderColor: 'rgba(255, 255, 255, 1)',
       });
 
       TweenMax.to(this.cursorText, 0.3, {

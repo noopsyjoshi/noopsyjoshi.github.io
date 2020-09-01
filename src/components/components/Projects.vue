@@ -14,7 +14,7 @@
                 <!-- <div class="landscape-wrapper"> -->
                 <!-- <div class="landscape-inner"> -->
                 <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--dark plane projects__project-image-wrapper">
-                  <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" :src="require('@/assets/images/paperlondon.jpg')" :alt="item.image.alt">
+                  <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
                 </figure>
                 <div class="reveal-text-wrapper projects__project-title-wrapper">
                   <h2 data-aos="slide-up-body" class="d-split projects__project-title">
@@ -25,7 +25,7 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="projects__project-description-wrapper">
-                  <p data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="750" data-aos-delay="300" class="projects__project-description">{{ item.description }}</p>
+                  <p data-aos-easing="smooth" data-aos="slide-up-body" data-aos-duration="750" data-aos-delay="300" class="d-split projects__project-description">{{ item.description }}</p>
                 </div>
               </router-link>
             </div>
@@ -49,7 +49,7 @@ export default {
             number: '01',
             title: 'Paper London',
             image: {
-              url: '@/assets/images/almyra.jpg',
+              url: 'paper.jpg',
               alt: 'Paper London Image',
             },
             description: 'A new, redesigned e-commerce site built for a sustainabile fashion brand using Shopify ',
@@ -59,31 +59,31 @@ export default {
             number: '02',
             title: 'The Collective',
             image: {
-              url: '@/assets/images/thecollective.jpg',
+              url: 'thecollective.jpg',
               alt: 'Image of The Collective website',
             },
-            description: 'Co-living spaces website built in Vue.js.',
+            description: 'A site built for co-living spaces around London using Vue.js',
             path: '/thecollective',
           },
           {
             number: '03',
-            title: 'Thanos Hotels',
+            title: 'Thanos Group',
             image: {
-              url: '@/assets/images/almyra.jpg',
+              url: 'almyra.jpg',
               alt: 'Image of Thanos Hotels website',
             },
             description:
-              'Three luxury hotels based in Cyprus, part of the Thanos group. Created using Handlebars.js templating.',
+              'Three sites created using Handlebars.js templating created for their corresponding luxury hotels situated in Cyprus.',
             path: '/thanos',
           },
           {
             number: '04',
             title: 'Space Invaders',
             image: {
-              url: '@/assets/images/almyra.jpg',
+              url: 'spaceinvaders.png',
               alt: 'Image of Thanos Hotels website',
             },
-            description: 'Game created during a 3 month coding bootcamp using HTML, CSS and JavaScript.',
+            description: 'A Star Wars spin taken on the classic Space Invaders. A web based game created during a 3 month coding bootcamp using HTML, CSS and JavaScript.',
             path: '/spaceinvaders',
           },
         ];

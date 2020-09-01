@@ -8,6 +8,6 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss">
+@import '@/assets/scss/atomic/elements/_close.scss';
 </style>

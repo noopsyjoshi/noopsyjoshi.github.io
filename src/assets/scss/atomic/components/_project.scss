@@ -1,28 +1,37 @@
 .project {
   padding: 50px 0;
 
-  &__close {
-    @include flex-pos(center, flex-end);
-    width: 100%;
-    height: 100%;
+  @include media-breakpoint-up(xl) {
+    padding: 100px 0;
   }
 
   &__intro-block {
     margin-bottom: 30px;
   }
 
-  &__image {
-    @include object-fit;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
+  &__title {
+    @include h1--wide;
+    text-transform: uppercase;
 
-    &--showcase {
-      position: relative;
-      height: 200px;
-      width: 100%;
-      margin-bottom: 100px;
+    @include media-breakpoint-up(xl) {
+      margin-top: 100px;
+      font-size: 10rem;
+      line-height: 10rem;
     }
+  }
+
+  &__figure {
+    position: relative;
+    height: 200px;
+    width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      height: 600px;
+    }
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
 
     &:nth-child(1) {
       @include media-breakpoint-up(md) {
@@ -46,7 +55,22 @@
     &:nth-child(4) {
       grid-column: 6 / 10;
       grid-row: 10 / 13;
+
+      @include media-breakpoint-up(md) {
+        grid-row: 10 / 18;
+      }
     }
+  }
+
+  &__image {
+    @include object-fit;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    margin: 100px 0;
   }
 
   &__image-grid {
@@ -58,6 +82,14 @@
       grid-template-rows: repeat(12, 100px);
       grid-gap: 15px;
     }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 100px;
+    }
+  }
+
+  &__tech-wrapper {
+    margin-bottom: 300px;
   }
 
   &__tech-list {
@@ -70,8 +102,6 @@
   &__tech {
     display: inline-block;
     margin: 0 40px;
-    font-size: 2rem;
-    font-family: 'poppins-medium';
 
     &:first-of-type,
     &:last-of-type {

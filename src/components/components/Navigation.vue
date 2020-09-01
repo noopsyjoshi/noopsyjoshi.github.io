@@ -9,7 +9,7 @@
           <div class="navigation__block">
             <ul class="navigation__links">
               <li v-for="(link, index) in links" :key="index" class="link navigation__link">
-                <a data-aos="slide-up-body" class="d-split navigation__anchor" :href="link.path">{{ link.name }}</a>
+                <a class="d-split navigation__anchor" :href="link.path">{{ link.name }}</a>
               </li>
             </ul>
           </div>

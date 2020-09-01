@@ -25,6 +25,8 @@ new Vue({
   },
 
   mounted() {
+
+        
     AOS.init({
       startEvent: 'load',
       once: 'true',
@@ -39,12 +41,11 @@ new Vue({
     // this.lmS.init();
 
     this.split();
- 
 
-    // router.beforeEach((to, from, next) => {
-    //   window.scrollTo(0, 0);
-    //   next();
-    // });
+    router.beforeEach((to, from, next) => {
+      window.scrollTo(0, 0);
+      next();
+    });
   },
 
   destroyed() {
@@ -62,6 +63,11 @@ new Vue({
     split() {
       const animateText = Array.from(document.querySelectorAll('.d-split'));
       const animateTextLines = Array.from(document.querySelectorAll('.d-split-lines'));
+
+      // Splitting({ target: animateText, by: 'lines' }).forEach((s) => {
+      //   // Use s.words as the target instead of s.el
+      //   Splitting({ target: s.words, by: 'chars', force: true });
+      // });
 
       animateText.forEach((text) => {
         Splitting({

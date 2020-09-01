@@ -23,6 +23,10 @@
   }
 }
 
+@mixin h1--wide {
+  font-family: roc-grotesk-extrawide, sans-serif;
+}
+
 // Project Title (homepage)
 @mixin h2 {
   font-size: 2.6rem;
@@ -118,7 +122,6 @@
 }
 
 @mixin text--body {
-  font-weight: 500;
   margin-bottom: 0;
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -126,13 +129,13 @@
   font-weight: 400;
   font-style: normal;
 
+
   @include media-breakpoint-up(md) {
     font-size: 2rem;
     line-height: 3rem;
   }
 
   @include media-breakpoint-up(lg) {
-    font-size: 2.2rem;
     line-height: 3.6rem;
   }
 }

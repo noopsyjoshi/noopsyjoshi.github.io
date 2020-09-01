@@ -15,6 +15,10 @@
 export default {
   components: {
   },
+
+  beforeCreate: function() {
+    document.body.className = 'bg--dark';
+  },
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-container home">
-    <!-- <custom-cursor cursor-color="white" /> -->
+    <custom-cursor cursor-color="white" />
     <navigation />
     <homepage-hero />
     <projects />
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-// import CustomCursor from '@/components/elements/CustomCursor.vue';
+import CustomCursor from '@/components/elements/CustomCursor.vue';
 import Navigation from '@/components/components/Navigation.vue';
 import HomepageHero from '@/components/components/HomepageHero.vue';
 import Projects from '@/components/components/Projects.vue';
@@ -19,7 +19,7 @@ import Contact from '@/components/components/Contact.vue';
 export default {
   // name: 'App',
   components: {
-    // CustomCursor, 
+    CustomCursor, 
     Navigation,
     HomepageHero,
     Projects,
