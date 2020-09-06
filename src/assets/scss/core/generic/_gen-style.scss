@@ -10,10 +10,51 @@ footer {
   margin-top: -1px;
 }
 
+.anchor {
+  &__link {
+    color: $c-white;
+    position: relative;
+
+    &:after {
+      content: '';
+      bottom: -3px;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      background: $c-white;
+      position: absolute;
+      display: inline-block;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $c-white;
+    }
+  }
+}
+
 .section {
   &__title {
     position: relative;
     margin-bottom: 70px;
+    font-family: roc-grotesk-wide, sans-serif;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      font-size: 2.6rem;
+      line-height: 4rem;
+      margin-bottom: 100px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+      line-height: 4rem;
+      letter-spacing: 0.2rem;
+    }
+
+    &--low-spacer {
+      margin-bottom: 25px;
+    }
 
     &:after {
       content: '';
@@ -26,7 +67,7 @@ footer {
       transition: width 2s 1s ease;
     }
 
-     &--light {
+    &--light {
       &:after {
         background-color: $c-black;
       }
@@ -36,19 +77,6 @@ footer {
       &:after {
         width: 100%;
       }
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: 2.6rem;
-      line-height: 4rem;
-      margin-bottom: 100px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 6rem;
-      line-height: 7rem;
-      font-family: roc-grotesk-extrawide, sans-serif;
-      text-transform: uppercase;
     }
   }
 
@@ -82,6 +110,10 @@ h1 {
 
 h2 {
   @include h2;
+}
+
+h3 {
+  @include h3;
 }
 
 p {

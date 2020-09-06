@@ -5,20 +5,11 @@ $height: 70px;
   position: fixed;
   width: 100%;
   z-index: z('navigation');
-  top: 20px;
-
-  @include media-breakpoint-up(md) {
-    top: 40px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    top: 0;
-    padding: 20px 0;
-    height: 50px;
-  }
+  top: 0;
+  padding: 20px 0;
 
   &__flex {
-    @include flex-pos(center, space-between);
+    @include flex-pos(flex-start, space-between);
   }
 
   &__icon {
@@ -68,7 +59,6 @@ $height: 70px;
     text-align: right;
     display: block;
     color: $c-white;
-    margin: 0;
     font-size: 1.4rem;
     line-height: 1.6rem;
     font-family: roc-grotesk-wide, sans-serif;
@@ -88,6 +78,15 @@ $height: 70px;
   }
 
   .navigation__anchor {
+    &--light {
+      .char {
+        &:before,
+        &:after {
+          color: $c-black;
+        }
+      }
+    }
+    
     .char {
       overflow: hidden;
       color: transparent;
@@ -101,7 +100,6 @@ $height: 70px;
       }
 
       &:before {
-        color:white;
         transition-delay: calc(0.02s * (var(--char-index)));
       }
     }

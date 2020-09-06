@@ -8,24 +8,19 @@
         <div id="page-wrap">
           <div id="canvas" />
           <div id="content">
-            <div v-for="(item, index) in projects" id="planes" :key="index" class="projects__project">
-              <router-link :to="item.path" class="plane-wrapper projects__link">
-                <!-- <div class="plane-inner"> -->
-                <!-- <div class="landscape-wrapper"> -->
-                <!-- <div class="landscape-inner"> -->
-                <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--dark plane projects__project-image-wrapper">
-                  <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
+            <div v-for="(item, index) in projects" :key="index" class="projects__project">
+              <router-link :to="item.path" class="projects__link">
+                <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--dark projects__project-image-wrapper">
+                  <img data-aos="zoom-image" class="projects__project-image reveal-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
                 </figure>
                 <div class="reveal-text-wrapper projects__project-title-wrapper">
-                  <h2 data-aos="slide-up-body" class="d-split projects__project-title">
+                  <h3 data-aos="slide-up-body" class="d-split projects__project-title">
                     <span class="projects__project-title projects__project-title--number">{{ item.number }}</span>
                     {{ item.title }}
-                  </h2>
+                  </h3>
                 </div>
-                <!-- </div> -->
-                <!-- </div> -->
                 <div class="projects__project-description-wrapper">
-                  <p data-aos-easing="smooth" data-aos="slide-up-body" data-aos-duration="750" data-aos-delay="300" class="d-split projects__project-description">{{ item.description }}</p>
+                  <p data-aos="fade-in" data-aos-duration="750" data-aos-delay="300" class="projects__project-description">{{ item.description }}</p>
                 </div>
               </router-link>
             </div>
@@ -33,7 +28,7 @@
         </div>
       </div>
     </div>
-    <router-view />
+    <!-- <router-view /> -->
   </section>
 </template>
 

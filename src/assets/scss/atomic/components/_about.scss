@@ -85,10 +85,13 @@
   &__date {
     text-align: left;
     margin: 0;
-    color: $c-grey;
+    font-size: 1.6rem;
 
     @include media-breakpoint-up(md) {
-      color: $c-white;
+      font-size: 2rem;
+    }
+
+    @include media-breakpoint-up(lg) {
       @include text--body;
     }
   }
@@ -98,7 +101,7 @@
   }
 
   &__location {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       text-align: right;
     }
   }

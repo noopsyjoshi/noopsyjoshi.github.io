@@ -29,6 +29,50 @@
 
 // Project Title (homepage)
 @mixin h2 {
+  position: relative;
+  margin-bottom: 70px;
+  font-family: roc-grotesk-wide, sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+  color: inherit;
+
+  // &:after {
+  //   content: '';
+  //   height: 2px;
+  //   background-color: $c-white;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   width: 0;
+  //   transition: width 2s 1s ease;
+  // }
+
+  &--light {
+    &:after {
+      background-color: $c-black;
+    }
+  }
+
+  &.aos-animate {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.6rem;
+    line-height: 4rem;
+    margin-bottom: 100px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+}
+
+@mixin h3 {
   font-size: 2.6rem;
   line-height: 3.2rem;
   margin: 0;
@@ -39,28 +83,6 @@
   @include media-breakpoint-up(md) {
     font-size: 3.2rem;
     line-height: 4rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    // font-size: $size-bigger; // 70px
-    // line-height: 7.5rem;
-  }
-}
-
-@mixin h3 {
-  //   font-family: $font-header;
-  //   font-size: $size-large; // 30px
-  //   font-weight: $weight-medium;
-  //   line-height: 3.9rem;
-  //   text-transform: lowercase;
-
-  @include media-breakpoint-up(md) {
-    // font-size: $size-xx-large; // 45px
-    // line-height: 5.8rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    // font-size: $size-big; // 55px
   }
 }
 
@@ -123,20 +145,20 @@
 
 @mixin text--body {
   margin-bottom: 0;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
   font-family: poppins, sans-serif;
   font-weight: 400;
   font-style: normal;
-
+  font-size: 2rem;
+  line-height: 3rem;
 
   @include media-breakpoint-up(md) {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 3rem;
+    line-height: 4.2rem;
   }
 
   @include media-breakpoint-up(lg) {
     line-height: 3.6rem;
+    font-size: 2rem;
   }
 }
 
@@ -146,4 +168,9 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.275rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+  }
 }

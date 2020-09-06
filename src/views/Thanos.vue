@@ -23,7 +23,7 @@
           >
         </figure>
       </div>
-      <div class="col-10 offset-1 col-xl-7 offset-2">
+      <div class="col-10 offset-1 col-xl-7 offset-xl-1">
         <p
             data-aos="fade-in"
             data-aos-easing="smooth"
@@ -32,6 +32,15 @@
         >
           Thanos is a group consisting of three luxury hotel retreats located in Cyprus. The hotels, Anassa, Annabelle and Almyra adhere to a brand guideline, embodying elegance, serenity and the Meditarrean charm, but also maintain a unique feel that makes each hotel distinctive. I helped deliver the frontend for the three brochure sites and their respective booking systems, while liasing with a back-end partner company to integrate the site as seamlessly as possible by providing extensive integration support.
         </p>
+      </div>
+      <!-- Link to website -->
+      <div class="col-10 offset-1 col-md-7 offset-md-2">
+        <div data-aos="fade-in"
+            data-aos-easing="smooth"
+            data-aos-duration="1000"
+        >
+          <a href="#" class="link d-split project__anchor project__anchor--light">See Website</a>
+        </div>
       </div>
       <div class="col-10 offset-1">
         <div class="project__image-grid">

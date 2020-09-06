@@ -13,7 +13,7 @@
             <source src="@/assets/images/jurassic-park.mp4" type="video/mp4">
           </video>
           <p class="error__body">
-            The park is closed, please go <router-link class="link error__link" :to="{ name: 'home'}">home </router-link>
+            The park is closed, please go <router-link class="link anchor__link" :to="{ name: 'home'}">home </router-link>
           </p>
         </div>
       </div>

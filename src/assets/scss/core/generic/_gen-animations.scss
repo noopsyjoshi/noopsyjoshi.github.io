@@ -14,9 +14,13 @@
   z-index: 1;
 }
 
-.word,
-.whitespace {
+.word {
   overflow: hidden;
+}
+
+.whitespace {
+  line-height: 0px;
+  visibility: hidden;
 }
 
 [data-aos='slide-up-text'] {
