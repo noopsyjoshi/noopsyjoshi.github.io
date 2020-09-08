@@ -4,19 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
-  &__arrow {
-    width: 40px;
-    height: 40px;
-    fill: $c-white;
 
-    &--top {
-      transform: rotate(180deg);
-    }
-
-    @include media-breakpoint-up(md) {
-      width: 70px;
-      height: 70px;
-    }
+  &__span {
+    display: inline-block;
   }
 }

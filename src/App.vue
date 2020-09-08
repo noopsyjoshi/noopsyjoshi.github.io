@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    <!-- <transition mode="out-in"> -->
     <router-view />
+    <!-- </transition> -->
     <main-footer />
   </div>
 </template>

@@ -4,7 +4,7 @@ import Home from './views/Home';
 import PaperLondon from './views/PaperLondon';
 import TheCollective from './views/TheCollective';
 import Thanos from './views/Thanos';
-import SpaceInvaders from './views/SpaceInvaders';
+import GeneralAssembly from './views/GeneralAssembly';
 import ErrorPage from './views/Error';
 
 Vue.use(Router);
@@ -33,9 +33,9 @@ export default new Router({
       component: Thanos,
     },
     {
-      path: '/spaceinvaders',
-      name: 'spaceinvaders',
-      component: SpaceInvaders,
+      path: '/generalassembly',
+      name: 'generalassembly',
+      component: GeneralAssembly,
     },
     {
       path: '*',

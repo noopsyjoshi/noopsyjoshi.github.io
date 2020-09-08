@@ -26,7 +26,6 @@
 [data-aos='slide-up-text'] {
   &.aos-init {
     .char {
-      transition: color 4s ease;
       transform: translateY(100%);
       opacity: 0;
     }
@@ -60,7 +59,7 @@
   &.aos-animate {
     .char {
       animation: slideIn 1s cubic-bezier(0.2, 0, 0.1, 1) both;
-      animation-delay: calc(6ms * var(--char-index));
+      animation-delay: calc(2ms * var(--char-index));
       will-change: transform;
       transform-origin: top left;
     }
@@ -244,20 +243,3 @@
     transform: scale(1);
   }
 }
-
-// .d-split {
-//   .char {
-//     transition: color 4s ease;
-//     transform: translateY(100%);
-//     // opacity: 0;
-//   }
-
-//   &.is-inview {
-//     .char {
-//       animation: slideIn 1.6s cubic-bezier(0.2, 0, 0.1, 1) both;
-//       animation-delay: calc(40ms * var(--char-index));
-//       will-change: transform;
-//       transform-origin: top left;
-//     }
-//   }
-// }

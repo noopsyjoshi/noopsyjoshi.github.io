@@ -3,13 +3,25 @@
     <div class="row">
       <div class="col-10 offset-1">
         <div class="navigation__flex">
-          <div class="navigation__icon">
-            <h1 class="navigation__logo">n.</h1>
-          </div>
+          <button v-scroll-to="{ 
+            el: '#hero',
+            easing: 'ease-in',
+            duration: 2000 
+          }" class="link d-split navigation__button navigation__button--no-spacer"
+          >
+            Noops
+          </button>
           <div class="navigation__block">
             <ul class="navigation__links">
               <li v-for="(link, index) in links" :key="index" class="link navigation__link">
-                <a class="d-split navigation__anchor" :href="link.path">{{ link.name }}</a>
+                <button v-scroll-to="{ 
+                  el: link.path,
+                  easing: 'ease-out',
+                  duration: index * 1000, 
+                }" class="d-split navigation__button"
+                >
+                  {{ link.name }}
+                </button>
               </li>
             </ul>
           </div>

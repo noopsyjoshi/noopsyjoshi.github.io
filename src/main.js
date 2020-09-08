@@ -6,10 +6,13 @@ import 'splitting/dist/splitting-cells.css';
 import Splitting from 'splitting';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import _ from 'lodash';
 // import LocomotiveScroll from 'locomotive-scroll';
-import 'locomotive-scroll/dist/locomotive-scroll.min.css';
+// import 'locomotive-scroll/dist/locomotive-scroll.min.css';
 
 Vue.config.productionTip = false;
+const VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo);
 
 new Vue({
   router,
@@ -17,6 +20,13 @@ new Vue({
   data() {
     return {};
   },
+
+  // watch: {
+  //   '$route'(to, from) {
+  //     this.transitionName = 'overlay';
+  //     console.log(this.transitionName);
+  //   },
+  // },
 
   mounted() {
     AOS.init({
@@ -28,8 +38,6 @@ new Vue({
       this.splitInit();
       // this.lmsInit();
     });
-
-    // this.lmS.init();
 
     router.afterEach((to, from, next) => {
       this.$nextTick(() => {
@@ -52,6 +60,7 @@ new Vue({
 
   methods: {
     splitInit() {
+      console.log('into split');
       const animateText = Array.from(document.querySelectorAll('.d-split'));
       animateText.forEach((text) => {
         Splitting({
@@ -75,3 +84,35 @@ new Vue({
 
   render: (h) => h(App),
 }).$mount('#app');
+
+
+window.onload = function() {
+
+  const projects = document.querySelector('.projects__block');
+  let prevPos = window.pageYOffset;
+
+  const initSkew = function() {
+    const newPos = window.pageYOffset;
+    const diff = newPos - prevPos;
+    const speed = _.clamp(diff * 0.07, -10, 10);
+
+    projects.style.transform = `skewY(${speed}deg)`;
+
+    prevPos = newPos;
+
+    requestAnimationFrame(initSkew);
+  };
+
+  const removeSkew = function() {
+    projects.style.transform = 'none';
+  };
+
+  window.innerWidth >= 768 ? initSkew() : removeSkew();
+
+  window.onresize = (e) => {
+    (window.innerWidth >= 768) && projects ? initSkew() : removeSkew(); 
+  };
+
+};
+
+

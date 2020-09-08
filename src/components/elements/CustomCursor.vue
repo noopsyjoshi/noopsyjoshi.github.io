@@ -2,7 +2,7 @@
   <div class="cursor" :class="`cursor--${cursorColor}`">
     <div ref="cursorInner" class="cursor cursor--inner" />
     <div ref="cursorOuter" class="cursor cursor--outer" />
-    <div ref="cursorText" class="cursor cursor--text">GO</div>
+    <div ref="cursorText" class="cursor cursor--text">&#43;</div>
   </div>
 </template>
 
@@ -61,12 +61,12 @@ export default {
           y: event.clientY,
         });
 
-        TweenMax.to(this.cursorOuter, 0.5, {
+        TweenMax.to(this.cursorOuter, 0.3, {
           x: event.clientX,
           y: event.clientY,
         });
 
-        TweenMax.to(this.cursorText, 0.5, {
+        TweenMax.to(this.cursorText, 0.3, {
           x: event.clientX,
           y: event.clientY,
         });
@@ -94,14 +94,13 @@ export default {
 
       TweenMax.to(this.cursorOuter, 0.3, {
         scale: 1,
-        opacity: .4,
+        opacity: 0.4,
         backgroundColor: 'transparent',
       });
     },
 
     // Projects
     hoverCursorProject() {
-      console.log('hovering');
       TweenMax.to(this.cursorInner, 0.3, {
         opacity: 1,
         scale: 0,
@@ -115,8 +114,9 @@ export default {
       TweenMax.to(this.cursorOuter, 0.3, {
         scale: 4,
         opacity: 1,
-        borderColor: 'rgba(90, 0, 204, 1)',
+        borderColor: 'rgba( 255, 123, 0, 1)',
       });
+     
     },
 
     hoverCursorOutProject() {
@@ -127,7 +127,7 @@ export default {
 
       TweenMax.to(this.cursorOuter, 0.3, {
         scale: 1,
-        opacity: .4,
+        opacity: 0.4,
         backgroundColor: 'transparent',
         borderColor: 'rgba(255, 255, 255, 1)',
       });

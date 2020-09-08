@@ -11,13 +11,10 @@
     visibility: visible;
   }
 
-
   &--text {
     @include flex-pos;
-    font-family: roc-grotesk-extrawide, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.6rem;
+    font-family: 'roc-grotesk-wide', sans-serif;
+    font-size: 3rem;
     width: 50px;
     height: 50px;
     opacity: 0.4;
@@ -25,7 +22,7 @@
     left: -25px !important;
     text-align: center;
     opacity: 0;
-    color: $c-purple;
+    color: $c-orange;
     cursor: none;
   }
 

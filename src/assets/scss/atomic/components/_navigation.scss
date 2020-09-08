@@ -10,6 +10,11 @@ $height: 70px;
 
   &__flex {
     @include flex-pos(flex-start, space-between);
+
+    @include media-breakpoint-up(xl) {
+      align-items: center;
+      padding: 22px 0;
+    }
   }
 
   &__icon {
@@ -18,14 +23,6 @@ $height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  &__logo {
-    font-size: 2.6rem;
-    margin: 0;
-    font-family: roc-grotesk-extrawide, sans-serif;
-    font-weight: 600;
-    font-style: normal;
   }
 
   &__links {
@@ -40,31 +37,35 @@ $height: 70px;
     }
   }
 
-  &__anchor {
-    color: $c-white;
-    text-align: right;
+  &__link {
+    margin: 5px 0;
 
     @include media-breakpoint-up(xl) {
-      @include flex-pos;
+      margin: 0 10px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 
-  &__link,
-  &__logo {
-    display: inline-block;
+  &__button {
     color: $c-white;
-  }
-
-  &__link {
     text-align: right;
-    display: block;
-    color: $c-white;
+    background: none;
+    border: none;
+    appearance: none;
     font-size: 1.4rem;
-    line-height: 1.6rem;
-    font-family: roc-grotesk-wide, sans-serif;
+    line-height: 2rem;
+    font-family: poppins, sans-serif;
     font-weight: 500;
     font-style: normal;
-    text-transform: uppercase;
+    margin: 0;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
 
     @include media-breakpoint-up(md) {
       font-size: 1.8rem;
@@ -72,12 +73,23 @@ $height: 70px;
     }
 
     @include media-breakpoint-up(xl) {
-      font-size: 1.4rem;
-      margin: 0 20px;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      margin: 0 15px;
+      @include flex-pos;
+    }
+
+    &--no-spacer {
+      margin: 0;
     }
   }
 
-  .navigation__anchor {
+  &__link {
+    text-align: right;
+    display: block;
+  }
+
+  .navigation__button {
     &--light {
       .char {
         &:before,
@@ -86,7 +98,7 @@ $height: 70px;
         }
       }
     }
-    
+
     .char {
       overflow: hidden;
       color: transparent;
@@ -112,7 +124,7 @@ $height: 70px;
     }
   }
 
-  .navigation__anchor {
+  .navigation__button {
     .char:before {
       transform: translateY(-100%);
     }

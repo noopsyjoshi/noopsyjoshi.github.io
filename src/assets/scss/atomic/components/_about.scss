@@ -15,8 +15,9 @@
     line-height: 7rem;
     margin-bottom: 50px;
     font-size: 5.6rem;
-    font-family: 'poppins-medium';
+    font-family: 'poppins-medium', sans-serif;
     font-weight: 600;
+    font-style: normal;
 
     @include media-breakpoint-up(md) {
       line-height: 11rem;
@@ -35,9 +36,18 @@
 
   &__body {
     margin-bottom: 30px;
+    font-family: 'poppins-light', sans-serif;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 60px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.6rem;
+      line-height: 3.2rem;
+    }
+
+    @include media-breakpoint-up(xl) {
     }
   }
 
@@ -45,24 +55,8 @@
     margin-bottom: 50px;
   }
 
-  &__clients {
-    @include flex-pos(flex-start, center);
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-  }
-
-  &__client {
-    font-size: 3rem;
-    line-height: 4rem;
-    margin-bottom: 5px;
-    display: block;
-    text-transform: uppercase;
-
-    @include media-breakpoint-up(xl) {
-      font-size: 5rem;
-      line-height: 8rem;
-    }
+  &__skills {
+    margin-bottom: 70px;
   }
 
   &__timeline {
@@ -82,8 +76,23 @@
     }
   }
 
+  &__timeline-body {
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+
+    @include media-breakpoint-up(md) {
+      @include text--body;
+    }
+
+    &--right {
+      @include media-breakpoint-up(lg) {
+        text-align: right;
+      }
+    }
+  }
+
   &__date {
-    text-align: left;
     margin: 0;
     font-size: 1.6rem;
 
@@ -96,24 +105,56 @@
     }
   }
 
-  &__role {
-    text-align: left;
+  &__subtitle {
+    margin: 0 10px;
   }
 
-  &__location {
-    @include media-breakpoint-up(lg) {
-      text-align: right;
+  &__websites {
+    @include flex-pos(center, flex-start);
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 7rem;
+      line-height: 8rem;
+      margin-bottom: 100px;
+    }
+
+    p {
+      font-size: 6rem;
+      line-height: 7rem;
+      color: $c-grey;
+      margin: 0 10px;
+    }
+
+    a {
+      color: $c-grey;
+      transition: all 1s ease;
+
+      &:hover {
+        color: $c-white;
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      .about__website {
+        opacity: 0.15;
+      }
+    }
+
+    .about__website {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
-  &__role,
-  &__location {
-    margin: 0;
-    font-size: 2.2rem;
-    line-height: 3.6rem;
+  &__website {
+    display: inline-block;
+    transition: all 1s ease;
 
-    @include media-breakpoint-up(md) {
-      @include text--body;
+    &:hover {
+      opacity: 1;
     }
   }
 }

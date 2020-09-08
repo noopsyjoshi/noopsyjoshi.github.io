@@ -6,6 +6,21 @@
     padding: 200px 0;
   }
 
+  &__block {
+    will-change: transform;
+    -webkit-transition: -webkit-transform 4s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    transition: -webkit-transform 4s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    -o-transition: transform 4s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    transition: transform 4s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+
+    @include media-breakpoint-up(xl) {
+      -webkit-transition: -webkit-transform 3s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+      transition: -webkit-transform 3s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+      -o-transition: transform 3s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+      transition: transform 3s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    }
+  }
+
   &__project {
     margin-bottom: 100px;
 
@@ -45,6 +60,10 @@
       max-width: 70%;
     }
 
+    @include media-breakpoint-up(xl) {
+      max-width: 60%;
+    }
+
     &:hover {
       color: inherit;
       text-decoration: none;
@@ -53,10 +72,15 @@
 
   &__project-title {
     margin: 30px 0 0;
-    text-transform: uppercase;
 
     @include media-breakpoint-up(xl) {
-      margin: 50px 0 20px;
+      margin: 40px 0 10px;
+    }
+
+    &--number {
+      color: $c-orange;
+      font-size: 3rem;
+      line-height: 5.6rem;
     }
   }
 
@@ -68,17 +92,18 @@
     @include media-breakpoint-up(lg) {
       max-width: 60%;
     }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 50%;
+    }
   }
 
   &__project-description {
     font-size: 1.6rem;
+    color: $c-grey;
 
     @include media-breakpoint-up(md) {
       font-size: 2rem;
-      line-height: 3.2rem;
-    }
-
-    @include media-breakpoint-up(xl) {
     }
   }
 
@@ -86,6 +111,7 @@
     width: 100%;
     height: 250px;
     overflow: hidden;
+    cursor: none;
 
     @include media-breakpoint-up(md) {
       width: 100%;

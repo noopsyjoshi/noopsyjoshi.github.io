@@ -1,9 +1,11 @@
 <template>
-  <section data-aos="bg-color" class="hero">
+  <section id="hero" data-aos="bg-color" class="hero">
     <div class="row">
       <div class="col-10 offset-1">
         <div class="hero__heading-wrapper">
-          <h1 data-scroll data-aos="slide-up-text" class="d-split hero__heading">Hi, I'm Noops, Frontend Developer & Chai Lover</h1>
+          <h1 data-scroll data-aos="slide-up-text" class="d-split hero__heading">
+            <span class="hero__span">Hi, I'm Noops</span><span class="hero__span">Frontend Developer</span><span class="hero__span">& Chai Lover</span>
+          </h1>
         </div>
       </div>
     </div>
@@ -12,11 +14,7 @@
 
 
 <script>
-
 export default {
-  components: {
-  },
-
   beforeCreate: function() {
     document.body.className = 'bg--dark';
   },
@@ -24,5 +22,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/scss/atomic/components/_hero.scss';
+@import '@/assets/scss/atomic/components/_hero.scss';
 </style>

@@ -19,7 +19,7 @@
 }
 
 .loader {
-  animation: loadIn .3s forwards cubic-bezier(.165, .84, .44, 1);
+  animation: loadIn 4s forwards cubic-bezier(.165, .84, .44, 1);
   background: $c-black;
   height: 200%;
   left: 0;
@@ -29,7 +29,7 @@
   z-index: z('loader');
 
   &--loaded {
-    animation: loadOut .4s forwards cubic-bezier(.165, .84, .44, 1);
+    animation: loadOut 4s forwards cubic-bezier(.165, .84, .44, 1);
     transform: translate3d(0, -50%, 0);
   }
 }
