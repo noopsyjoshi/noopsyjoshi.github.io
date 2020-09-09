@@ -4,8 +4,6 @@ import Splitting from 'splitting';
 
 const SplittingAnimation = ($el) => {
   
-  console.log('into split');
-
   const animateText = Array.from(document.querySelectorAll('.d-split'));
 
   animateText.forEach((text) => {
