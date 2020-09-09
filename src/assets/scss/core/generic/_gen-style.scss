@@ -97,6 +97,7 @@ body {
   font-size: 1rem;
   font-family: 'poppins-regular', sans-serif;
   overflow-x: hidden;
+  font-weight: normal;
 }
 
 .bg {
@@ -112,11 +113,11 @@ body {
   }
 }
 
-h1 {
+h1, .h1 {
   @include h1;
 }
 
-h2 {
+h2, .h2 {
   @include h2;
 }
 

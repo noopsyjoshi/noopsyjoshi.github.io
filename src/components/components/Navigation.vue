@@ -5,8 +5,6 @@
         <div class="navigation__flex">
           <button v-scroll-to="{ 
             el: '#hero',
-            easing: 'ease-in',
-            duration: 2000 
           }" class="link d-split navigation__button navigation__button--no-spacer"
           >
             Noops
@@ -16,8 +14,6 @@
               <li v-for="(link, index) in links" :key="index" class="link navigation__link">
                 <button v-scroll-to="{ 
                   el: link.path,
-                  easing: 'ease-out',
-                  duration: index * 1000, 
                 }" class="d-split navigation__button"
                 >
                   {{ link.name }}
@@ -36,6 +32,8 @@
 </style>
 
 <script>
+import ScrollTo from '@/utils/scrollTo.js';
+
 export default {
   props: {
     links: {
@@ -63,6 +61,11 @@ export default {
       isActive: false,
     };
   },
+
+  created() {
+    ScrollTo();
+  },
+
   methods: {
     toggleNav: function() {
       this.isActive = !this.isActive;

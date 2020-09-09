@@ -1,6 +1,6 @@
 // Hero
 @mixin h1 {
-  font-family: 'poppins', sans-serif;
+  font-family: 'poppins-medium', sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
@@ -37,20 +37,16 @@
   }
 }
 
-@mixin h1--wide {
-  font-family: poppins-medium, sans-serif;
-}
-
 // Project Title (homepage)
 @mixin h2 {
   position: relative;
   margin-bottom: 70px;
-  font-family: poppins-medium, sans-serif;
+  font-family: 'poppins-medium', sans-serif;
   font-size: 2rem;
   line-height: 4rem;
   font-weight: 500;
+  font-style: normal;
   color: inherit;
-  text-transform: capitalize;
 
   &--light {
     &:after {
@@ -119,6 +115,7 @@
   font-size: 1.4rem;
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-style: normal;
   letter-spacing: 0.275rem;
 
   @include media-breakpoint-up(md) {

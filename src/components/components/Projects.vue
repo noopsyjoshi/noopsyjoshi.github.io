@@ -14,8 +14,8 @@
                 </figure>
               </router-link>
               <h3 data-aos="slide-up-body" class="d-split projects__project-title">
-                <span class="projects__project-title projects__project-title--number">{{ item.number }}</span>
-                {{ item.title }}
+                <span class="projects__project-title--number">{{ item.number }} &nbsp;</span>
+                <span>{{ item.title }}</span>
               </h3>
               <div class="projects__project-description-wrapper">
                 <p data-aos="slide-up-body" class="d-split projects__project-description">{{ item.description }}</p>

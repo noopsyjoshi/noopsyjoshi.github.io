@@ -8,17 +8,10 @@
 
   &__block {
     will-change: transform;
-    -webkit-transition: -webkit-transform 4s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-    transition: -webkit-transform 4s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-    -o-transition: transform 4s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-    transition: transform 4s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-
-    @include media-breakpoint-up(xl) {
-      -webkit-transition: -webkit-transform 3s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-      transition: -webkit-transform 3s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-      -o-transition: transform 3s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-      transition: transform 3s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-    }
+    -webkit-transition: -webkit-transform 2s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    transition: -webkit-transform 2s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    -o-transition: transform 2s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    transition: transform 2s cubic-bezier(0.04, 0.72, 0.09, 0.99);
   }
 
   &__project {
@@ -79,8 +72,6 @@
 
     &--number {
       color: $c-orange;
-      font-size: 3rem;
-      line-height: 5.6rem;
     }
   }
 
