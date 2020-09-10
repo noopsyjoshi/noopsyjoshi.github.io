@@ -33,17 +33,24 @@
     }
   }
 
-  &__body {
+  &__intro {
+    @include text--large;
     margin-bottom: 30px;
-    font-weight: 300;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 60px;
     }
 
-    @include media-breakpoint-up(lg) {
-      font-size: 2.6rem;
-      line-height: 3.2rem;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__body {
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 60px;
     }
   }
 
@@ -53,33 +60,44 @@
 
   &__skills {
     margin-bottom: 70px;
-  }
 
-  &__timeline {
-    margin-top: 70px;
-
-    @include media-breakpoint-up(md) {
-      margin-top: 100px;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 180px;
     }
   }
 
   &__block {
-    border-bottom: 1px solid $c-white;
     padding: 20px 0;
-
-    &.first {
-      border-top: 1px solid $c-white;
-    }
+    position: relative;
+    transform: translateX(25%) skewX(-40deg);
+    opacity: 0;
 
     @include media-breakpoint-up(md) {
       padding: 30px 0;
+    }
+
+    &:after {
+      content: '';
+      height: 2px;
+      background-color: $c-white;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0%;
+    }
+
+    &.aos-animate {
+      animation: slideInRight 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+
+      &:after {
+        animation: animateLineRight .6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      }
     }
   }
 
   &__timeline-body {
     margin: 0;
     @include text--body;
-    font-weight: 300;
 
     &--right {
       @include media-breakpoint-up(lg) {
@@ -154,5 +172,17 @@
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+@for $i from 1 to 5 {
+  .about__block:nth-child(#{$i}) {
+    animation-delay: $i * 0.1s;
+  }
+}
+
+@for $i from 1 to 5 {
+  .about__block::after:nth-child(#{$i}) {
+    animation-delay: $i * 0.05s;
   }
 }

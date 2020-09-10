@@ -23,12 +23,22 @@
         </figure>
       </div>
       <!-- Description -->
-      <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
+      <div class="col-10 offset-1 col-md-8 offset-md-2">
         <p
             data-aos="slide-up-body"
-            class="d-split project__body"
+            class="d-split project__intro"
         >
-          Thanos is a group consisting of three luxury hotel retreats located in Cyprus. The hotels, Anassa, Annabelle and Almyra adhere to a brand guideline, embodying elegance, serenity and the Meditarrean charm, but also maintain a unique feel that makes each hotel distinctive. I helped deliver the frontend for the three brochure sites and their respective booking systems, while liasing with a back-end partner company to integrate the site as seamlessly as possible by providing extensive integration support.
+          Thanos is a group consisting of three luxury hotel retreats located in Cyprus. The hotels, Anassa, Annabelle and Almyra adhere to a brand guideline, embodying elegance, serenity and the Meditarrean charm, but also maintain a unique feel that makes each hotel distinctive. 
+        </p>
+      </div>
+      <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
+        <p
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+            class="project__body"
+        >
+          I helped deliver the frontend for the three brochure sites and their respective booking systems, while liasing with a back-end partner company to integrate the site as seamlessly as possible by providing extensive integration support.
         </p>
       </div>
       <!-- Link to website -->
@@ -78,8 +88,10 @@
       </div>
       <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
         <p
-            data-aos="slide-up-body"
-            class="d-split project__body"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+            class="project__body"
         >
           I worked individually and part of a development team ranging between two and six developers at a time. The site was broken down into pages and modules which were assigned and discussed by each member of the team during the sprint kick off and daily stands up. We used the popular SCSS BEM format to keep the styles organised and consistent across all the projects. Retrospectives were held in a classic agency fashion using colourful sticky notes at the end of every site build, to discuss how to further improve the process. In addition to working on my technical skills, I got to understand the top view process of the project by engaging closely to QA, Project Managers, UX and UI designers, often sitting together and sharing ideas.
         </p>
@@ -87,7 +99,12 @@
       <!-- Tech -->
       <div class="col-10 offset-1 col-xl-10">
         <div class="project__tech-wrapper">
-          <p data-aos="slide-up-subheading" class="d-split section__subtitle">Tech Stack</p>
+          <h2
+              data-aos="slide-up-subheading"
+              class="d-split section__title section__title--low-spacer"
+          >
+            Tech Stack
+          </h2>
           <ul data-aos="fade-in" class="project__tech-list">
             <li class="project__tech">
               <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">JavaScript</p>
@@ -118,13 +135,13 @@
             </li>
           </ul>
         </div>
-      </div>   
+      </div>
       <!-- Next Project -->
       <div class="col-10 offset-1">
         <h2 data-scroll data-aos="slide-up-subheading" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
         <router-link :to="{ name: 'generalassembly' }" class="project__link projects__link">
-          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light plane projects__project-image-wrapper">
-            <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" src="@/assets/images/projects/generalassembly.jpg">
+          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light projects__project-image-wrapper">
+            <img data-aos="zoom-image" class="projects__project-image reveal-image" src="@/assets/images/projects/generalassembly.jpg">
           </figure>
           <h3 data-aos="slide-up-body" class="project__project-title d-split">General Assembly Work</h3>
         </router-link>

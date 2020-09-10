@@ -4,16 +4,19 @@
       <div class="col-10 offset-1">
         <h2 data-aos="slide-up-subheading" class="d-split section__title">About</h2>
       </div>
-      <div class="about__overview">
-        <div class="col-10 offset-1 col-md-8 offset-md-1 col-xl-5 offset-xl-2">
-          <p data-aos="slide-up-body" class="about__body d-split">
-            I'm a frontend developer living in London, fuelled by ramen, chai, glitter & pixel perfection. Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including e-commerce and hospitality. My main pool of skills involve HTML, SCSS, JavaScript, Vue.js, Handlebars and Shopify.
+      <div class="col-10 offset-1 col-md-8">
+        <div class="about__overview">
+          <p data-aos="slide-up-body" class="about__intro d-split">
+            I'm Noopur Joshi, a frontend developer living in London, fuelled by creative designs, clean code, chai, glitter & pixel perfection.
           </p>
         </div>
       </div>
-      <div class="about__skills">
-        <div class="col-10 offset-1 col-md-8 offset-md-1 col-xl-5 offset-xl-2">
-          <p data-aos="slide-up-body" class="about__body d-split">
+      <div class="col-10 offset-1 col-md-8 col-lg-7 col-xl-5 offset-xl-2">
+        <p class="about__body" data-aos="fade-in" data-aos-delay="1400">Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including e-commerce and hospitality.</p>
+      </div>
+      <div class="col-10 offset-1 col-md-8 col-lg-7 offset-lg-2 col-xl-5 offset-xl-2">
+        <div class="about__skills">
+          <p class="about__body" data-aos="fade-in" data-aos-delay="1600">
             Expertise in HTML, SCSS, JavaScript, Shopify e-commerce platform, Handlebars, Git Version Control, sprint planning, communication with project managers, clients and partners and good understanding of UX and UI designs. I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.
           </p>
         </div>
@@ -32,19 +35,20 @@
         </div>
       </div> -->
       <div class="col-10 offset-1">
+        <h2 data-aos="slide-up-subheading" class="d-split section__title section__title--low-spacer">Timeline</h2>
+      </div>
+      <div class="col-10 offset-1">
         <div class="about__timeline">
-          <div v-for="(item, index) in items" :key="index">
-            <div data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000" :class="item.class" class="about__block">
-              <div class="row">
-                <div class="col-12 col-lg-4">
-                  <p class="about__date">{{ item.date }}</p>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <p class="about__timeline-body">{{ item.role }}</p>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <p class="about__timeline-body about__timeline-body--right">{{ item.location }}</p>
-                </div>
+          <div v-for="(item, index) in items" :key="index" data-aos="slide-in-right" :class="item.class" class="about__block">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <p class="about__date">{{ item.date }}</p>
+              </div>
+              <div class="col-12 col-lg-4">
+                <p class="about__timeline-body">{{ item.role }}</p>
+              </div>
+              <div class="col-12 col-lg-4">
+                <p class="about__timeline-body about__timeline-body--right">{{ item.location }}</p>
               </div>
             </div>
           </div>

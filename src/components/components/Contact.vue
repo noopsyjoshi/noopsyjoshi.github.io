@@ -9,10 +9,10 @@
         </p>
        
         <div data-aos="fade-in" data-aos-delay="600" class="contact__links">
-          <div class="contact__location">
+          <!-- <div class="contact__location">
             <Location class="contact__icon" />
             <p class="d-split contact__link">London</p>
-          </div>
+          </div> -->
           <p>
             <a target="_blank" class="d-split link contact__link contact__link-span" href="github.com/noopsyjoshi/">GitHub</a>
           </p>
@@ -30,11 +30,11 @@
 </style>
 
 <script>
-import Location from '@/assets/icons/location.svg';
+// import Location from '@/assets/icons/location.svg';
 
 export default {
   components: {
-    Location,
+    // Location,
   },
 };
 </script>

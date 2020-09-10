@@ -23,10 +23,20 @@
         </figure>
       </div>
       <!-- Description -->
-      <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
+      <div class="col-10 offset-1 col-md-8 offset-md-2">
         <p
             data-aos="slide-up-body"
-            class="d-split project__body"
+            class="d-split project__intro"
+        >
+          Lorem Ipsum
+        </p>
+      </div>
+      <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
+        <p
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+            class="project__body"
         >
           The project was to collaborate in a team of six developers to build a website for 'The Collective', a group of thoughtful co-living spaces situated around London. The websites embraces colourful components, fun carousels and use of animating svg shapes. The frontend is built using Vue.js, HTML and SCSS and uses Kentico for content management.
         </p>
@@ -73,7 +83,12 @@
       <!-- Tech -->
       <div class="col-10 offset-1 col-xl-10">
         <div class="project__tech-wrapper">
-          <p data-aos="slide-up-subheading" class="d-split section__subtitle">Tech Stack</p>
+          <h2
+              data-aos="slide-up-subheading"
+              class="d-split section__title section__title--low-spacer"
+          >
+            Tech Stack
+          </h2>
           <ul data-aos="fade-in" class="project__tech-list">
             <li class="project__tech">
               <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">Vue.js</p>
@@ -103,13 +118,12 @@
         </div>
       </div>
 
-
       <!-- Next Project -->
       <div class="col-10 offset-1">
         <h2 data-scroll data-aos="slide-up-subheading" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
         <router-link :to="{ name: 'thanos' }" class="project__link projects__link">
-          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light plane projects__project-image-wrapper">
-            <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" src="@/assets/images/projects/almyra.jpg">
+          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light projects__project-image-wrapper">
+            <img data-aos="zoom-image" class="projects__project-image reveal-image" src="@/assets/images/projects/almyra.jpg">
           </figure>
           <h3 data-aos="slide-up-body" class="project__project-title d-split">Thanos Group</h3>
         </router-link>

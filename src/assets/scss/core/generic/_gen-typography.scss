@@ -4,19 +4,11 @@
   font-weight: 400;
   font-style: normal;
   margin: 0;
-
-  @media only screen and (max-width: 380px) {
-    font-size: 5.4rem;
-    line-height: 7rem;
-  }
-
-  @media only screen and (min-width: 380px) {
-    font-size: 5.8rem;
-  }
+  line-height: 6rem;
+  font-size: 5rem;
 
   @media only screen and (min-width: 450px) {
     font-size: 6.2rem;
-    font-weight: 500;
   }
 
   @include media-breakpoint-up(md) {
@@ -30,6 +22,7 @@
   }
 
   @include media-breakpoint-up(xl) {
+    font-weight: 500;
     font-size: 11rem;
     line-height: 12.6rem;
   }
@@ -75,7 +68,7 @@
   line-height: 3.2rem;
   margin: 0;
   font-family: 'poppins', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
 
   @include media-breakpoint-up(md) {
@@ -83,7 +76,7 @@
     line-height: 4rem;
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     font-size: 5.2rem;
     line-height: 5.6rem;
   }
@@ -95,7 +88,7 @@
   line-height: 3rem;
   font-weight: 300;
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     font-size: 4rem;
     line-height: 5.2rem;
   }
@@ -104,7 +97,7 @@
 @mixin text--body {
   margin-bottom: 0;
   font-family: 'poppins', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 2rem;
   line-height: 3rem;
 
@@ -114,8 +107,34 @@
   }
 
   @include media-breakpoint-up(lg) {
-    line-height: 2.6rem;
+    line-height: 2.8rem;
     font-size: 2rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: 3.4rem;
+  }
+
+  .bg--light & {
+    font-weight: 400;
+  }
+}
+
+@mixin text--large {
+  font-weight: 300;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .bg--light & {
+    font-weight: 400;
   }
 }
 

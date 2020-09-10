@@ -26,12 +26,10 @@
 [data-aos='fade-in'] {
   &.aos-init {
     opacity: 0;
-    transform: translateY(20%);
   }
 
   &.aos-animate {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -68,7 +66,7 @@
       will-change: transform;
       transform-origin: top left;
     }
-}
+  }
 }
 
 [data-aos='slide-up-subheading'] {
@@ -81,7 +79,7 @@
 
   &.aos-animate {
     .char {
-      animation: slideUp .6s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation: slideUp 0.6s cubic-bezier(0.2, 0, 0.1, 1) both;
       animation-delay: calc(70ms * var(--char-index));
       will-change: transform;
       transform-origin: top left;
@@ -100,10 +98,23 @@
   &.aos-animate {
     .char {
       animation: slideUp 1s cubic-bezier(0.2, 0, 0.1, 1) both;
-      animation-delay: calc(1ms * var(--char-index));
+      animation-delay: calc(20ms * var(--char-index));
       will-change: transform;
       transform-origin: top left;
     }
+  }
+}
+
+[data-aos='slide-up-fade'] {
+  &.aos-init {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+
+  &.aos-animate {
+    animation: slideUpFade 0.6s 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    will-change: transform;
+    transform-origin: top left;
   }
 }
 
@@ -114,7 +125,7 @@
   }
 
   50% {
-     opacity: 1;
+    opacity: 1;
     transform: translateY(-5%);
   }
 
@@ -125,9 +136,21 @@
 }
 
 @keyframes slideUp {
-    0% {
+  0% {
     transform: translateY(100%);
     opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
   }
 
   100% {
@@ -218,3 +241,25 @@
   }
 }
 
+// Timeline Animations
+@keyframes animateLineRight {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(25%) skewX(-40deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}

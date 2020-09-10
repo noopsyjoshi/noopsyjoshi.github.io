@@ -83,6 +83,10 @@
   }
 
   &__project-description-wrapper {
+    @include media-breakpoint-down(sm) {
+
+    }
+    
     @include media-breakpoint-up(md) {
       max-width: 70%;
     }

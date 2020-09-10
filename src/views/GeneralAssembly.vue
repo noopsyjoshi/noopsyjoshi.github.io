@@ -25,8 +25,10 @@
       <!-- Description -->
       <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
         <p
-            data-aos="slide-up-body"
-            class="d-split project__body"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+            class="project__body"
         >
           I enrolled in General Assembly’s Web Development Immersive course in June 2018 to help develop my coding skills further. It was a pivotal point in my journey as it taught me that perseverance, curiosity and a logical approach to problem solving is key to becoming a Web Developer. I gained insight into full stack technologies and frameworks such as JavaScript, React.js and Node.js, Git and Github version control, SCSS and CSS frameworks Bootstrap and Bulma.
         </p>
@@ -52,8 +54,10 @@
       </div>
       <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
         <p
-            data-aos="slide-up-body"
-            class="d-split project__body"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+            class="project__body"
         >
           Over the time period of 3 months, I worked on 4 projects including a group one. For my first project I recreated the classic Space Invaders game with a Star Wars spin, using HTML, CSS and JavaScript. Designed as a one player game where you can move the spaceship left and right, shoot at the incoming enemies by pressing the spacebar and defeat the Death Star in a final boss level.
         </p>
@@ -78,7 +82,12 @@
       <!-- Tech -->
       <div class="col-10 offset-1 col-xl-10">
         <div class="project__tech-wrapper">
-          <p data-aos="slide-up-subheading" class="d-split section__subtitle">Tech Stack</p>
+          <h2
+              data-aos="slide-up-subheading"
+              class="d-split section__title section__title--low-spacer"
+          >
+            Tech Stack
+          </h2>
           <ul data-aos="fade-in" class="project__tech-list">
             <li class="project__tech">
               <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">JavaScript</p>
@@ -114,10 +123,10 @@
       <div class="col-10 offset-1">
         <h2 data-scroll data-aos="slide-up-subheading" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
         <router-link :to="{ name: 'thecollective' }" class="project__link projects__link">
-          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light plane projects__project-image-wrapper">
-            <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" src="@/assets/images/projects/thecollective.jpg">
+          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light projects__project-image-wrapper">
+            <img data-aos="zoom-image" class="projects__project-image reveal-image" src="@/assets/images/projects/paper.jpg">
           </figure>
-          <h3 data-aos="slide-up-body" class="project__project-title d-split">The Collective</h3>
+          <h3 data-aos="slide-up-body" class="project__project-title d-split">Paper London</h3>
         </router-link>
       </div>
     </div>

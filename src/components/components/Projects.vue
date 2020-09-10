@@ -16,7 +16,7 @@
                 <span>{{ item.title }}</span>
               </h3>
               <div class="projects__project-description-wrapper">
-                <p data-aos="slide-up-body" class="d-split projects__project-description">{{ item.description }}</p>
+                <p data-aos="slide-up-fade" class="projects__project-description">{{ item.description }}</p>
               </div>
             </div>
           </div>

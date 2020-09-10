@@ -23,26 +23,90 @@
         </figure>
       </div>
       <!-- Description -->
-      <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
+      <div class="col-10 offset-1 col-md-8 offset-md-2">
         <p
             data-aos="slide-up-body"
-            class="d-split project__body"
+            class="d-split project__intro"
         >
-          Paper is a luxury women's retail brand with focus on bold, colourful and sustainable clothing. The client wanted to update their site with a redesign and build to closely reflect their brand guidelines. Using the Debut theme in Shopify as a base template, I was responsible for creating the site, with help from two other developers on the shopping cart, bug fixes and deployment to the live site. The website took three months to complete and the launch was a huge successs for the client that resulted in increased sales.
+          Paper is a luxury women's retail brand with focus on bold, colourful and sustainable clothing.
+        </p>
+      </div>
+      <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
+        <p
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+            class="project__body"
+        >
+          The client wanted to update their site with a redesign and build to closely reflect their brand guidelines. Using the Debut theme in Shopify as a base template, I was responsible for creating the site, with help from two other developers on the shopping cart, bug fixes and deployment to the live site. The website took three months to complete and the launch was a huge successs for the client that resulted in increased sales.
         </p>
       </div>
       <!-- Link to website -->
       <div class="col-10 offset-1 col-md-7 offset-md-2">
         <div data-aos="slide-up-body">
-          <a target="_blank" href="https://paperlondon.com/" class="link d-split project__anchor project__anchor--light">See Website</a>
+          <a
+              target="_blank"
+              href="https://paperlondon.com/"
+              class="link d-split project__anchor project__anchor--light"
+          >See Website</a>
         </div>
       </div>
       <!-- Images -->
       <div class="col-10 offset-1">
+        <figure
+            data-aos="reveal-image-right"
+            class="project__figure reveal-image-right reveal-image-right--light"
+        >
+          <img
+              data-aos="zoom-image"
+              class="project__image project__image--contain reveal-image"
+              src="@/assets/images/paperlondon/paper-hero.png"
+          >
+        </figure>
+        <figure
+            data-aos="reveal-image-right"
+            class="project__figure reveal-image-right reveal-image-right--light"
+        >
+          <img
+              data-aos="zoom-image"
+              class="project__image project__image--contain reveal-image"
+              src="@/assets/images/paperlondon/paper-navigation.png"
+          >
+        </figure>
+        <figure
+            data-aos="reveal-image-right"
+            class="project__figure reveal-image-right reveal-image-right--light"
+        >
+          <img
+              data-aos="zoom-image"
+              class="project__image project__image--contain reveal-image"
+              src="@/assets/images/paperlondon/paper-instagram.png"
+          >
+        </figure>
+        <figure
+            data-aos="reveal-image-right"
+            class="project__figure reveal-image-right reveal-image-right--light"
+        >
+          <img
+              data-aos="zoom-image"
+              class="project__image project__image--contain reveal-image"
+              src="@/assets/images/paperlondon/paper-pdp.png"
+          >
+        </figure>
+        <figure
+            data-aos="reveal-image-right"
+            class="project__figure reveal-image-right reveal-image-right--light"
+        >
+          <img
+              data-aos="zoom-image"
+              class="project__image project__image--contain reveal-image"
+              src="@/assets/images/paperlondon/paper-recommended.png"
+          >
+        </figure>
         <div class="image-grid">
           <figure data-aos="reveal-image-right" class="image-grid__figure">
-            <img 
-                src="@/assets/images/paperlondon/paper-02.jpg"
+            <img
+                src="@/assets/images/paperlondon/paper-collection.png"
                 alt="paper london"
                 class="image-grid__image reveal-image-right reveal-image-right--light"
             >
@@ -63,7 +127,7 @@
           </figure>
           <figure data-aos="reveal-image-right" class="image-grid__figure">
             <img
-                src="@/assets/images/paperlondon/paper-05.jpg"
+                src="@/assets/images/paperlondon/paper-navigation.png"
                 alt="paper london"
                 class="image-grid__image reveal-image-right reveal-image-right--light"
             >
@@ -71,43 +135,117 @@
         </div>
       </div>
       <!-- Tech -->
-      <div class="col-10 offset-1 col-xl-10">
+      <div class="col-10 offset-1">
         <div class="project__tech-wrapper">
-          <p data-aos="slide-up-subheading" class="d-split section__subtitle">Tech Stack</p>
+          <h2
+              data-aos="slide-up-subheading"
+              class="d-split section__title section__title--low-spacer"
+          >
+            Tech Stack
+          </h2>
           <ul data-aos="fade-in" class="project__tech-list">
             <li class="project__tech">
-              <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">JavaScript</p>
+              <p
+                  class="d-split"
+                  data-aos-delay="750"
+                  data-aos-duration="1200"
+                  data-aos="fade-in"
+              >
+                JavaScript
+              </p>
             </li>
             <li class="project__tech">
-              <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">HTML</p>
+              <p
+                  class="d-split"
+                  data-aos-delay="750"
+                  data-aos-duration="1200"
+                  data-aos="fade-in"
+              >
+                HTML
+              </p>
             </li>
             <li class="project__tech">
-              <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">SCSS</p>
+              <p
+                  class="d-split"
+                  data-aos-delay="750"
+                  data-aos-duration="1200"
+                  data-aos="fade-in"
+              >
+                SCSS
+              </p>
             </li>
             <li class="project__tech">
-              <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">Shopify</p>
+              <p
+                  class="d-split"
+                  data-aos-delay="750"
+                  data-aos-duration="1200"
+                  data-aos="fade-in"
+              >
+                Shopify
+              </p>
             </li>
             <li class="project__tech">
-              <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">Liquid</p>
+              <p
+                  class="d-split"
+                  data-aos-delay="750"
+                  data-aos-duration="1200"
+                  data-aos="fade-in"
+              >
+                Liquid
+              </p>
             </li>
             <li class="project__tech">
-              <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">AJAX</p>
+              <p
+                  class="d-split"
+                  data-aos-delay="750"
+                  data-aos-duration="1200"
+                  data-aos="fade-in"
+              >
+                AJAX
+              </p>
             </li>
             <li class="project__tech">
-              <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">Sketch</p>
+              <p
+                  class="d-split"
+                  data-aos-delay="750"
+                  data-aos-duration="1200"
+                  data-aos="fade-in"
+              >
+                Sketch
+              </p>
             </li>
             <li class="project__tech">
-              <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">Jira</p>
+              <p
+                  class="d-split"
+                  data-aos-delay="750"
+                  data-aos-duration="1200"
+                  data-aos="fade-in"
+              >
+                Jira
+              </p>
             </li>
           </ul>
         </div>
-      </div>   
+      </div>
       <!-- Next Project -->
       <div class="col-10 offset-1">
-        <h2 data-scroll data-aos="slide-up-subheading" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
+        <h2
+            data-scroll
+            data-aos="slide-up-subheading"
+            class="d-split section__title section__title--low-spacer section__title--light"
+        >
+          Next Project
+        </h2>
         <router-link :to="{ name: 'thecollective' }" class="project__link projects__link">
-          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light plane projects__project-image-wrapper">
-            <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" src="@/assets/images/projects/thecollective.jpg">
+          <figure
+              data-aos="reveal-image-right"
+              class="reveal-image-right reveal-image-right--light projects__project-image-wrapper"
+          >
+            <img
+                data-aos="zoom-image"
+                class="projects__project-image reveal-image"
+                src="@/assets/images/projects/thecollective.jpg"
+            >
           </figure>
           <h3 data-aos="slide-up-body" class="project__project-title d-split">The Collective</h3>
         </router-link>
@@ -124,7 +262,8 @@ import Close from '@/components/elements/Close.vue';
 
 export default {
   components: {
-    Close, CustomCursor,
+    Close,
+    CustomCursor,
   },
 
   beforeCreate: function() {
