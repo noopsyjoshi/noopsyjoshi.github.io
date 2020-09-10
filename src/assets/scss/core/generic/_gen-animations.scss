@@ -23,7 +23,37 @@
   visibility: hidden;
 }
 
-[data-aos='slide-up-text'] {
+[data-aos='fade-in'] {
+  &.aos-init {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos] {
+  body[data-aos-easing='smooth'] &,
+  &[data-aos][data-aos-easing='smooth'] {
+    transition-timing-function: cubic-bezier(0.2, 0, 0.1, 1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// Splitting Text Animations
+[data-aos='slide-up-heading'] {
   &.aos-init {
     .char {
       transform: translateY(100%);
@@ -33,15 +63,26 @@
 
   &.aos-animate {
     .char {
-      animation: slideIn 1.6s cubic-bezier(0.2, 0, 0.1, 1) both;
-      animation-delay: calc(40ms * var(--char-index));
+      animation: slideUpHeading 1s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation-delay: calc(50ms * var(--char-index));
       will-change: transform;
       transform-origin: top left;
     }
+}
+}
 
-    .word {
-      animation: slideIn 1.6s cubic-bezier(0.2, 0, 0.1, 1) both;
-      animation-delay: calc(40ms * var(--word-index));
+[data-aos='slide-up-subheading'] {
+  &.aos-init {
+    .char {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+
+  &.aos-animate {
+    .char {
+      animation: slideUp .6s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation-delay: calc(70ms * var(--char-index));
       will-change: transform;
       transform-origin: top left;
     }
@@ -58,34 +99,44 @@
 
   &.aos-animate {
     .char {
-      animation: slideIn 1s cubic-bezier(0.2, 0, 0.1, 1) both;
-      animation-delay: calc(2ms * var(--char-index));
+      animation: slideUp 1s cubic-bezier(0.2, 0, 0.1, 1) both;
+      animation-delay: calc(1ms * var(--char-index));
       will-change: transform;
       transform-origin: top left;
     }
   }
 }
 
-[data-aos='reveal-text'] {
-  &.aos-init {
+@keyframes slideUpHeading {
+  0% {
     transform: translateY(100%);
+    opacity: 1;
   }
 
-  &.aos-animate {
-    animation: reveal 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
-  }
-}
-
-[data-aos='zoom-image'] {
-  &.aos-init {
-    transform: scale(1);
+  50% {
+     opacity: 1;
+    transform: translateY(-5%);
   }
 
-  &.aos-animate {
-    animation: zoomImage 2s ease forwards;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes slideUp {
+    0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Image Animations
 [data-aos='reveal-image-right'] {
   &.aos-init {
     &.reveal-image-right {
@@ -104,22 +155,33 @@
   }
 }
 
-[data-aos='fade-in'] {
+[data-aos='zoom-image'] {
   &.aos-init {
-    opacity: 0;
-    transform: translateY(20%);
+    transform: scale(1);
   }
 
   &.aos-animate {
-    opacity: 1;
-    transform: translateY(0);
+    animation: zoomImage 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   }
 }
 
-[data-aos] {
-  body[data-aos-easing='smooth'] &,
-  &[data-aos][data-aos-easing='smooth'] {
-    transition-timing-function: cubic-bezier(0.2, 0, 0.1, 1);
+@keyframes revealImageRight {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes zoomImage {
+  0% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -156,90 +218,3 @@
   }
 }
 
-.reveal-text-wrapper {
-  overflow: hidden;
-}
-
-.reveal-text {
-  margin: 0;
-}
-
-.reveal-text-reverse {
-  animation: revealReverse 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
-}
-
-@keyframes reveal {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes revealReverse {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(100%);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateY(100%);
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideOutIn {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes revealImageRight {
-  0% {
-    transform: translateY(0%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes zoomImage {
-  0% {
-    transform: scale(1.4);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}

@@ -2,9 +2,7 @@
   <section id="about" class="about">
     <div class="row">
       <div class="col-10 offset-1">
-        <div class="reveal-text-wrapper">
-          <h2 data-aos="slide-up-text" class="d-split section__title">About</h2>
-        </div>
+        <h2 data-aos="slide-up-subheading" class="d-split section__title">About</h2>
       </div>
       <div class="about__overview">
         <div class="col-10 offset-1 col-md-8 offset-md-1 col-xl-5 offset-xl-2">
@@ -20,9 +18,8 @@
           </p>
         </div>
       </div>
-      <div class="col-10 offset-1 col-xl-8 offset-xl-1">
-        <!-- <p data-aos="slide-up-text" class="d-split section__subtitle about__subtitle">Client Sites</p> -->
-        <!-- <div data-aos="fade-in" data-aos-delay="1000" data-aos-duration="1000" class="about__websites">
+      <!-- <div class="about__websites">
+        <div class="col-10 offset-1 col-xl-8 offset-xl-1">
           <p class="link about__website"><a href="https://paperlondon.com/">Paper London</a></p>
           <p>/</p>
           <p class="link about__website"><a href="https://www.anassa.com/">Anassa</a></p>
@@ -32,8 +29,8 @@
           <p class="link about__website"><a href="https://www.annabelle.com.cy/">Annabelle</a></p>
           <p>/</p>
           <p class="link about__website"><a href="https://www.thecollective.com/">The Collective</a></p>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
       <div class="col-10 offset-1">
         <div class="about__timeline">
           <div v-for="(item, index) in items" :key="index">

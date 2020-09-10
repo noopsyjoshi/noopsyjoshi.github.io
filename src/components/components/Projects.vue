@@ -2,9 +2,7 @@
   <section id="projects" class="projects">
     <div class="row">
       <div class="np--sm col-10 offset-1">
-        <div class="reveal-text-wrapper">
-          <h2 data-scroll data-aos="slide-up-text" class="d-split section__title">Projects</h2>
-        </div>
+        <h2 data-scroll data-aos="slide-up-subheading" class="d-split section__title">Projects</h2>
         <div class="projects__block">
           <div v-for="(item, index) in projects" :key="index" class="projects__project">
             <div class="projects__link">

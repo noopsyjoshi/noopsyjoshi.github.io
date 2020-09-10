@@ -1,6 +1,6 @@
 <template>
   <div class="col-10 offset-1">
-    <p data-aos="slide-up-text" class="d-split section__subtitle">Websites</p>
+    <p data-aos="slide-up-subheading" class="d-split section__subtitle">Websites</p>
     <ul data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="1000" class="about__clients">
       <li class="about__client">The Collective</li>
       <li class="about__client">Anassa</li>

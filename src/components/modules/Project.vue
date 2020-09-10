@@ -79,18 +79,14 @@
       </div>    -->
       <!-- Next Project -->
       <!-- <div class="col-10 offset-1">
-        <div class="reveal-text-wrapper">
           <h2 data-scroll data-aos="slide-up-text" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
-        </div>
         <router-link :to="{ name: 'thecollective' }" class="projects__link">
           <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light plane projects__project-image-wrapper">
             <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" src="@/assets/images/projects/thecollective.jpg">
           </figure>
-          <div class="reveal-text-wrapper projects__project-title-wrapper">
             <h2 data-aos="slide-up-body" class="d-split">
               The Collective
             </h2>
-          </div>
         </router-link>
       </div> -->
     </div>

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-10 offset-1 col-md-9 col-xl-10">
         <div class="hero__heading-wrapper">
-          <h1 data-scroll data-aos="slide-up-text" class="d-split hero__heading">
+          <h1 data-scroll data-aos="slide-up-heading" class="d-split hero__heading">
             <span class="hero__span">Hi, I'm Noops</span>
             <span class="hero__span">Frontend Developer</span>
             <span class="hero__span">& Chai Lover</span>

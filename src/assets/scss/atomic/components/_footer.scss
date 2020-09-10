@@ -1,27 +1,25 @@
 .footer {
   &__body {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    text-transform: uppercase;
-    font-family: 'poppins-light', sans-serif;
+    @extend %footer-font;
   }
 
   &__flex {
     border-top: 1px solid $c-white;
     padding: 40px 0 50px;
     @include flex-pos(center, space-between);
+
+    .bg--light & {
+      border-top: 1px solid $c-black;
+    }
   }
 
   &__button {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    text-transform: uppercase;
-    font-family: 'poppins-light', sans-serif;
+    @extend %footer-font;
     @include reset-button;
-    color: $c-white;
     margin-right: 10px;
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       outline: none;
     }
   }
@@ -30,4 +28,14 @@
     width: 25px;
     height: 25px;
   }
+}
+
+%footer-font {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-family: 'poppins-medium', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: inherit;
 }

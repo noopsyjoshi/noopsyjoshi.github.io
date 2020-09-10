@@ -9,7 +9,7 @@
           </router-link>
         </div>
         <div class="project__intro-block">
-          <h1 data-aos="slide-up-text" class="h2 d-split project__title">The Collective</h1>
+          <h1 data-aos="slide-up-heading" class="h2 d-split project__title">The Collective</h1>
         </div>
         <figure
             data-aos="reveal-image-right"
@@ -73,7 +73,7 @@
       <!-- Tech -->
       <div class="col-10 offset-1 col-xl-10">
         <div class="project__tech-wrapper">
-          <p data-aos="slide-up-text" class="d-split section__subtitle">Tech Stack</p>
+          <p data-aos="slide-up-subheading" class="d-split section__subtitle">Tech Stack</p>
           <ul data-aos="fade-in" class="project__tech-list">
             <li class="project__tech">
               <p class="d-split" data-aos-delay="750" data-aos-duration="1200" data-aos="fade-in">Vue.js</p>
@@ -106,9 +106,7 @@
 
       <!-- Next Project -->
       <div class="col-10 offset-1">
-        <div class="reveal-text-wrapper">
-          <h2 data-scroll data-aos="slide-up-text" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
-        </div>
+        <h2 data-scroll data-aos="slide-up-subheading" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
         <router-link :to="{ name: 'thanos' }" class="project__link projects__link">
           <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light plane projects__project-image-wrapper">
             <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" src="@/assets/images/projects/almyra.jpg">
