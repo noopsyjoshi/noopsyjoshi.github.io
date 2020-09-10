@@ -23,7 +23,7 @@ const SkewAnimation = ($el) => {
     const enableSkew = function() {
       const newPos = window.pageYOffset;
       const diff = newPos - prevPos;
-      const speed = _.clamp(diff * 0.07, -10, 10);
+      const speed = _.clamp(diff * 0.03, -10, 10);
       projects.forEach((project) => {
         project.style.transform = `skewY(${speed}deg)`;
       });

@@ -40,7 +40,7 @@
       <!-- Images -->
       <div class="col-10 offset-1">
         <div class="image-grid">
-          <figure data-scroll-container data-scroll-speed="1.5" data-aos="reveal-image-right" class="image-grid__figure">
+          <figure data-aos="reveal-image-right" class="image-grid__figure">
             <img 
                 src="@/assets/images/paperlondon/paper-02.jpg"
                 alt="paper london"

@@ -3,10 +3,7 @@
     <div class="row">
       <div class="col-10 offset-1">
         <div class="navigation__flex">
-          <button v-scroll-to="{ 
-            el: '#hero',
-          }" class="link d-split navigation__button navigation__button--no-spacer"
-          >
+          <button v-scroll-to="{ el: '#hero', duration: 2000, easing: [0.64, 0, 0.78, 0] }" class="link d-split navigation__button navigation__button--no-spacer">
             Noops
           </button>
           <div class="navigation__block">
@@ -14,6 +11,8 @@
               <li v-for="(link, index) in links" :key="index" class="link navigation__link">
                 <button v-scroll-to="{ 
                   el: link.path,
+                  duration: 2000,
+                  easing: [0.64, 0, 0.78, 0] 
                 }" class="d-split navigation__button"
                 >
                   {{ link.name }}
@@ -56,20 +55,8 @@ export default {
       },
     },
   },
-  data() {
-    return {
-      isActive: false,
-    };
-  },
-
   created() {
     ScrollTo();
-  },
-
-  methods: {
-    toggleNav: function() {
-      this.isActive = !this.isActive;
-    },
   },
 };
 </script>

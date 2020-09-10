@@ -1,7 +1,7 @@
 <template>
   <section id="hero" data-aos="bg-color" class="hero">
     <div class="row">
-      <div class="col-10 offset-1">
+      <div class="col-10 offset-1 col-md-9 col-xl-10">
         <div class="hero__heading-wrapper">
           <h1 data-scroll data-aos="slide-up-text" class="d-split hero__heading">
             <span class="hero__span">Hi, I'm Noops</span>

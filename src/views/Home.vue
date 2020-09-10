@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-container home">
+  <div class="home">
     <custom-cursor cursor-color="white" />
     <navigation />
     <homepage-hero />

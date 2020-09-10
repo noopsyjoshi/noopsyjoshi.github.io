@@ -10,7 +10,6 @@
     // antialiasing
     outline: 1px solid transparent;
     -webkit-backface-visibility: hidden;
-    transform: translateZ(0);
     will-change: transform;
     -webkit-perspective: 1000;
     perspective: 1000;
@@ -75,6 +74,7 @@
 
     @include media-breakpoint-up(xl) {
       margin: 40px 0 10px;
+      max-width: 70%;
     }
 
     &--number {
@@ -106,10 +106,21 @@
   }
 
   &__project-image-wrapper {
+    outline: 10px solid transparent;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
     width: 100%;
     height: 250px;
     overflow: hidden;
     cursor: none;
+    transition: transform .4s cubic-bezier(.645,.045,.355,1),
+    -webkit-transform .4s cubic-bezier(.645,.045,.355,1);
 
     @include media-breakpoint-up(md) {
       width: 100%;
@@ -126,122 +137,21 @@
       height: 500px;
       margin-bottom: 40px;
     }
+
+    &:hover {
+      transform: scale(0.95);
+
+      .projects__project-image {
+        transform: scale(1.095);
+      }
+    }
   }
 
   &__project-image {
     @include object-fit;
     width: 100%;
     height: 100%;
+    transition: transform .4s cubic-bezier(.645,.045,.355,1),
+    -webkit-transform .4s cubic-bezier(.645,.045,.355,1);
   }
 }
-
-// @media screen {
-//   .landscape-wrapper {
-//     position: relative;
-//     height: 0;
-//     width: 100%;
-//     overflow: hidden;
-//     padding-bottom: 66.6%;
-//   }
-
-//   .landscape-inner {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//   }
-
-//   #page-wrap {
-//     position: relative;
-//   }
-
-//   #canvas {
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     left: 0;
-//     height: 100vh;
-//     z-index: -1;
-//     opacity: 0;
-//     transition: opacity 0.5s ease-in;
-//   }
-
-//   .planes-loaded #canvas {
-//     opacity: 1;
-//   }
-
-//   #content {
-//     position: relative;
-//     margin: 0 auto;
-//   }
-
-// #planes {
-//   overflow: hidden;
-//   opacity: 0;
-//   transition: opacity 0.5s ease-in;
-
-//     &:nth-child(even) {
-//       display: flex;
-//       flex-direction: row-reverse;
-//       text-align: right;
-//     }
-// }
-
-//   .planes-loaded #planes {
-//     opacity: 1;
-//   }
-
-//   .plane-wrapper {
-//     width: 100%;
-//     float: left;
-//     position: relative;
-//     margin-bottom: 200px;
-
-//     @include media-breakpoint-up(lg) {
-//       width: 70vw;
-//     }
-//   }
-
-//   .plane-inner {
-//     box-sizing: border-box;
-//     margin-bottom: 30px;
-//   }
-
-//   .plane {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//   }
-
-//   .plane img {
-//     display: none;
-//   }
-
-//   #add-more-planes-wrapper {
-//     text-align: center;
-//     margin-top: 40px;
-//   }
-
-//   /*** handling errors ***/
-
-//   .no-curtains .plane-title {
-//     z-index: 1;
-//   }
-
-//   .no-curtains .plane img {
-//     display: block;
-//     width: 100%;
-//     height: auto;
-//   }
-// }
-
-// @media screen and (max-width: 720px) {
-//   .plane-wrapper {
-//     width: 100%;
-//     float: none;
-//     margin-bottom: 10px;
-//   }
-// }

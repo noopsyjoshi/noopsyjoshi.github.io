@@ -110,8 +110,6 @@
   }
 
   &__websites {
-    display: none;
-    
     @include flex-pos(center, flex-start);
     flex-wrap: wrap;
 

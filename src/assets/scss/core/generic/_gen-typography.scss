@@ -22,18 +22,18 @@
   }
 
   @include media-breakpoint-up(md) {
-    line-height: 8.4rem;
+    line-height: 10.6rem;
     font-size: 9rem;
   }
 
   @include media-breakpoint-up(lg) {
-    line-height: 11rem;
+    line-height: 14rem;
     font-size: 12rem;
   }
 
   @include media-breakpoint-up(xl) {
     font-size: 11rem;
-    line-height: 11.6rem;
+    line-height: 12.6rem;
   }
 }
 
@@ -54,11 +54,11 @@
     }
   }
 
-  &.aos-animate {
-    &:after {
-      width: 100%;
-    }
-  }
+  // &.aos-animate {
+  //   &:after {
+  //     width: 100%;
+  //   }
+  // }
 
   @include media-breakpoint-up(md) {
     font-size: 2.6rem;
@@ -88,6 +88,19 @@
   @include media-breakpoint-up(md) {
     font-size: 5.2rem;
     line-height: 5.6rem;
+  }
+}
+
+@mixin h4 {
+  font-family: 'poppins-light', sans-serif;
+  font-size: 2rem;
+  line-height: 4rem;
+  font-weight: 500;
+  font-style: normal;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 4rem;
+    line-height: 5.2rem;
   }
 }
 

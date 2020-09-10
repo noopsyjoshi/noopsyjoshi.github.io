@@ -23,10 +23,6 @@ export default {
   created() {
   },
 
-  destroyed() {
-    window.removeEventListener('mousemove', this.moveCursor());
-  },
-
   mounted() {
     window.addEventListener('mousemove', this.moveCursor);
     this.cursorInner = this.$refs.cursorInner;
@@ -56,7 +52,7 @@ export default {
   methods: {
     moveCursor() {
       if (this.cursorInner && this.cursorOuter && this.cursorText) {
-        TweenMax.to(this.cursorInner, 0.3, {
+        TweenMax.to(this.cursorInner, 0.1, {
           x: event.clientX,
           y: event.clientY,
         });
@@ -75,7 +71,7 @@ export default {
 
     // Navigation
     hoverCursor() {
-      TweenMax.to(this.cursorInner, 0.3, {
+      TweenMax.to(this.cursorInner, 0.1, {
         opacity: 1,
         scale: 0,
       });
@@ -87,7 +83,7 @@ export default {
     },
 
     hoverCursorOut() {
-      TweenMax.to(this.cursorInner, 0.3, {
+      TweenMax.to(this.cursorInner, 0.1, {
         opacity: 1,
         scale: 1,
       });
@@ -101,7 +97,7 @@ export default {
 
     // Projects
     hoverCursorProject() {
-      TweenMax.to(this.cursorInner, 0.3, {
+      TweenMax.to(this.cursorInner, 0.1, {
         opacity: 1,
         scale: 0,
       });
@@ -120,7 +116,7 @@ export default {
     },
 
     hoverCursorOutProject() {
-      TweenMax.to(this.cursorInner, 0.3, {
+      TweenMax.to(this.cursorInner, 0.1, {
         opacity: 1,
         scale: 1,
       });

@@ -9,10 +9,7 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
+  cursor: none;
 }
 
 .anchor {
@@ -80,11 +77,11 @@ html {
       }
     }
 
-    &.aos-animate {
-      &:after {
-        width: 100%;
-      }
-    }
+    // &.aos-animate {
+    //   &:after {
+    //     width: 100%;
+    //   }
+    // }
   }
 
   &__subtitle {
@@ -113,16 +110,22 @@ body {
   }
 }
 
-h1, .h1 {
+h1,
+.h1 {
   @include h1;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   @include h2;
 }
 
 h3 {
   @include h3;
+}
+
+h4 {
+  @include h4;
 }
 
 p {

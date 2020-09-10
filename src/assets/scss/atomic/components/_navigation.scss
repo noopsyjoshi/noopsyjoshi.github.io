@@ -50,14 +50,12 @@ $height: 70px;
   }
 
   &__button {
+    @include reset-button;
     color: $c-white;
     text-align: right;
-    background: none;
-    border: none;
-    appearance: none;
     font-size: 1.4rem;
     line-height: 2rem;
-    font-family: 'poppins', sans-serif;
+    font-family: 'poppins-regular', sans-serif;
     font-weight: 500;
     font-style: normal;
     margin: 0;

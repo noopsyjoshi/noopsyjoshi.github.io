@@ -1,5 +1,6 @@
 <template>
   <div v-if="loading" class="loader" :class="{ 'loader--loaded': loading && loadingFinished }" />
+  <!-- <div class="loader" /> -->
 </template>
 
 <script>

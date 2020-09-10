@@ -21,8 +21,8 @@
         </div>
       </div>
       <div class="col-10 offset-1 col-xl-8 offset-xl-1">
-        <p data-aos="slide-up-text" class="d-split section__subtitle about__subtitle">Client Sites</p>
-        <div data-aos="fade-in" data-aos-delay="1000" data-aos-duration="1000" class="about__websites">
+        <!-- <p data-aos="slide-up-text" class="d-split section__subtitle about__subtitle">Client Sites</p> -->
+        <!-- <div data-aos="fade-in" data-aos-delay="1000" data-aos-duration="1000" class="about__websites">
           <p class="link about__website"><a href="https://paperlondon.com/">Paper London</a></p>
           <p>/</p>
           <p class="link about__website"><a href="https://www.anassa.com/">Anassa</a></p>
@@ -32,11 +32,10 @@
           <p class="link about__website"><a href="https://www.annabelle.com.cy/">Annabelle</a></p>
           <p>/</p>
           <p class="link about__website"><a href="https://www.thecollective.com/">The Collective</a></p>
-        </div>
+        </div> -->
       </div>
       <div class="col-10 offset-1">
         <div class="about__timeline">
-          <p data-aos="slide-up-text" class="d-split section__subtitle">Timeline</p>
           <div v-for="(item, index) in items" :key="index">
             <div data-aos-easing="smooth" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000" :class="item.class" class="about__block">
               <div class="row">

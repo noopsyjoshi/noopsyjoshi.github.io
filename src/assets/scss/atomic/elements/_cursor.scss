@@ -13,11 +13,11 @@
 
   &--text {
     @include flex-pos;
-    font-family: 'roc-grotesk-wide', sans-serif;
+    font-family: 'poppins-extralight', sans-serif;
+    font-weight: 200;
     font-size: 3rem;
     width: 50px;
     height: 50px;
-    opacity: 0.4;
     top: -25px !important;
     left: -25px !important;
     text-align: center;
@@ -27,11 +27,11 @@
   }
 
   &--outer {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     opacity: 0.4;
-    top: -25px;
-    left: -25px;
+    top: -20px;
+    left: -20px;
 
     .cursor--white & {
       border: 1px solid $c-white;
@@ -43,10 +43,10 @@
   }
 
   &--inner {
-    width: 14px;
-    height: 14px;
-    left: -7px;
-    top: -7px;
+    width: 10px;
+    height: 10px;
+    left: -5px;
+    top: -5px;
 
     .cursor--white & {
       background: $c-white;

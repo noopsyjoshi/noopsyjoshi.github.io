@@ -1,11 +1,29 @@
 .footer {
-  padding: 50px 0;
-  @include flex-pos(center, center);
-
   &__body {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    font-family: 'poppins-light', sans-serif;
+  }
+
+  &__flex {
+    border-top: 1px solid $c-white;
+    padding: 40px 0 50px;
+    @include flex-pos(center, space-between);
+  }
+
+  &__button {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    font-family: 'poppins-light', sans-serif;
+    @include reset-button;
+    color: $c-white;
     margin-right: 10px;
-    font-size: 1.2rem;
-    display: inline;
+
+    &:active, &:focus {
+      outline: none;
+    }
   }
 
   &__icon {
