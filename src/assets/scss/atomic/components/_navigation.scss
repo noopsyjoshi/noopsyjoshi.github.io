@@ -29,7 +29,6 @@ $height: 70px;
     margin: 0;
     padding: 0;
     @include flex-pos(flex-end, flex-start);
-    flex-direction: column;
 
     @include media-breakpoint-up(xl) {
       flex-direction: row;
@@ -38,11 +37,7 @@ $height: 70px;
   }
 
   &__link {
-    margin: 5px 0;
-
-    @include media-breakpoint-up(xl) {
-      margin: 0 10px;
-    }
+    margin: 0 10px;
 
     &:last-of-type {
       margin-right: 0;
@@ -55,8 +50,8 @@ $height: 70px;
     text-align: right;
     font-size: 1.4rem;
     line-height: 2rem;
-    font-family: 'poppins-regular', sans-serif;
-    font-weight: 500;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     font-style: normal;
     margin: 0;
 

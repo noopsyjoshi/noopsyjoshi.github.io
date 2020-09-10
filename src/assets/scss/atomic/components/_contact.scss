@@ -51,9 +51,8 @@
     text-align: right;
     font-size: 1.4rem;
     line-height: 2rem;
-    font-family: 'poppins-regular', sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
 
     @include media-breakpoint-up(md) {
       font-size: 1.8rem;

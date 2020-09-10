@@ -39,7 +39,8 @@ html {
   &__title {
     position: relative;
     margin-bottom: 70px;
-    font-family: 'poppins-regular', sans-serif;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
 
     @include media-breakpoint-up(md) {
       font-size: 2.6rem;
@@ -89,12 +90,24 @@ html {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-style: normal;
+  margin: 0;
+  font-family: 'poppins', sans-serif;
+}
+
 body {
   font-size: 10px;
   font-size: 1rem;
-  font-family: 'poppins-regular', sans-serif;
+  font-weight: 400;
   overflow-x: hidden;
-  font-weight: normal;
+  font-family: 'poppins', sans-serif;
 }
 
 .bg {
@@ -105,18 +118,15 @@ body {
 
   &--dark {
     background-color: $c-grey-dark;
-    // background-color: $c-black;
     color: $c-white;
   }
 }
 
-h1,
-.h1 {
+h1 {
   @include h1;
 }
 
-h2,
-.h2 {
+h2 {
   @include h2;
 }
 

@@ -43,7 +43,7 @@
                   <p class="about__timeline-body">{{ item.role }}</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                  <p class="about__timeline-body--right">{{ item.location }}</p>
+                  <p class="about__timeline-body about__timeline-body--right">{{ item.location }}</p>
                 </div>
               </div>
             </div>
