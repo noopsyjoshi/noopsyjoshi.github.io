@@ -9,7 +9,7 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  cursor: none;
+  // cursor: none;
 }
 
 .anchor {
@@ -118,8 +118,7 @@ body {
   }
 
   &--dark {
-    background-color: $c-grey-dark;
-    // background-color: $c-black;
+    background-color: #17181a;
     color: $c-white;
   }
 }
@@ -190,3 +189,10 @@ button {
     }
   }
 }
+
+figcaption {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+

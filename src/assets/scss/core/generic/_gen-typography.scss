@@ -122,10 +122,11 @@
 
 @mixin text--large {
   font-weight: 300;
+  font-size: 3rem;
+  line-height: 3.6rem;
 
   @include media-breakpoint-up(lg) {
     font-size: 2.6rem;
-    line-height: 3.6rem;
   }
 
   @include media-breakpoint-up(xl) {

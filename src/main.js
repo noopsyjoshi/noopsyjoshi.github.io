@@ -5,6 +5,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import SkewAnimation from './utils/skewAnimation.js';
 import SplittingAnimation from './utils/splitting.js';
+import VuePlyr from 'vue-plyr';
+
+Vue.use(VuePlyr, {
+  plyr: {
+    fullscreen: { enabled: false },
+  },
+  emit: ['ended'],
+});
+
 
 Vue.config.productionTip = false;
 

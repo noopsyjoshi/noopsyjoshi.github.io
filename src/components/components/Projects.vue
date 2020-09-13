@@ -7,8 +7,8 @@
           <div v-for="(item, index) in projects" :key="index" class="projects__project">
             <div class="projects__link">
               <router-link :to="item.path">
-                <figure class="projects__project-image-wrapper">
-                  <img class="projects__project-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
+                <figure data-aos="reveal-image-up" class="reveal-image-up projects__project-image-wrapper">
+                  <img data-aos="zoom-image" class="projects__project-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
                 </figure>
               </router-link>
               <h3 data-aos="slide-up-body" class="d-split projects__project-title">
@@ -71,7 +71,7 @@ export default {
             number: '04',
             title: 'General Assembly Work',
             image: {
-              url: 'generalassembly.jpg',
+              url: 'almyra.jpg',
               alt: 'Image of Thanos Hotels website',
             },
             description: 'Selected projects built during a three month coding bootcamp in London',

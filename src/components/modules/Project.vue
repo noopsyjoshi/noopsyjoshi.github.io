@@ -12,8 +12,8 @@
           <h1 data-aos="slide-up-text" class="h2 d-split project__title">{{ title }}</h1>
         </div>
         <figure
-            data-aos="reveal-image-right"
-            class="project__figure reveal-image-right reveal-image-right--light"
+            data-aos="reveal-image-up"
+            class="project__figure reveal-image-up reveal-image-up--light"
         >
           <img
               data-aos="zoom-image"
@@ -81,7 +81,7 @@
       <!-- <div class="col-10 offset-1">
           <h2 data-scroll data-aos="slide-up-text" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
         <router-link :to="{ name: 'thecollective' }" class="projects__link">
-          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light plane projects__project-image-wrapper">
+          <figure data-aos="reveal-image-up" class="reveal-image-up reveal-image-up--light plane projects__project-image-wrapper">
             <img data-aos="zoom-image" data-sampler="planeTexture" class="projects__project-image reveal-image" src="@/assets/images/projects/thecollective.jpg">
           </figure>
             <h2 data-aos="slide-up-body" class="d-split">

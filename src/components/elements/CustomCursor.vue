@@ -110,7 +110,7 @@ export default {
       TweenMax.to(this.cursorOuter, 0.3, {
         scale: 4,
         opacity: 1,
-        borderColor: 'rgba( 255, 123, 0, 1)',
+        borderColor: 'transparent',
       });
      
     },

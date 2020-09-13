@@ -3,24 +3,11 @@
     <custom-cursor cursor-color="black" />
     <div class="row">
       <div class="col-10 offset-1">
-        <div class="close__wrapper">
-          <router-link class="close__link link" :to="{ name: 'home'}">
-            <close />
-          </router-link>
-        </div>
+        <close />
         <div class="project__intro-block">
           <h1 data-aos="slide-up-subheading" class="h2 d-split project__title">General Assembly</h1>
         </div>
-        <figure
-            data-aos="reveal-image-right"
-            class="project__figure reveal-image-right reveal-image-right--light"
-        >
-          <img
-              data-aos="zoom-image"
-              class="project__image project__image--showcase reveal-image"
-              src="@/assets/images/assembly/assembly-01.jpg"
-          >
-        </figure>
+        <iframe frameborder="0" controls="0" allow="autoplay" autoplay src="https://drive.google.com/file/d/1MWprCk0l30DJYX3ahM5Uq3KsIh8VbbkV/preview?start=1" width="640" height="480" />
       </div>
       <!-- Description -->
       <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
@@ -36,18 +23,18 @@
       <!-- Images -->
       <div class="col-10 offset-1">
         <div class="image-grid image-grid--small">
-          <figure data-aos="reveal-image-right" class="image-grid__figure">
+          <figure data-aos="reveal-image-up" class="image-grid__figure">
             <img
                 src="@/assets/images/assembly/assembly-02.png"
                 alt="paper london"
-                class="image-grid__image image-grid__image--contain reveal-image-right reveal-image-right--light"
+                class="image-grid__image image-grid__image--contain reveal-image-up reveal-image-up--light"
             >
           </figure>
-          <figure data-aos="reveal-image-right" class="image-grid__figure">
+          <figure data-aos="reveal-image-up" class="image-grid__figure">
             <img
                 src="@/assets/images/assembly/assembly-03.png"
                 alt="paper london"
-                class="image-grid__image image-grid__image--contain reveal-image-right reveal-image-right--light"
+                class="image-grid__image image-grid__image--contain reveal-image-up reveal-image-up--light"
             >
           </figure>
         </div>
@@ -123,7 +110,7 @@
       <div class="col-10 offset-1">
         <h2 data-scroll data-aos="slide-up-subheading" class="d-split section__title section__title--low-spacer section__title--light">Next Project</h2>
         <router-link :to="{ name: 'thecollective' }" class="project__link projects__link">
-          <figure data-aos="reveal-image-right" class="reveal-image-right reveal-image-right--light projects__project-image-wrapper">
+          <figure data-aos="reveal-image-up" class="reveal-image-up reveal-image-up--light projects__project-image-wrapper">
             <img data-aos="zoom-image" class="projects__project-image reveal-image" src="@/assets/images/projects/paper.jpg">
           </figure>
           <h3 data-aos="slide-up-body" class="project__project-title d-split">Paper London</h3>

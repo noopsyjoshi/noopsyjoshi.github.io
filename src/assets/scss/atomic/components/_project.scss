@@ -11,14 +11,14 @@
   }
 
   &__title {
-    line-height: 4.2rem;
-    font-size: 3.8rem;
-    font-family: poppins-medium, sans-serif;
+    // line-height: 4.2rem;
+    // font-size: 3.8rem;
+    // font-family: poppins-medium, sans-serif;
 
-    @include media-breakpoint-up(md) {
-      line-height: 7rem;
-      font-size: 7rem;
-    }
+    // @include media-breakpoint-up(md) {
+    //   line-height: 7rem;
+    //   font-size: 7rem;
+    // }
 
     @include media-breakpoint-up(lg) {
       max-width: 80%;
@@ -27,23 +27,27 @@
     @include media-breakpoint-up(xl) {
       margin-top: 50px;
       margin-bottom: 100px;
-      font-size: 10rem;
-      line-height: 10rem;
+      // font-size: 10rem;
+      // line-height: 10rem;
     }
   }
 
+  &__video {
+    margin-bottom: 100px;
+  }
+
   &__figure {
+    margin-bottom: 50px;
     position: relative;
-    height: 250px;
-    width: 100%;
-
+    overflow: hidden;
+    
     @include media-breakpoint-up(md) {
-      height: 400px;
+      margin-bottom: 100px;
     }
+  }
 
-    @include media-breakpoint-up(xl) {
-      height: 600px;
-    }
+  &__video {
+    margin-bottom: 100px;
   }
 
   &__image {
@@ -108,7 +112,7 @@
     }
   }
 
-   &__project-title {
+  &__project-title {
     margin: 30px 0 0;
     text-transform: uppercase;
 
