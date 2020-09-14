@@ -20,11 +20,16 @@ export default {
       default: () => '',
     },
   },
+
   created() {
+    window.addEventListener('mousemove', this.moveCursor);
+  },
+
+  destroyed() {
+    window.removeEventListener('mousemove', this.moveCursor);
   },
 
   mounted() {
-    window.addEventListener('mousemove', this.moveCursor);
     this.cursorInner = this.$refs.cursorInner;
     this.cursorOuter = this.$refs.cursorOuter;
     this.cursorText = this.$refs.cursorText;

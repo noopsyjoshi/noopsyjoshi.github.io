@@ -175,13 +175,13 @@
   }
 }
 
-@for $i from 1 to 5 {
+@for $i from 1 to 6 {
   .about__block:nth-child(#{$i}) {
     animation-delay: $i * 0.1s;
   }
 }
 
-@for $i from 1 to 5 {
+@for $i from 1 to 6 {
   .about__block::after:nth-child(#{$i}) {
     animation-delay: $i * 0.05s;
   }

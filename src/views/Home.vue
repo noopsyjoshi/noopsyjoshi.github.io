@@ -6,6 +6,7 @@
     <projects />
     <about />
     <contact />
+    <footer-item link="#home" />
   </div>
 </template>
 
@@ -16,6 +17,8 @@ import HomepageHero from '@/components/components/HomepageHero.vue';
 import Projects from '@/components/components/Projects.vue';
 import About from '@/components/components/About.vue';
 import Contact from '@/components/components/Contact.vue';
+import FooterItem from '@/components/elements/FooterItem.vue';
+
 export default {
   // name: 'App',
   components: {
@@ -25,6 +28,7 @@ export default {
     Projects,
     About,
     Contact,
+    FooterItem,
   },
   created() {
   },

@@ -13,7 +13,7 @@
       </div>
       <div class="col-10 offset-1 col-md-8 col-lg-7 col-xl-5 offset-xl-2">
         <div class="about__skills">
-          <p class="about__body" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1400">Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including e-commerce and hospitality. Expertise in HTML, SCSS, JavaScript, Shopify e-commerce platform, Handlebars, Git Version Control, sprint planning, communication with project managers, clients and partners and good understanding of UX and UI designs. I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.</p>
+          <p class="about__body" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="2000">Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including e-commerce and hospitality. Expertise in HTML, SCSS, JavaScript, Shopify e-commerce platform, Handlebars, Git Version Control, sprint planning, communication with project managers, clients and partners and good understanding of UX and UI designs. I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.</p>
         </div>
       </div>
       <!-- <div class="about__websites">
@@ -74,6 +74,11 @@ export default {
             date: '2015 - 2017',
             role: 'Implementation Consultant',
             location: 'Concep, London',
+          },
+          {
+            date: '2017 Nov - 2019 April',
+            role: 'Associate Implementation Consultant',
+            location: 'Confluence, London',
           },
           {
             date: '2018 June - Sept',

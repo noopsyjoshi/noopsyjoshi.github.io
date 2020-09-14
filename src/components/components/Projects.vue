@@ -67,16 +67,16 @@ export default {
               'Three sites created using Handlebars.js templating created for their corresponding luxury hotels situated in Cyprus.',
             path: '/thanos',
           },
-          {
-            number: '04',
-            title: 'General Assembly Work',
-            image: {
-              url: 'almyra.jpg',
-              alt: 'Image of Thanos Hotels website',
-            },
-            description: 'Selected projects built during a three month coding bootcamp in London',
-            path: '/generalassembly',
-          },
+          // {
+          //   number: '04',
+          //   title: 'General Assembly Work',
+          //   image: {
+          //     url: 'almyra.jpg',
+          //     alt: 'Image of Thanos Hotels website',
+          //   },
+          //   description: 'Selected projects built during a three month coding bootcamp in London',
+          //   path: '/generalassembly',
+          // },
         ];
       },
     },

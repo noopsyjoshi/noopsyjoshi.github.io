@@ -9,7 +9,7 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  // cursor: none;
+  cursor: none;
 }
 
 .anchor {
@@ -127,8 +127,7 @@ h1 {
   @include h1;
 }
 
-h2
- {
+h2 {
   @include h2;
 }
 
@@ -194,5 +193,3 @@ figcaption {
   font-weight: 500;
   font-size: 1.2rem;
 }
-
-

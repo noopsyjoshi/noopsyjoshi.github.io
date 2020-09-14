@@ -20,14 +20,12 @@ Vue.config.productionTip = false;
 new Vue({
   router,
 
-  watch: {
-    '$route'(to, from) {
-      console.log(to, from);
-    },
-  },
+  // watch: {
+  //   '$route'(to, from) {
+  //   },
+  // },
 
   mounted() {   
-    SkewAnimation();
  
     AOS.init({
       startEvent: 'load',
@@ -36,11 +34,13 @@ new Vue({
 
     this.$nextTick(() => {
       this.splitInit();
+      SkewAnimation();
     });
 
     router.afterEach((to, from, next) => {
       this.$nextTick(() => {
         this.splitInit();
+        SkewAnimation();
       });
 
       window.scrollTo(0, 0);
