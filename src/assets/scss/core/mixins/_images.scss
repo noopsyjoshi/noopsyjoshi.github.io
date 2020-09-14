@@ -1,0 +1,7 @@
+// object-fit mixin | how to use >> @include object-fit();
+// This ensures that the IE11 fallback plugin kicks in and saves writing it out each time.
+@mixin object-fit($fit: cover, $position: center) {
+  font-family: 'object-fit: #{$fit}; object-position: #{$position};';
+  object-fit: $fit;
+  object-position: $position;
+}
