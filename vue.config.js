@@ -1,5 +1,7 @@
 module.exports = {
-  publicPath: '/portfolio/',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/'
+    : '/',
   chainWebpack: (config) => {
     const svgRule = config.module.rule('svg');
     svgRule.uses.clear();
