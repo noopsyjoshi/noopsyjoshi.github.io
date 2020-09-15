@@ -7,7 +7,7 @@
           <div v-for="(item, index) in projects" :key="index" class="projects__project">
             <div class="projects__link">
               <router-link :to="item.path">
-                <figure data-aos="reveal-image-up" class="reveal-image-up reveal-image-up--light projects__project-image-wrapper">
+                <figure data-aos="reveal-image-up" class="reveal-image-up reveal-image-up--light projects__figure">
                   <img data-aos="zoom-image" class="projects__project-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
                 </figure>
               </router-link>
