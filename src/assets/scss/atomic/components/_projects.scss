@@ -7,42 +7,21 @@
   }
 
   &__project {
+    // antialiasing
+    outline: 1px solid transparent;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
     margin-bottom: 100px;
-    @include flex-pos(flex-start, center);
-
-    &:first-of-type {
-      justify-content: flex-start;
-
-      .projects__link {
-        max-width: 60%;
-      }
-
-      .projects__figure {
-        height: 500px;
-      }
-    }
-
-    &:nth-child(2) {      
-      .projects__link {
-        max-width: 60%;
-      }
-
-      .projects__figure {
-        height: 400px;
-      }
-    }
-
-    &:nth-child(3){
-      justify-content: flex-start;
-
-      .projects__link {
-        max-width: 70%;
-      }
-
-      .projects__figure {
-        height: 400px;
-      }
-    }
+    -webkit-transition: -webkit-transform 6s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    transition: -webkit-transform 6s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    -o-transition: transform 6s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+    transition: transform 6s cubic-bezier(0.04, 0.72, 0.09, 0.99);
 
     &:nth-last-child(1) {
       margin: 0;
@@ -50,6 +29,15 @@
 
     @include media-breakpoint-up(xl) {
       margin-bottom: 150px;
+
+      &:nth-child(even) {
+        @include flex-pos(flex-end, flex-end);
+
+        .projects__link {
+          text-align: right;
+          align-items: flex-end;
+        }
+      }
     }
 
     @include media-breakpoint-up(xl) {
@@ -62,6 +50,10 @@
 
     @include flex-pos(flex-start, center);
     flex-direction: column;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 60%;
+    }
 
     &:hover {
       color: inherit;
@@ -98,7 +90,7 @@
     }
   }
 
-  &__figure{
+  &__project-image-wrapper {
     width: 100%;
     height: 250px;
     overflow: hidden;
