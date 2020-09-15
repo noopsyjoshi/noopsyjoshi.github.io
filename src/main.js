@@ -3,9 +3,10 @@ import App from './App.vue';
 import router from './router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import SkewAnimation from './utils/skewAnimation.js';
+// import SkewAnimation from './utils/skewAnimation.js';
 import SplittingAnimation from './utils/splitting.js';
 import VuePlyr from 'vue-plyr';
+
 
 Vue.use(VuePlyr, {
   plyr: {
@@ -34,13 +35,13 @@ new Vue({
 
     this.$nextTick(() => {
       this.splitInit();
-      SkewAnimation();
+      // SkewAnimation();
     });
 
     router.afterEach((to, from, next) => {
       this.$nextTick(() => {
         this.splitInit();
-        SkewAnimation();
+        // SkewAnimation();
       });
 
       window.scrollTo(0, 0);

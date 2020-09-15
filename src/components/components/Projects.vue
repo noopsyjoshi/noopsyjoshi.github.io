@@ -7,11 +7,11 @@
           <div v-for="(item, index) in projects" :key="index" class="projects__project">
             <div class="projects__link">
               <router-link :to="item.path">
-                <figure data-aos="reveal-image-up" class="reveal-image-up projects__project-image-wrapper">
+                <figure data-aos="reveal-image-up" class="reveal-image-up reveal-image-up--light projects__project-image-wrapper">
                   <img data-aos="zoom-image" class="projects__project-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
                 </figure>
               </router-link>
-              <h3 data-aos="slide-up-body" class="d-split projects__project-title">
+              <h3 data-aos="slide-up-subheading" class="d-split projects__project-title">
                 <span class="projects__project-title--number">{{ item.number }} &nbsp;</span>
                 <span>{{ item.title }}</span>
               </h3>

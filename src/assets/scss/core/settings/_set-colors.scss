@@ -3,10 +3,19 @@ $c-white: #ffffff;
 $c-grey: #7a7a7a;
 // $c-grey-dark: #131313;
 $c-grey-dark: #17181a;
-$c-purple: #5a00cc;
-$c-orange: #ff7b00;
+$c-grey-light: #eee;
+$c-orange-light: #efe3e1;
+$c-blue-light: #e1edef;
+$c-pink-light: #efe1e6;
 
-.bg--white {
-  background-color: $c-white;
-  color: $c-black;
+.bg {
+  &--light {
+    background-color: $c-grey-light;
+    color: $c-grey-dark;
+  }
+
+  &--dark {
+    background-color: $c-grey-dark;
+    color: $c-grey-light;
+  }
 }

@@ -24,23 +24,15 @@
     opacity: 0;
     color: $c-white;
     background-color: $c-grey-dark;
-    cursor: none;
   }
 
   &--outer {
-    width: 40px;
-    height: 40px;
-    opacity: 0.4;
-    top: -20px;
-    left: -20px;
-
-    .cursor--white & {
-      border: 1px solid $c-white;
-    }
-
-    .cursor--black & {
-      border: 1px solid $c-black;
-    }
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px;
+    background-color: $c-grey-dark;
+    mix-blend-mode: difference;
   }
 
   &--inner {
@@ -48,13 +40,7 @@
     height: 10px;
     left: -5px;
     top: -5px;
-
-    .cursor--white & {
-      background: $c-white;
-    }
-
-    .cursor--black & {
-      background: $c-black;
-    }
+    background-color: $c-white;
+    mix-blend-mode: difference;
   }
 }

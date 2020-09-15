@@ -1,6 +1,6 @@
 <template>
   <div data-scroll-container class="home">
-    <custom-cursor cursor-color="white" />
+    <!-- <custom-cursor cursor-color="black" /> -->
     <navigation />
     <homepage-hero />
     <projects />
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import CustomCursor from '@/components/elements/CustomCursor.vue';
+// import CustomCursor from '@/components/elements/CustomCursor.vue';
 import Navigation from '@/components/components/Navigation.vue';
 import HomepageHero from '@/components/components/HomepageHero.vue';
 import Projects from '@/components/components/Projects.vue';
@@ -22,7 +22,7 @@ import FooterItem from '@/components/elements/FooterItem.vue';
 export default {
   // name: 'App',
   components: {
-    CustomCursor, 
+    // CustomCursor, 
     Navigation,
     HomepageHero,
     Projects,
@@ -30,7 +30,9 @@ export default {
     Contact,
     FooterItem,
   },
-  created() {
+
+  beforeCreate: function() {
+    document.body.className = 'bg--light';
   },
 };
 </script>

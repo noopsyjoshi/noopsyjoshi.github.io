@@ -4,7 +4,7 @@
       <div class="col-10 offset-1">
         <div class="navigation__flex">
           <button v-scroll-to="{ el: '#hero', duration: 2000, easing: [0.64, 0, 0.78, 0] }" class="link d-split navigation__button navigation__button--no-spacer">
-            Noops
+            noops
           </button>
           <div class="navigation__block">
             <ul class="navigation__links">

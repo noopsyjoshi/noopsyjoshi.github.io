@@ -15,7 +15,7 @@ const SkewAnimation = ($el) => {
     };
 
     const disableSkew = function() {
-      projects.forEach((project) => {
+      hero.forEach((project) => {
         project.style.transform = 'none';
       });
     };

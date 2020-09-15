@@ -1,7 +1,7 @@
 <template>
   <div class="project-hero">
     <div class="project__intro-block">
-      <h1 data-aos="slide-up-heading" class="d-split project__title">
+      <h1 data-aos="slide-up-body" class="d-split project__title">
         {{ title }}
       </h1>
     </div>

@@ -2,6 +2,8 @@
   min-height: 100vh;
   height: 100%;
   padding: 100px 0;
+  background-color: #c7e1e9;
+  overflow-x: hidden;
 
   @include media-breakpoint-up(xl) {
     padding: 200px 0;
@@ -34,10 +36,10 @@
   }
 
   &__intro {
-    @include text--large;
     margin-bottom: 30px;
 
     @include media-breakpoint-up(md) {
+      @include text--large;
       margin-bottom: 60px;
     }
 
@@ -47,9 +49,11 @@
   }
 
   &__body {
+    @include text--medium;
     margin-bottom: 30px;
 
     @include media-breakpoint-up(md) {
+      text-indent: 15rem;
       margin-bottom: 60px;
     }
   }
@@ -69,7 +73,7 @@
   &__block {
     padding: 20px 0;
     position: relative;
-    transform: translateX(25%) skewX(-40deg);
+    transform: translateX(25%);
     opacity: 0;
 
     @include media-breakpoint-up(md) {
@@ -79,7 +83,7 @@
     &:after {
       content: '';
       height: 2px;
-      background-color: $c-white;
+      background-color: $c-black;
       position: absolute;
       bottom: 0;
       right: 0;
@@ -90,39 +94,25 @@
       animation: slideInRight 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 
       &:after {
-        animation: animateLineRight .6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation: animateLineRight 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
       }
     }
   }
 
   &__timeline-body {
     margin: 0;
-    @include text--body;
+
+    &--medium {
+      @include media-breakpoint-down(sm) {
+        font-family: 'neuemontreal-medium';
+      }
+    }
 
     &--right {
       @include media-breakpoint-up(lg) {
         text-align: right;
       }
     }
-  }
-
-  &__date {
-    margin: 0;
-    font-size: 1.6rem;
-    color: $c-grey;
-
-    @include media-breakpoint-up(md) {
-      font-size: 2rem;
-      color: $c-white;
-    }
-
-    @include media-breakpoint-up(lg) {
-      @include text--body;
-    }
-  }
-
-  &__subtitle {
-    margin: 0 10px;
   }
 
   &__websites {

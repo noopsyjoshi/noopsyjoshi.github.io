@@ -98,7 +98,7 @@
   &.aos-animate {
     .char {
       animation: slideUp 1s cubic-bezier(0.2, 0, 0.1, 1) both;
-      animation-delay: calc(20ms * var(--char-index));
+      animation-delay: calc(1ms * var(--char-index));
       will-change: transform;
       transform-origin: top left;
     }
@@ -172,7 +172,7 @@
   &.aos-animate {
     &.reveal-image-up {
       &:after {
-        animation: revealImageUp 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        animation: revealImageUp 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
       }
     }
   }
@@ -234,7 +234,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: $c-white;
+      background: $c-grey-light;
     }
   }
 }
@@ -252,12 +252,12 @@
 
 @keyframes slideInRight {
   0% {
-    transform: translateX(25%) skewX(-40deg);
+    transform: translateX(25%);
     opacity: 0;
   }
 
   100% {
-    transform: translateX(0) skewX(0deg);
+    transform: translateX(0);
     opacity: 1;
   }
 }

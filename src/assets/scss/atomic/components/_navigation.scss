@@ -3,7 +3,7 @@ $height: 70px;
 .navigation {
   background-color: transparent;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: z('navigation');
   top: 0;
   padding: 20px 0;
@@ -52,13 +52,12 @@ $height: 70px;
   }
 
   &__button {
+    font-family: 'neuemontreal-regular';
     @include reset-button;
-    color: $c-white;
+    color: $c-black;
     text-align: right;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2rem;
-    font-family: 'poppins', sans-serif;
-    font-weight: 400;
     font-style: normal;
     margin: 0;
 
@@ -68,14 +67,14 @@ $height: 70px;
     }
 
     @include media-breakpoint-up(md) {
-      font-size: 1.8rem;
-      line-height: 2.2rem;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
       margin: 0 12px;
     }
 
     @include media-breakpoint-up(xl) {
-      font-size: 1.6rem;
-      line-height: 2rem;
+      font-size: 2rem;
+      line-height: 2.8rem;
       @include flex-pos;
     }
 
@@ -106,7 +105,7 @@ $height: 70px;
       &:before,
       &:after {
         visibility: visible;
-        color: $c-white;
+        color: $c-black;
         transition: transform 0.3s cubic-bezier(0.9, 0, 0.2, 1);
         transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
       }

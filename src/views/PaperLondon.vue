@@ -1,7 +1,7 @@
 <template>
   <section id="project">
     <div class="project">
-      <custom-cursor cursor-color="black" />
+      <!-- <custom-cursor cursor-color="black" /> -->
       <div class="row">
         <div class="np--sm col-10 offset-1">
           <close />
@@ -144,7 +144,7 @@
 <script>
 import '@/assets/scss/atomic/components/_project.scss';
 import '@/assets/scss/atomic/components/_image-grid.scss';
-import CustomCursor from '@/components/elements/CustomCursor.vue';
+// import CustomCursor from '@/components/elements/CustomCursor.vue';
 import Close from '@/components/elements/Close.vue';
 import VimeoPlayer from '@/components/components/VimeoPlayer.vue';
 import ProjectHero from '@/components/components/ProjectHero.vue';
@@ -155,7 +155,7 @@ import FooterItem from '@/components/elements/FooterItem.vue';
 export default {
   components: {
     Close,
-    CustomCursor,
+    // CustomCursor,
     ProjectHero,
     VimeoPlayer,
     WebsiteLink,

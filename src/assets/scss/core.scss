@@ -1,1 +1,27 @@
 @import './core/base.scss';
+
+
+@font-face {
+  font-family: 'neuemontreal-bold';
+  src:  url('@/assets/fonts/NeueMontreal-Bold.otf') format('otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neuemontreal-medium';
+  src:  url('@/assets/fonts/NeueMontreal-Medium.otf') format('otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neuemontreal-regular';
+  src:  url('@/assets/fonts/NeueMontreal-Regular.otf') format('otf');
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'neuemontreal-light';
+  src:  url('@/assets/fonts/NeueMontreal-Light.otf') format('otf');
+  font-style: normal;
+}

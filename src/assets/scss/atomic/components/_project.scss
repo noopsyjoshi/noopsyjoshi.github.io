@@ -11,9 +11,7 @@
   }
 
   &__title {
-    @include media-breakpoint-up(lg) {
-      max-width: 80%;
-    }
+    @include h1--uppercase;
 
     @include media-breakpoint-up(xl) {
       margin-top: 50px;

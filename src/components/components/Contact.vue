@@ -7,12 +7,7 @@
           <a class="contact__anchor link" href="mailto:noopur.joshi13@gmail.com">
             noopur.joshi13@gmail.com</a>
         </p>
-       
         <div data-aos="fade-in" data-aos-delay="600" class="contact__links">
-          <!-- <div class="contact__location">
-            <Location class="contact__icon" />
-            <p class="d-split contact__link">London</p>
-          </div> -->
           <p>
             <a target="_blank" class="d-split link contact__link contact__link-span" href="github.com/noopsyjoshi/">GitHub</a>
           </p>
@@ -30,11 +25,9 @@
 </style>
 
 <script>
-// import Location from '@/assets/icons/location.svg';
 
 export default {
   components: {
-    // Location,
   },
 };
 </script>

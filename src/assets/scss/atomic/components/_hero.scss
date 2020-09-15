@@ -1,16 +1,8 @@
 .hero {
-  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
-  @include media-breakpoint-up(lg) {
-    height: 95vh;
-  }
-
-  @include media-breakpoint-up(xl) {
-    height: 100vh;
-  }
+  height: 100vh;
 
   &__span {
     display: inline-block;

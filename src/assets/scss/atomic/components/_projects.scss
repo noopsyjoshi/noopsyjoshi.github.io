@@ -2,7 +2,7 @@
   height: 100%;
   padding: 50px 0;
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(md) {
     padding: 200px 0;
   }
 
@@ -27,7 +27,7 @@
       margin: 0;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xl) {
       margin-bottom: 150px;
 
       &:nth-child(even) {
@@ -51,12 +51,8 @@
     @include flex-pos(flex-start, center);
     flex-direction: column;
 
-    @include media-breakpoint-up(md) {
-      max-width: 80%;
-    }
-
-    @include media-breakpoint-up(lg) {
-      max-width: 70%;
+    @include media-breakpoint-up(xl) {
+      max-width: 60%;
     }
 
     &:hover {
@@ -66,23 +62,15 @@
   }
 
   &__project-title {
-    margin: 20px 0;
+    margin: 15px 0 10px 0;
 
     @include media-breakpoint-up(xl) {
-      margin: 40px 0 10px;
+      margin: 25px 0 10px 0;
       max-width: 70%;
-    }
-
-    &--number {
-      color: $c-orange;
     }
   }
 
   &__project-description-wrapper {
-    @include media-breakpoint-down(sm) {
-
-    }
-    
     @include media-breakpoint-up(md) {
       max-width: 70%;
     }
@@ -97,39 +85,23 @@
   }
 
   &__project-description {
-    font-size: 1.6rem;
-    color: $c-grey;
-
-    @include media-breakpoint-up(md) {
-      font-size: 2rem;
+    @include media-breakpoint-up(xl) {
+      font-size: 1.8rem;
     }
   }
 
   &__project-image-wrapper {
-    outline: 10px solid transparent;
-    -webkit-backface-visibility: hidden;
-    will-change: transform;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
     width: 100%;
     height: 250px;
     overflow: hidden;
-    cursor: none;
-    // transition: transform .4s cubic-bezier(.645,.045,.355,1),
-    // -webkit-transform .4s cubic-bezier(.645,.045,.355,1);
 
     @include media-breakpoint-up(md) {
       width: 100%;
-      height: 300px;
       margin-bottom: 20px;
+      height: 400px;
     }
 
     @include media-breakpoint-up(lg) {
-      height: 400px;
       margin-bottom: 40px;
     }
 
@@ -151,7 +123,7 @@
     @include object-fit;
     width: 100%;
     height: 100%;
-    transition: transform 1s cubic-bezier(.645,.045,.355,1),
-    -webkit-transform 1s cubic-bezier(.645,.045,.355,1);
+    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1),
+      -webkit-transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
