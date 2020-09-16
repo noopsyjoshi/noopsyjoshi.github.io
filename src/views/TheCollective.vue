@@ -1,12 +1,11 @@
 <template>
   <section id="project">
     <div class="project">
-      <custom-cursor cursor-color="black" />
       <div class="row">
         <div class="col-10 offset-1">
           <close />
           <project-hero title="The Collective" :image="{
-            url: 'collective/collective-01.jpg',
+            url: 'collective/collective.jpg',
             description: 'alt'
           }"
           />
@@ -70,7 +69,6 @@
               class="project__image project__image--contain"
               src="@/assets/images/collective/collective-03.jpeg"
           >
-          <figcaption>Designs</figcaption>
         </figure>
       </div>
       <div class="row">
@@ -125,52 +123,30 @@
           </ul>
         </div>
       </div>
-      <!-- Next Project -->
-      <div class="col-10 offset-1">
-        <h2
-            data-scroll
-            data-aos="slide-up-subheading"
-            class="d-split section__title section__title--low-spacer section__title--light"
-        >
-          Next Project
-        </h2>
-        <router-link :to="{ name: 'thanos' }" class="project__link projects__link">
-          <figure
-              data-aos="reveal-image-up"
-              class="reveal-image-up reveal-image-up--light projects__project-image-wrapper"
-          >
-            <img
-                data-aos="zoom-image"
-                class="projects__project-image reveal-image"
-                src="@/assets/images/projects/thanos.jpg"
-            >
-          </figure>
-          <h3 data-aos="slide-up-body" class="project__project-title d-split">Thanos Group</h3>
-        </router-link>
-      </div>
     </div>
     <footer-item link="#project" />
+    <custom-cursor />
   </section>
 </template>
 
 <script>
 import '@/assets/scss/atomic/components/_project.scss';
 import '@/assets/scss/atomic/components/_image-grid.scss';
-import CustomCursor from '@/components/elements/CustomCursor.vue';
 import Close from '@/components/elements/Close.vue';
 import VimeoPlayer from '@/components/components/VimeoPlayer.vue';
 import ProjectHero from '@/components/components/ProjectHero.vue';
 import WebsiteLink from '@/components/elements/WebsiteLink.vue';
 import FooterItem from '@/components/elements/FooterItem.vue';
+import CustomCursor from '@/components/elements/CustomCursor.vue';
 
 export default {
   components: {
     Close,
-    CustomCursor,
     ProjectHero,
     VimeoPlayer,
     WebsiteLink,
     FooterItem,
+    CustomCursor,
   },
 
   props: {
@@ -182,16 +158,16 @@ export default {
             stack: 'Nuxt.js',
           },
           {
-            stack: 'Javascript',
+            stack: 'JavaScript',
           },
           {
             stack: 'HTML',
           },
           {
-            stack: 'SCSS',
+            stack: 'SASS',
           },
           {
-            stack: 'Kentico',
+            stack: 'Kentico CMS',
           },
           {
             stack: 'Sketch',
@@ -205,16 +181,9 @@ export default {
           {
             stack: 'Mailchimp',
           },
-          {
-            stack: 'Kentico Content Management',
-          },
         ];
       },
     },
-  },
-
-  beforeCreate: function() {
-    document.body.className = 'bg--light';
   },
 };
 </script>

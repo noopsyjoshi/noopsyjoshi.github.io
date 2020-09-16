@@ -1,12 +1,11 @@
 <template>
   <section id="project">
     <div class="project">
-      <!-- <custom-cursor cursor-color="black" /> -->
       <div class="row">
         <div class="np--sm col-10 offset-1">
           <close />
           <project-hero title="Paper London" :image="{
-            url: 'paperlondon/paper-01.jpg',
+            url: 'paperlondon/paper.jpg',
             description: 'alt'
           }"
           />
@@ -32,13 +31,12 @@
         </div>
         <!-- Link to website -->
         <div class="col-10 offset-1 col-md-7 offset-md-2"><website-link link="https://paperlondon.com" /></div>
-        <div class="col-12 col-md-8 offset-md-3">
+        <div class="col-12 col-md-8 offset-md-1">
           <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
             <img
                 class="project__image project__image--contain"
                 src="@/assets/images/paperlondon/paper-hero.png"
             >
-            <figcaption>Hero</figcaption>
           </figure>
         </div>
         <div class="col-12 col-md-8 offset-md-3">
@@ -47,7 +45,6 @@
                 class="project__image project__image--contain"
                 src="@/assets/images/paperlondon/paper-navigation.png"
             >
-            <figcaption>Hero with Navigation</figcaption>
           </figure>
         </div>
       </div>
@@ -64,14 +61,12 @@
               class="project__image project__image--contain"
               src="@/assets/images/paperlondon/paper-instagram.png"
           >
-          <figcaption>Instagram Integration</figcaption>
         </figure>
         <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
           <img
               class="project__image project__image--contain"
               src="@/assets/images/paperlondon/paper-recommended.png"
           >
-          <figcaption>Recommended Products appear below in the PDP</figcaption>
         </figure>
       </div>
       <div class="col-12 col-md-7 offset-md-1">
@@ -85,7 +80,7 @@
             data-aos-delay="1200"
             class="project__body"
         >
-          A vibrant page was designed and added to the site to reflect on the brands goals and process, as well as emit a powerful message on fashions repercussion on the environment. The page features customisable sticky images on the left and content on the right, transforming to accordions on smaller devices.
+          A vibrant page was designed and added to the site to reflect on the brands goals and process, as well as emit a powerful message on fashion and its repercussions on the environment. The page features customisable sticky images on the left and content on the right, transforming to accordions on smaller devices.
         </p>
       </div>
       <div class="col-12 col-md-10 offset-md-1">
@@ -113,38 +108,16 @@
           </ul>
         </div>
       </div>
-      <!-- Next Project -->
-      <div class="col-10 offset-1">
-        <h2
-            data-scroll
-            data-aos="slide-up-subheading"
-            class="d-split section__title section__title--low-spacer section__title--light"
-        >
-          Next Project
-        </h2>
-        <router-link :to="{ name: 'thecollective' }" class="project__link projects__link">
-          <figure
-              data-aos="reveal-image-up"
-              class="reveal-image-up reveal-image-up--light projects__project-image-wrapper"
-          >
-            <img
-                data-aos="zoom-image"
-                class="projects__project-image reveal-image"
-                src="@/assets/images/projects/thecollective.jpg"
-            >
-          </figure>
-          <h3 data-aos="slide-up-body" class="project__project-title d-split">The Collective</h3>
-        </router-link>
-      </div>
     </div>
     <footer-item link="#project" />
+    <custom-cursor />
   </section>
 </template>
 
 <script>
 import '@/assets/scss/atomic/components/_project.scss';
 import '@/assets/scss/atomic/components/_image-grid.scss';
-// import CustomCursor from '@/components/elements/CustomCursor.vue';
+import CustomCursor from '@/components/elements/CustomCursor.vue';
 import Close from '@/components/elements/Close.vue';
 import VimeoPlayer from '@/components/components/VimeoPlayer.vue';
 import ProjectHero from '@/components/components/ProjectHero.vue';
@@ -155,7 +128,7 @@ import FooterItem from '@/components/elements/FooterItem.vue';
 export default {
   components: {
     Close,
-    // CustomCursor,
+    CustomCursor,
     ProjectHero,
     VimeoPlayer,
     WebsiteLink,
@@ -194,10 +167,6 @@ export default {
         ];
       },
     },
-  },
-
-  beforeCreate: function() {
-    document.body.className = 'bg--light';
   },
 };
 </script>

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- <loader /> -->
     <!-- <transition mode="out-in"> -->
     <router-view />
     <!-- </transition> -->
@@ -8,12 +7,12 @@
 </template>
 
 <script>
-// import Loader from '@/components/components/Loader.vue';
+// import CustomCursor from '@/components/elements/CustomCursor.vue';
 
 export default {
   name: 'App',
   components: {
-    // Loader, 
+    // CustomCursor,
   },
 };
 </script>

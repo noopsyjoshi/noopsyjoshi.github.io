@@ -11,28 +11,38 @@
     visibility: visible;
   }
 
-  &--text {
-    @include flex-pos;
-    font-family: 'poppins-extralight', sans-serif;
-    font-weight: 200;
-    font-size: 3rem;
-    width: 50px;
-    height: 50px;
-    top: -25px !important;
-    left: -25px !important;
-    text-align: center;
-    opacity: 0;
-    color: $c-white;
-    background-color: $c-grey-dark;
-  }
-
   &--outer {
+    color: $c-grey-dark;
     width: 30px;
     height: 30px;
+    font-family: 'neuemontreal-regular';
+    @include flex-pos;
     top: -15px;
     left: -15px;
-    background-color: $c-grey-dark;
+    background-color: $c-red-light;
     mix-blend-mode: difference;
+    border-radius: 50%;
+    line-height: 100%;
+    z-index: 0;
+    position: absolute;
+
+    &.cursor--projects {
+      background-color: $c-red-light;
+
+      &:after {
+        content: 'explore';
+        font-size: 0.1rem;
+      }
+    }
+
+    &.cursor--email {
+      background-color: $c-pink-light;
+
+      &:after {
+        content: 'email';
+        font-size: 0.1rem;
+      }
+    }
   }
 
   &--inner {
@@ -40,7 +50,8 @@
     height: 10px;
     left: -5px;
     top: -5px;
-    background-color: $c-white;
-    mix-blend-mode: difference;
+    background-color: $c-grey-dark;
+    z-index: 1;
+    position: absolute;
   }
 }

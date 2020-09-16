@@ -10,20 +10,24 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  // cursor: none;
+  cursor: none;
+  overflow-x: hidden;
 }
 
 
 body {
   font-size: 10px;
   font-size: 1rem;
-  font-family: 'neuemontreal-medium';
-  border: 1px solid black;
+  font-family: 'neuemontreal-regular';
+}
+
+.bg-body {
+ transition: background-color .3s ease;
 }
 
 .anchor {
   &__link {
-    color: $c-white;
+    color: $c-grey-dark;
     position: relative;
 
     &:after {
@@ -32,19 +36,23 @@ body {
       height: 2px;
       width: 100%;
       left: 0;
-      background: $c-white;
+      background: $c-grey-dark;
       position: absolute;
       display: inline-block;
     }
 
     &:hover {
       text-decoration: none;
-      color: $c-white;
+      color: $c-grey-dark;
     }
   }
 }
 
 .link {
+  // z-index: z('link');
+  z-index: 10;
+  position: relative;
+
   &:hover {
     color: inherit;
     text-decoration: none;

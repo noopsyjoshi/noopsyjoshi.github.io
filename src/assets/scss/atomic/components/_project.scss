@@ -27,7 +27,7 @@
     margin-bottom: 50px;
     position: relative;
     overflow: hidden;
-    
+
     @include media-breakpoint-up(md) {
       margin-bottom: 100px;
     }
@@ -50,6 +50,8 @@
 
   &__intro {
     @include text--large;
+    font-family: 'neuemontreal-italic';
+    letter-spacing: 0.075rem;
     margin-top: 50px;
 
     @include media-breakpoint-up(xl) {
@@ -78,25 +80,11 @@
     @include flex-pos(flex-start, center);
     margin: 0;
     padding: 0;
-
-    @include media-breakpoint-up(lg) {
-      @include flex-pos(center, flex-start);
-      flex-wrap: wrap;
-      flex-direction: row;
-    }
   }
 
   &__tech {
+    @include text--medium;
     display: inline-block;
-
-    @include media-breakpoint-up(lg) {
-      margin: 0 15px;
-    }
-
-    &:first-of-type,
-    &:last-of-type {
-      margin: 0;
-    }
   }
 
   &__project-title {
@@ -173,4 +161,8 @@
       transform: translateY(100%);
     }
   }
+}
+
+#project {
+  background-color: $c-grey-light;
 }

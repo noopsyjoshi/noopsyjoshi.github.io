@@ -1,14 +1,14 @@
 <template>
-  <section id="projects" class="projects">
+  <section id="projects" data-color="bg--grey-light" class="projects">
     <div class="row">
       <div class="np--sm col-10 offset-1">
         <h2 data-scroll data-aos="slide-up-subheading" class="d-split section__title">Projects</h2>
         <div class="projects__block">
           <div v-for="(item, index) in projects" :key="index" class="projects__project">
             <div class="projects__link">
-              <router-link :to="item.path">
-                <figure data-aos="reveal-image-up" class="reveal-image-up reveal-image-up--light projects__project-image-wrapper">
-                  <img data-aos="zoom-image" class="projects__project-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
+              <router-link class="projects__anchor" :to="item.path">
+                <figure data-aos="reveal-image-up" class="reveal-image-up reveal-image-up--grey projects__figure">
+                  <img id="project" data-aos="zoom-image" class="projects__project-image" :src="require(`@/assets/images/projects/${item.image.url}`)" :alt="item.image.alt">
                 </figure>
               </router-link>
               <h3 data-aos="slide-up-subheading" class="d-split projects__project-title">
@@ -43,17 +43,17 @@ export default {
               url: 'paper.jpg',
               alt: 'Paper London Image',
             },
-            description: 'A new, redesigned e-commerce site built for a sustainabile fashion brand using Shopify ',
+            description: 'Redesigned e-commerce site built for a sustainabile fashion brand in Shopify ',
             path: '/paperlondon',
           },
           {
             number: '02',
             title: 'The Collective',
             image: {
-              url: 'thecollective.jpg',
+              url: 'collective.jpg',
               alt: 'Image from The Collective website',
             },
-            description: 'A site built for co-living spaces around London using Vue.js',
+            description: 'Website developed using Vue.js for a co-living spaces start up',
             path: '/thecollective',
           },
           {
@@ -64,7 +64,7 @@ export default {
               alt: 'Image of Thanos Hotels website',
             },
             description:
-              'Three sites created using Handlebars.js templating created for their corresponding luxury hotels situated in Cyprus.',
+              'Three websites built for Cyprian luxury hotels using Handlebars.js',
             path: '/thanos',
           },
           // {
@@ -74,7 +74,7 @@ export default {
           //     url: 'almyra.jpg',
           //     alt: 'Image of Thanos Hotels website',
           //   },
-          //   description: 'Selected projects built during a three month coding bootcamp in London',
+          //   description: 'Selected projects during a three month coding bootcamp in London',
           //   path: '/generalassembly',
           // },
         ];

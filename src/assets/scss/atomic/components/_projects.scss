@@ -6,38 +6,65 @@
     padding: 200px 0;
   }
 
-  &__project {
-    // antialiasing
-    outline: 1px solid transparent;
-    -webkit-backface-visibility: hidden;
-    will-change: transform;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    margin-bottom: 100px;
-    -webkit-transition: -webkit-transform 6s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-    transition: -webkit-transform 6s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-    -o-transition: transform 6s cubic-bezier(0.04, 0.72, 0.09, 0.99);
-    transition: transform 6s cubic-bezier(0.04, 0.72, 0.09, 0.99);
+  @include media-breakpoint-up(xl) {
+    padding: 400px 0 100px;
+  }
 
-    &:nth-last-child(1) {
-      margin: 0;
+  &__project {
+    margin-bottom: 100px;
+    @include flex-pos(flex-start, center);
+
+    &:first-of-type {
+      justify-content: flex-start;
+
+      .projects__link {
+        max-width: 58%;
+      }
+
+      .projects__figure {
+        height: 420px;
+      }
     }
+
+    &:nth-child(2) {
+      .projects__link {
+        max-width: 62%;
+      }
+
+      .projects__figure {
+        height: 380px;
+      }
+    }
+
+    &:nth-child(3) {
+      margin: 0;
+      justify-content: flex-start;
+
+      .projects__link {
+        max-width: 60%;
+      }
+
+      .projects__figure {
+        height: 400px;
+      }
+    }
+
+    // &:last-of-type {
+    //   margin: 0;
+
+    //   justify-content: flex-end;
+
+    //   .projects__link {
+    //     max-width: 50%;
+    //   }
+
+    //   .projects__figure {
+    //     height: 300px;
+    //   }
+    // }
 
     @include media-breakpoint-up(xl) {
       margin-bottom: 150px;
-
-      &:nth-child(even) {
-        @include flex-pos(flex-end, flex-end);
-
-        .projects__link {
-          text-align: right;
-          align-items: flex-end;
-        }
-      }
     }
 
     @include media-breakpoint-up(xl) {
@@ -45,15 +72,15 @@
     }
   }
 
+  &__anchor {
+    cursor: none;
+  }
+
   &__link {
     color: inherit;
 
     @include flex-pos(flex-start, center);
     flex-direction: column;
-
-    @include media-breakpoint-up(xl) {
-      max-width: 60%;
-    }
 
     &:hover {
       color: inherit;
@@ -66,7 +93,6 @@
 
     @include media-breakpoint-up(xl) {
       margin: 25px 0 10px 0;
-      max-width: 70%;
     }
   }
 
@@ -90,7 +116,7 @@
     }
   }
 
-  &__project-image-wrapper {
+  &__figure {
     width: 100%;
     height: 250px;
     overflow: hidden;
@@ -109,21 +135,11 @@
       height: 500px;
       margin-bottom: 40px;
     }
-
-    &:hover {
-      // transform: scale(0.95);
-
-      .projects__project-image {
-        transform: scale(1.095);
-      }
-    }
   }
 
   &__project-image {
     @include object-fit;
     width: 100%;
     height: 100%;
-    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1),
-      -webkit-transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }

@@ -2,7 +2,6 @@
   min-height: 100vh;
   height: 100%;
   padding: 100px 0;
-  background-color: #c7e1e9;
   overflow-x: hidden;
 
   @include media-breakpoint-up(xl) {
@@ -49,11 +48,10 @@
   }
 
   &__body {
-    @include text--medium;
     margin-bottom: 30px;
 
     @include media-breakpoint-up(md) {
-      text-indent: 15rem;
+      text-indent: 12rem;
       margin-bottom: 60px;
     }
   }
@@ -63,6 +61,7 @@
   }
 
   &__skills {
+    overflow: hidden;
     margin-bottom: 70px;
 
     @include media-breakpoint-up(xl) {
@@ -128,12 +127,10 @@
     p {
       font-size: 6rem;
       line-height: 7rem;
-      color: $c-grey;
       margin: 0 10px;
     }
 
     a {
-      color: $c-grey;
       transition: all 1s ease;
 
       &:hover {
@@ -173,6 +170,6 @@
 
 @for $i from 1 to 6 {
   .about__block::after:nth-child(#{$i}) {
-    animation-delay: $i * 0.05s;
+    animation-delay: $i * 0.04s;
   }
 }

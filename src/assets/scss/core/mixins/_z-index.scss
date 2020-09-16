@@ -7,7 +7,7 @@
     @return null;
   }
 }
-$z-indexes: ('cursor', 'loader', 'navigation-toggle', 'navigation');
+$z-indexes: ('link', 'navigation', 'cursor', 'loader');
 
 /* Usage example
   .header {

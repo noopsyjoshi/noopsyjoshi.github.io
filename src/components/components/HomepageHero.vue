@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="hero">
+  <section id="hero" data-color="bg--orange-light" class="hero">
     <div class="row">
       <div class="col-10 offset-1 col-md-9 col-xl-10">
         <div class="hero__heading-wrapper">

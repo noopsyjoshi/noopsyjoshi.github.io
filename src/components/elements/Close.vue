@@ -1,7 +1,7 @@
 <template>
   <div class="close__wrapper">
     <router-link class="close__link link" :to="{ name: 'home'}">
-      <div class="close" /><p>HOME</p>
+      <div class="close" />
     </router-link>
   </div>
 </template>

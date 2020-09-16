@@ -130,9 +130,5 @@ export default {
   components: {
     Close, CustomCursor,
   },
-
-  beforeCreate: function() {
-    document.body.className = 'bg--light';
-  },
 };
 </script>

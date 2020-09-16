@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// import SkewAnimation from './utils/skewAnimation.js';
+import BgColorFade from './utils/bgColorFade.js';
 import SplittingAnimation from './utils/splitting.js';
 import VuePlyr from 'vue-plyr';
 
@@ -35,13 +35,13 @@ new Vue({
 
     this.$nextTick(() => {
       this.splitInit();
-      // SkewAnimation();
+      this.bgFadeInit();
     });
 
     router.afterEach((to, from, next) => {
       this.$nextTick(() => {
         this.splitInit();
-        // SkewAnimation();
+        this.bgFadeInit();
       });
 
       window.scrollTo(0, 0);
@@ -59,6 +59,10 @@ new Vue({
   methods: {
     splitInit() {
       SplittingAnimation();
+    },
+
+    bgFadeInit() {
+      BgColorFade();
     },
   },
 

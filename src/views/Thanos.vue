@@ -1,7 +1,6 @@
 <template>
   <section id="project">
     <div class="project">
-      <custom-cursor cursor-color="black" />
       <div class="row">
         <div class="col-10 offset-1">
           <close />
@@ -18,7 +17,7 @@
               class="d-split project__intro"
           />
         </div>
-        <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
+        <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-6">
           <p
               data-aos="fade-in"
               data-aos-duration="1000"
@@ -62,61 +61,35 @@
             </h2>
             <ul data-aos="fade-in" class="project__tech-list">
               <li v-for="(item, index) in items" :key="index" class="project__tech">
-                <p
-                    data-aos="fade-in"
-                >
-                  {{ item.stack }}
-                </p>
+                <p>{{ item.stack }}</p>
               </li>
             </ul>
           </div>
         </div>
-        <!-- Next Project -->
-        <div class="col-10 offset-1">
-          <h2
-              data-scroll
-              data-aos="slide-up-subheading"
-              class="d-split section__title section__title--low-spacer section__title--light"
-          >
-            Next Project
-          </h2>
-          <router-link :to="{ name: 'paperlondon' }" class="project__link projects__link">
-            <figure
-                data-aos="reveal-image-up"
-                class="reveal-image-up reveal-image-up--light projects__project-image-wrapper"
-            >
-              <img
-                  data-aos="zoom-image"
-                  class="projects__project-image reveal-image"
-                  src="@/assets/images/projects/paper.jpg"
-              >
-            </figure>
-            <h3 data-aos="slide-up-body" class="project__project-title d-split">Paper London</h3>
-          </router-link>
-        </div>
       </div>
     </div>
     <footer-item link="#project" />
+    <custom-cursor />
   </section>
 </template>
 
 <script>
 import '@/assets/scss/atomic/components/_project.scss';
 import '@/assets/scss/atomic/components/_image-grid.scss';
-import CustomCursor from '@/components/elements/CustomCursor.vue';
 import Close from '@/components/elements/Close.vue';
 import VimeoPlayer from '@/components/components/VimeoPlayer.vue';
 import ProjectHero from '@/components/components/ProjectHero.vue';
 import FooterItem from '@/components/elements/FooterItem.vue';
+import CustomCursor from '@/components/elements/CustomCursor.vue';
 
 
 export default {
   components: {
     Close,
-    CustomCursor,
     ProjectHero,
     VimeoPlayer,
     FooterItem,
+    CustomCursor,
   },
 
   props: {
@@ -131,7 +104,10 @@ export default {
             stack: 'HTML',
           },
           {
-            stack: 'SCSS, Bootstrap, BEM Format',
+            stack: 'SASS',
+          },
+          {
+            stack: 'Bootstrap',
           },
           {
             stack: 'Handlebars.js',
@@ -143,15 +119,14 @@ export default {
             stack: 'Sketch',
           },
           {
-            stack: 'Swiper.js, Choices.js, Google Maps API',
+            stack: 'Swiper Plugin',
+          },
+          {
+            stack: 'Google Maps Integration',
           },
         ];
       },
     },
-  },
-
-  beforeCreate: function() {
-    document.body.className = 'bg--light';
   },
 };
 </script>

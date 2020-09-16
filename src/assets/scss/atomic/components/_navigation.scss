@@ -43,7 +43,7 @@ $height: 70px;
     margin: 0 10px;
 
     @include media-breakpoint-up(lg) {
-      margin: 0 14px;
+      margin: 0 20px;
     }
 
     &:last-of-type {
@@ -66,15 +66,9 @@ $height: 70px;
       outline: none;
     }
 
-    @include media-breakpoint-up(md) {
-    font-size: 2.6rem;
-    line-height: 3.2rem;
-      margin: 0 12px;
-    }
-
     @include media-breakpoint-up(xl) {
       font-size: 2rem;
-      line-height: 2.8rem;
+      line-height: 2.4rem;
       @include flex-pos;
     }
 
@@ -135,10 +129,8 @@ $height: 70px;
       transform: translateY(0%);
     }
 
-    @media (pointer: fine) {
-      &:hover .char:after {
-        transform: translateY(100%);
-      }
+    &:hover .char:after {
+      transform: translateY(100%);
     }
   }
 }

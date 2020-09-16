@@ -1,12 +1,15 @@
 $c-black: #000000;
 $c-white: #ffffff;
-$c-grey: #7a7a7a;
-// $c-grey-dark: #131313;
 $c-grey-dark: #17181a;
 $c-grey-light: #eee;
 $c-orange-light: #efe3e1;
-$c-blue-light: #e1edef;
-$c-pink-light: #efe1e6;
+$c-yellow-light: #efeae1;
+$c-blue-light: #b7d9d3;
+$c-blue-dark: #b7ced9;
+$c-green-light: #b7d9c2;
+$c-pink-light: #efe1e7;
+$c-gold: #dcc693;
+$c-red-light: #ff9292;
 
 .bg {
   &--light {
@@ -17,5 +20,33 @@ $c-pink-light: #efe1e6;
   &--dark {
     background-color: $c-grey-dark;
     color: $c-grey-light;
+  }
+
+  &--grey-light {
+    background-color: $c-grey-light;
+  }
+
+  &--orange-light {
+    background-color: $c-orange-light;
+  }
+
+  &--yellow-light {
+    background-color: $c-yellow-light;
+  }
+
+  &--pink-light {
+    background-color: $c-pink-light;
+  }
+
+  &--blue-light {
+    background-color: $c-blue-light;
+  }
+
+  &--blue-dark {
+    background-color: $c-blue-dark;
+  }
+
+  &--green-light {
+    background-color: $c-green-light;
   }
 }

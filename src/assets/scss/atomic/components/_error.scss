@@ -1,8 +1,13 @@
 .error {
   height: 100vh;
-  @include flex-pos;
-  flex-direction: column;
-  text-align: center;
+  background-color: $c-yellow-light;
+
+  &__flex {
+    height: 100vh;
+    @include flex-pos;
+    flex-direction: column;
+    text-align: center;
+  }
 
   &__view {
     display: none;
@@ -17,6 +22,10 @@
     @include media-breakpoint-up(md) {
       margin-bottom: 75px;
     }
+  }
+
+  &__body {
+    font-family: 'neuemontreal-medium';
   }
 
   &__image,
@@ -39,7 +48,7 @@
   }
 
   &__link {
-    color: $c-white;
+    color: $c-grey-dark;
     position: relative;
 
     &:after {
@@ -48,14 +57,14 @@
       height: 2px;
       width: 100%;
       left: 0;
-      background: $c-white;
+      background: $c-grey-dark;
       position: absolute;
       display: inline-block;
     }
 
     &:hover {
       text-decoration: none;
-      color: $c-white;
+      color: $c-grey-dark;
     }
   }
 }

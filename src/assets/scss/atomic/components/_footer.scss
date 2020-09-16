@@ -4,13 +4,9 @@
   }
 
   &__flex {
-    border-top: 1px solid $c-white;
+    border-top: 1px solid $c-grey-dark;
     padding: 40px 0 50px;
     @include flex-pos(center, space-between);
-
-    .bg--light & {
-      border-top: 1px solid $c-black;
-    }
   }
 
   &__button {
@@ -37,9 +33,4 @@
   font-style: normal;
   color: inherit;
   font-family: 'neuemontreal-medium';
-
-  @include media-breakpoint-up(md) {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
 }
