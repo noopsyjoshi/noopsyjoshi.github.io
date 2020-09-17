@@ -5,7 +5,7 @@
 
   &__flex {
     border-top: 1px solid $c-grey-dark;
-    padding: 40px 0 50px;
+    padding: 20px 0 30px;
     @include flex-pos(center, space-between);
   }
 
@@ -28,9 +28,9 @@
 
 %footer-font {
   font-size: 1.6rem;
-  line-height: 2.4rem;
-  text-transform: uppercase;
+  line-height: 2rem;
   font-style: normal;
   color: inherit;
-  font-family: 'neuemontreal-medium';
+  font-family: 'nm-medium';
+  text-transform: uppercase;
 }

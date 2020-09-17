@@ -1,7 +1,7 @@
 <template>
   <div class="project-hero">
-    <div class="project__intro-block">
-      <h1 data-aos="slide-up-body" class="d-split project__title">
+    <div class="project-hero__intro-block">
+      <h1 data-aos="slide-up-body" class="d-split project-hero__title">
         {{ title }}
       </h1>
     </div>
@@ -11,7 +11,7 @@
     >
       <img
           data-aos="zoom-image"
-          class="project-hero__image project__image--showcase reveal-image"
+          class="project-hero__image project-hero__image--showcase reveal-image"
           :src="require(`@/assets/images/${image.url}`)"
           :alt="image.description"
       >

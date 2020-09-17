@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <custom-cursor />
-    <div class="bg-body bg--orange-light">
+    <div class="bg-body bg--grey-light">
       <navigation />
       <homepage-hero />
       <projects />

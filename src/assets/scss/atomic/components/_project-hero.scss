@@ -1,4 +1,17 @@
 .project-hero {
+  &__intro-block {
+    margin: 40px 0;
+  }
+
+  &__title {
+    @include h1--uppercase;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+  }
+
   &__figure {
     height: 250px;
     width: 100%;

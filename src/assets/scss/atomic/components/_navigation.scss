@@ -52,7 +52,6 @@ $height: 70px;
   }
 
   &__button {
-    font-family: 'neuemontreal-regular';
     @include reset-button;
     color: $c-black;
     text-align: right;
@@ -60,6 +59,7 @@ $height: 70px;
     line-height: 2rem;
     font-style: normal;
     margin: 0;
+    font-family: 'nm-regular';
 
     &:focus,
     &:active {
@@ -67,8 +67,8 @@ $height: 70px;
     }
 
     @include media-breakpoint-up(xl) {
-      font-size: 2rem;
-      line-height: 2.4rem;
+      font-size: 1.8rem;
+      line-height: 2rem;
       @include flex-pos;
     }
 

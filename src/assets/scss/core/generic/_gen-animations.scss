@@ -271,3 +271,22 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes reveal {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+[data-aos='reveal'] {
+  &.aos-init {
+    transform: translateY(100%);
+  }
+
+  &.aos-animate {
+    animation: reveal 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+}

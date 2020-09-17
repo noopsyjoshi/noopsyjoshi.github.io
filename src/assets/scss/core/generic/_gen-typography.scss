@@ -1,7 +1,6 @@
 // Hero
 @mixin h1 {
-  font-family: 'neuemontreal-medium';
-  font-weight: normal;
+  font-family: 'nm-medium';
   margin: 0;
   line-height: 7.6rem;
   font-size: 7rem;
@@ -17,17 +16,18 @@
   }
 
   @include media-breakpoint-up(xl) {
-    font-size: 14rem;
-    line-height: 14.2rem;
+    font-size: 12rem;
+    line-height: 13.2rem;
   }
 }
 
 @mixin h1--uppercase {
-  font-family: 'neuemontreal-regular';
-  font-weight: normal;
   margin: 0;
   line-height: 3rem;
   font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'nm-regular';
 
   @media only screen and (min-width: 450px) {
     font-size: 6.2rem;
@@ -46,17 +46,14 @@
   @include media-breakpoint-up(xl) {
     font-size: 14rem;
     line-height: 13rem;
-    text-transform: uppercase;
   }
 }
 
 @mixin h2 {
-  font-family: 'neuemontreal-medium';
-  font-weight: normal;
+  font-family: 'nm-medium';
   font-size: 2.8rem;
   line-height: 3.8rem;
   margin-bottom: 30px;
-  text-transform: capitalize;
 
   @include media-breakpoint-up(md) {
     margin-bottom: 70px;
@@ -64,11 +61,10 @@
 }
 
 @mixin h3 {
-  font-family: 'neuemontreal-medium';
   font-size: 2.8rem;
   line-height: 3.4rem;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
 
@@ -79,7 +75,6 @@
 }
 
 @mixin h4 {
-  font-family: 'neuemontreal-regular';
   font-size: 2.6rem;
   line-height: 3rem;
 
@@ -90,21 +85,17 @@
 }
 
 @mixin text--body {
+  font-family: 'nm-regular';
   margin-bottom: 0;
   font-size: 2rem;
   line-height: 3rem;
-  font-family: 'neuemontreal-regular';
-
-  @include media-breakpoint-up(xl) {
-    font-family: "neuemontreal-medium";
-  }
 }
 
 @mixin text--medium {
   margin-bottom: 0;
   font-size: 2rem;
   line-height: 3rem;
-  font-family: 'neuemontreal-regular';
+  font-family: 'nm-regular';
 
   @include media-breakpoint-up(md) {
     font-size: 3rem;
@@ -118,7 +109,7 @@
 
   @include media-breakpoint-up(xl) {
     font-size: 3rem;
-    line-height: 3.2rem;
+    line-height: 3.3rem;
   }
 }
 
@@ -126,7 +117,6 @@
   font-weight: 300;
   font-size: 3rem;
   line-height: 3.6rem;
-  font-family: 'neuemontreal-medium';
 
   @include media-breakpoint-up(lg) {
     font-size: 2.6rem;
@@ -152,10 +142,10 @@ h4,
 h5,
 h6,
 p {
-  // font-weight: 700;
-  font-style: normal;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
 }
 
 h1 {
@@ -176,9 +166,4 @@ h4 {
 
 p {
   @include text--body;
-}
-
-figcaption {
-  font-weight: 500;
-  font-size: 1.2rem;
 }

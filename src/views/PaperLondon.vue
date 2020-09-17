@@ -10,35 +10,18 @@
           }"
           />
         </div>
-        <!-- Description -->
-        <div class="col-10 offset-1 col-md-8 offset-md-2">
-          <p
-              data-aos="slide-up-body"
-              class="d-split project__intro"
-          >
-            "PAPER is strong modern femininity captured through bold bright and colourful collections of knitwear, outerwear, dresses and swimswear." - PAPER
-          </p>
-        </div>
+
         <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
           <p
               data-aos="fade-in"
               data-aos-duration="1000"
-              data-aos-delay="1200"
               class="project__body"
           >
-            The client wanted to update their site with a redesign and build to closely reflect their brand guidelines, focusing on their bold, colourful and sustainable clothing. Using the Debut theme in Shopify as a base template, I was responsible for creating the site from the Sketch designs, with help from two other developers on the shopping cart, bug fixes and deployment to the live site. The website took three months to complete and the launch was a huge successs for the client resulting in increased sales.
+            Paper is a fashion brand focusing on bold, bright and colourful collections of knitwear, outerwear, dresses and swimswear. The client wanted to update their site to closely reflect their brand guidelines, focusing on their bold, colourful and sustainable clothing. Using the Debut theme in Shopify as a base template, I was responsible for creating the site from the Sketch designs, with help from two other developers on the shopping cart, bug fixes and deployment to the live site. The website took three months to complete and the launch was a huge successs for the client resulting in increased sales.
           </p>
         </div>
         <!-- Link to website -->
         <div class="col-10 offset-1 col-md-7 offset-md-2"><website-link link="https://paperlondon.com" /></div>
-        <div class="col-12 col-md-8 offset-md-1">
-          <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
-            <img
-                class="project__image project__image--contain"
-                src="@/assets/images/paperlondon/paper-hero.png"
-            >
-          </figure>
-        </div>
         <div class="col-12 col-md-8 offset-md-3">
           <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
             <img
@@ -54,7 +37,7 @@
             data-aos-duration="800"
             class="project__body"
         >
-          Some of the site's features include Instagram API integration, a shopping cart created with AJAX, product search bar and Mailchimp integration for newsletter sign ups. Beautiful and responsive carousels were built to display product images using the plugin Swiper.js.
+          Site's features include Instagram API integration, a shopping cart created with AJAX, product search bar and Mailchimp integration for newsletter sign ups. Responsive carousels were built to display product images using the plugin Swiper.js.
         </p>
         <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
           <img

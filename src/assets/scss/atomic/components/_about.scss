@@ -51,21 +51,32 @@
     margin-bottom: 30px;
 
     @include media-breakpoint-up(md) {
-      text-indent: 12rem;
-      margin-bottom: 60px;
+      margin-bottom: 100px;
     }
-  }
 
-  &__overview {
-    margin-bottom: 50px;
+    > p {
+      line-height: 2.6rem;
+      @include text--medium;
+    }
   }
 
   &__skills {
     overflow: hidden;
     margin-bottom: 70px;
+    @include text--medium;
 
     @include media-breakpoint-up(xl) {
       margin-bottom: 180px;
+    }
+
+    li {
+      overflow: hidden;
+    }
+
+    p {
+      @include text--medium;
+      vertical-align: middle;
+      position: relative;
     }
   }
 
@@ -81,8 +92,8 @@
 
     &:after {
       content: '';
-      height: 2px;
-      background-color: $c-black;
+      height: 1px;
+      background-color: rgba($c-grey-dark, 0.2);
       position: absolute;
       bottom: 0;
       right: 0;
@@ -103,7 +114,6 @@
 
     &--medium {
       @include media-breakpoint-down(sm) {
-        font-family: 'neuemontreal-medium';
       }
     }
 
@@ -164,7 +174,7 @@
 
 @for $i from 1 to 6 {
   .about__block:nth-child(#{$i}) {
-    animation-delay: $i * 0.1s;
+    animation-delay: $i * 0.04s;
   }
 }
 

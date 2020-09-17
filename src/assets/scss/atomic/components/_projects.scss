@@ -7,45 +7,52 @@
   }
 
   @include media-breakpoint-up(xl) {
-    padding: 400px 0 100px;
+    padding: 200px 0;
   }
 
   &__project {
     margin-bottom: 100px;
     @include flex-pos(flex-start, center);
+    width: 100%;
 
     &:first-of-type {
-      justify-content: flex-start;
+      @include media-breakpoint-up(lg) {
+        justify-content: flex-start;
 
-      .projects__link {
-        max-width: 58%;
-      }
+        .projects__link {
+          width: 58%;
+        }
 
-      .projects__figure {
-        height: 420px;
+        .projects__figure {
+          height: 420px;
+        }
       }
     }
 
     &:nth-child(2) {
-      .projects__link {
-        max-width: 62%;
-      }
+      @include media-breakpoint-up(lg) {
+        .projects__link {
+          width: 62%;
+        }
 
-      .projects__figure {
-        height: 380px;
+        .projects__figure {
+          height: 380px;
+        }
       }
     }
 
     &:nth-child(3) {
-      margin: 0;
-      justify-content: flex-start;
+      @include media-breakpoint-up(lg) {
+        margin: 0;
+        justify-content: flex-start;
 
-      .projects__link {
-        max-width: 60%;
-      }
+        .projects__link {
+          width: 60%;
+        }
 
-      .projects__figure {
-        height: 400px;
+        .projects__figure {
+          height: 400px;
+        }
       }
     }
 
@@ -55,7 +62,7 @@
     //   justify-content: flex-end;
 
     //   .projects__link {
-    //     max-width: 50%;
+    //     width: 50%;
     //   }
 
     //   .projects__figure {
@@ -98,15 +105,15 @@
 
   &__project-description-wrapper {
     @include media-breakpoint-up(md) {
-      max-width: 70%;
+      width: 70%;
     }
 
     @include media-breakpoint-up(lg) {
-      max-width: 60%;
+      width: 60%;
     }
 
     @include media-breakpoint-up(xl) {
-      max-width: 50%;
+      width: 50%;
     }
   }
 
