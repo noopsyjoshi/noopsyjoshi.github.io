@@ -98,7 +98,7 @@
   &.aos-animate {
     .char {
       animation: slideUp 0.6s cubic-bezier(0.33, 1, 0.68, 1) both;
-      animation-delay: calc(1ms * var(--char-index));
+      animation-delay: calc(4ms * var(--char-index));
       will-change: transform;
       transform-origin: top left;
     }
@@ -288,5 +288,16 @@
 
   &.aos-animate {
     animation: reveal 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
   }
 }

@@ -1,0 +1,58 @@
+h1 {
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: $c-white;
+  z-index: 100;
+
+  &__body {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    mix-blend-mode: difference;
+    color: $c-white;
+    font-size: 3rem;
+    text-align: right;
+    line-height: 3rem;
+  }
+
+  &__enter {
+    @include text--medium;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    mix-blend-mode: difference;
+    color: $c-white;
+    font-size: 3rem;
+    text-align: right;
+    line-height: 3rem;
+    display: block;
+
+    &.hidden {
+        display: none;
+    }
+  }
+}
+
+.counter {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__wrapper {
+    @include h1;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    mix-blend-mode: difference;
+    z-index: 1000;
+    color: $c-white;
+  }
+}

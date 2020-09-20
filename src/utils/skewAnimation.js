@@ -2,7 +2,8 @@ import _ from 'lodash';
 
 const SkewAnimation = ($el) => {
   window.onload = function() {
-    const projects = Array.from(document.querySelectorAll('.projects__project'));
+    // const projects = Array.from(document.querySelectorAll('.projects'));
+    const projects = document.querySelector('.projects');
     let prevPos = window.pageYOffset;
 
     const isMobile = function() {
@@ -15,18 +16,18 @@ const SkewAnimation = ($el) => {
     };
 
     const disableSkew = function() {
-      hero.forEach((project) => {
-        project.style.transform = 'none';
-      });
+      // hero.forEach((project) => {
+      projects.style.transform = 'none';
+      // });
     };
 
     const enableSkew = function() {
       const newPos = window.pageYOffset;
       const diff = newPos - prevPos;
       const speed = _.clamp(diff * 0.07, -10, 10);
-      projects.forEach((project) => {
-        project.style.transform = `skewY(${speed}deg)`;
-      });
+      // projects.forEach((project) => {
+      projects.style.transform = `skewY(${speed}deg)`;
+      // });
       prevPos = newPos;
 
       requestAnimationFrame(enableSkew);

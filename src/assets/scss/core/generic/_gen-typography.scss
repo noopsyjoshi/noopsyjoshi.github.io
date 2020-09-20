@@ -11,13 +11,15 @@
   }
 
   @include media-breakpoint-up(lg) {
-    line-height: 14rem;
-    font-size: 12rem;
+    line-height: 20rem;
+    font-size: 18rem;
   }
 
   @include media-breakpoint-up(xl) {
-    font-size: 12rem;
-    line-height: 13.2rem;
+    font-weight: bold;
+    text-transform: lowercase;
+    line-height: 17rem;
+    font-size: 19rem;
   }
 }
 
@@ -50,28 +52,32 @@
 }
 
 @mixin h2 {
-  font-family: 'nm-medium';
-  font-size: 2.8rem;
-  line-height: 3.8rem;
-  margin-bottom: 30px;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 7rem;
+  line-height: 7rem;
+  font-family: 'nm-bold';
+  margin-bottom: 50px;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 70px;
+    margin-bottom: 100px;
   }
+
+  // &:after {
+  //   content: '';
+  //   height: 10px;
+  //   background-color: $c-orange;
+  //   width: 50px;
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: -10px;
+  // }
 }
 
 @mixin h3 {
-  font-size: 2.8rem;
-  line-height: 3.4rem;
-  margin: 0;
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-
-  @include media-breakpoint-up(md) {
-    font-size: 3.2rem;
-    line-height: 4rem;
-  }
+  font-size: 3rem;
+  line-height: 5rem;
+  font-family: 'nm-medium';
 }
 
 @mixin h4 {
@@ -80,46 +86,57 @@
 
   @include media-breakpoint-up(lg) {
     font-size: 6rem;
-    line-height: 6.6rem;
+    line-height: 6rem;
   }
 }
 
 @mixin text--body {
-  font-family: 'nm-regular';
+  font-family: 'nm-medium';
   margin-bottom: 0;
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
+// @mixin text--medium {
+//   margin-bottom: 0;
+//   font-size: 2rem;
+//   line-height: 3rem;
+//   font-family: 'nm-regular';
+
+//   @include media-breakpoint-up(md) {
+//     font-size: 3rem;
+//     line-height: 4.2rem;
+//   }
+
+//   @include media-breakpoint-up(lg) {
+//     line-height: 2.8rem;
+//     font-size: 2rem;
+//   }
+
+//   @include media-breakpoint-up(xl) {
+//     font-size: 3rem;
+//   }
+// }
+
 @mixin text--medium {
-  margin-bottom: 0;
-  font-size: 2rem;
+  font-size: 2.8rem;
   line-height: 3rem;
   font-family: 'nm-regular';
-
-  @include media-breakpoint-up(md) {
-    font-size: 3rem;
-    line-height: 4.2rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    line-height: 2.8rem;
-    font-size: 2rem;
-  }
-
-  @include media-breakpoint-up(xl) {
-    font-size: 3rem;
-    line-height: 3.3rem;
-  }
 }
 
 @mixin text--large {
+  font-family: 'nm-regular';
   font-weight: 300;
   font-size: 3rem;
   line-height: 3.6rem;
 
   @include media-breakpoint-up(lg) {
     font-size: 2.6rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 4rem;
+    line-height: 4.2rem;
   }
 }
 

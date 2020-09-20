@@ -10,143 +10,123 @@
     padding: 200px 0;
   }
 
-  &__project {
-    margin-bottom: 100px;
-    @include flex-pos(flex-start, center);
-    width: 100%;
+  &__figure {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    opacity: 0;
+    width: 40vw;
+    height: 350px;
+    transition: all 0.6s ease;
+    z-index: 999;
+    transform: translate3d(20px, -20%, 0) translate3d(0, 20px, 0);
 
-    &:first-of-type {
-      @include media-breakpoint-up(lg) {
-        justify-content: flex-start;
-
-        .projects__link {
-          width: 58%;
-        }
-
-        .projects__figure {
-          height: 420px;
-        }
-      }
-    }
-
-    &:nth-child(2) {
-      @include media-breakpoint-up(lg) {
-        .projects__link {
-          width: 62%;
-        }
-
-        .projects__figure {
-          height: 380px;
-        }
-      }
-    }
-
-    &:nth-child(3) {
-      @include media-breakpoint-up(lg) {
-        margin: 0;
-        justify-content: flex-start;
-
-        .projects__link {
-          width: 60%;
-        }
-
-        .projects__figure {
-          height: 400px;
-        }
-      }
-    }
-
-    // &:last-of-type {
-    //   margin: 0;
-
-    //   justify-content: flex-end;
-
-    //   .projects__link {
-    //     width: 50%;
-    //   }
-
-    //   .projects__figure {
-    //     height: 300px;
-    //   }
-    // }
-
-    @include media-breakpoint-up(xl) {
-      margin-bottom: 150px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      margin-bottom: 200px;
+    .active & {
+      opacity: 1;
+      transform: rotate(2deg) translate(-25%, -50%);
     }
   }
 
-  &__anchor {
-    cursor: none;
+  &__project {
+    position: relative;
+    margin: 0;
+  }
+
+  &__project-title {
+    font-size: 13rem;
+    line-height: 14rem;
+    font-family: 'nm-bold';
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+    transition: opacity 0.4s;
+
+    &:hover {
+      transition-duration: 0.1s;
+      opacity: 0;
+      text-decoration: none;
+      // color: $c-grey-dark;
+    }
+
+    &:hover ~ .projects__marquee .projects__marquee-inner {
+      animation-play-state: running;
+      opacity: 1;
+      transition-duration: 0.4s;
+    }
+  }
+
+  &__block {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    --marquee-width: 100vw;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+    counter-reset: menu;
+    margin: 40px 0;
+  }
+
+  &__item {
+    cursor: default;
+    position: relative;
+    padding: 0 5vw;
   }
 
   &__link {
-    color: inherit;
-
-    @include flex-pos(flex-start, center);
-    flex-direction: column;
+    color: $c-grey-dark;
+    cursor: pointer;
 
     &:hover {
-      color: inherit;
+      color: $c-grey-dark;
       text-decoration: none;
     }
   }
 
-  &__project-title {
-    margin: 15px 0 10px 0;
-
-    @include media-breakpoint-up(xl) {
-      margin: 25px 0 10px 0;
-    }
+  &__image {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
   }
 
-  &__project-description-wrapper {
-    @include media-breakpoint-up(md) {
-      width: 70%;
-    }
-
-    @include media-breakpoint-up(lg) {
-      width: 60%;
-    }
-
-    @include media-breakpoint-up(xl) {
-      width: 50%;
-    }
-  }
-
-  &__project-description {
-    @include media-breakpoint-up(xl) {
-      font-size: 1.8rem;
-    }
-  }
-
-  &__figure {
-    width: 100%;
-    height: 250px;
+  &__marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--marquee-width);
     overflow: hidden;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    color: $c-white;
+  }
 
-    @include media-breakpoint-up(md) {
-      width: 100%;
-      margin-bottom: 20px;
-      height: 400px;
-    }
+  &__marquee-inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: paused;
+    opacity: 0;
+    transition: opacity 0.1s;
+    z-index: -1;
 
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 40px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      height: 500px;
-      margin-bottom: 40px;
+    span {
+      font-size: 13rem;
+      line-height: 14rem;
+      font-family: 'nm-bold-italic';
+      text-align: center;
     }
   }
 
-  &__project-image {
-    @include object-fit;
-    width: 100%;
-    height: 100%;
+  &__project-title,
+  &__marquee-inner span {
+    white-space: nowrap;
+    padding: 0 10px;
   }
 }

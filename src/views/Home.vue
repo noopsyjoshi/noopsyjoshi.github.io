@@ -1,14 +1,13 @@
 <template>
   <div class="home">
-    <custom-cursor />
-    <div class="bg-body bg--grey-light">
+    <div class="bg">
       <navigation />
       <homepage-hero />
       <projects />
       <about />
       <contact />
       <footer-item link="#home" />
-    <!-- <custom-cursor /> -->
+      <!-- <custom-cursor /> -->
     </div>
   </div>
 </template>
@@ -20,12 +19,12 @@ import Projects from '@/components/components/Projects.vue';
 import About from '@/components/components/About.vue';
 import Contact from '@/components/components/Contact.vue';
 import FooterItem from '@/components/elements/FooterItem.vue';
-import CustomCursor from '@/components/elements/CustomCursor.vue';
+// import CustomCursor from '@/components/elements/CustomCursor.vue';
 
 export default {
   // name: 'App',
   components: {
-    CustomCursor, 
+    // CustomCursor, 
     Navigation,
     HomepageHero,
     Projects,

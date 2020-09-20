@@ -46,7 +46,7 @@
   }
 
   &__body {
-    @include text--body;
+    @include text--medium;
 
     margin: 70px 0;
 
@@ -149,8 +149,4 @@
       transform: translateY(100%);
     }
   }
-}
-
-#project {
-  background-color: $c-grey-light;
 }

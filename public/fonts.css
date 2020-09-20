@@ -19,7 +19,8 @@
     url('./fonts/neuemontreal-bold-webfont.woff') format('woff'),
     url('./fonts/neuemontreal-bold-webfont.ttf') format('truetype'),
     url('./fonts/neuemontreal-bold-webfont.svg#neue_montrealbold') format('svg');
-  font-weight: bold;
+  font-weight: normal;
+  font-style: none;
 }
 
 @font-face {

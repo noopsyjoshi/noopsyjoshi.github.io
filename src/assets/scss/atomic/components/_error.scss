@@ -1,6 +1,6 @@
 .error {
   height: 100vh;
-  background-color: $c-yellow-light;
+  background-color: $c-pink-light;
 
   &__flex {
     height: 100vh;
@@ -18,13 +18,15 @@
 
   &__title {
     margin-bottom: 50px;
+    color: $c-orange;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 75px;
+      text-transform: lowercase;
+      font-size: 10rem;
+      line-height: 10rem;
+      font-family: 'nm-bold';
     }
-  }
-
-  &__body {
   }
 
   &__image,
@@ -38,11 +40,6 @@
       width: 400px;
       height: 250px;
       margin-bottom: 75px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      width: 500px;
-      height: 350px;
     }
   }
 

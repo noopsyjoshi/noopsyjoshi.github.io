@@ -1,20 +1,20 @@
 <template>
   <section id="about" data-color="bg--blue-dark" class="about">
     <div class="row">
-      <div class="col-10 offset-1 offset-xl-2">
+      <div class="col-10 offset-1">
         <h2 data-aos="slide-up-subheading" class="d-split section__title">About</h2>
       </div>
-      <div class="col-10 offset-1 col-md-8 col-xl-6 offset-xl-2">
+      <div class="col-10 offset-1 col-md-8 offset-xl-2">
         <div class="about__body">
           <p
               class="d-split"
               data-aos="slide-up-body"
           >
-            I'm Noopur Joshi, a frontend developer living in London, fuelled by creative designs, clean code, chai, glitter & pixel perfection. Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including e-commerce and hospitality. I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.
+            Hi! I'm Noopur Joshi, a <span class="c--blue">front-end developer</span> living in <span class="c--blue">London</span>, fuelled by creative designs, clean code, chai, glitter & <span class="c--blue">pixel perfection</span>. Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including <span class="c--blue">e-commerce and hospitality.</span> I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.
           </p>
         </div>
       </div>
-      <div class="col-10 offset-1 col-md-8 offset-xl-3">
+      <div class="col-10 offset-1 col-md-8 offset-xl-2">
         <div class="about__skills">
           <ul>
             <li>
@@ -93,14 +93,6 @@
           <p class="link about__website"><a href="https://www.thecollective.com/">The Collective</a></p>
         </div>
       </div>-->
-      <div class="col-10 offset-1">
-        <h2
-            data-aos="slide-up-subheading"
-            class="d-split section__title section__title--low-spacer"
-        >
-          Timeline
-        </h2>
-      </div>
       <div class="col-10 offset-1">
         <div class="about__timeline">
           <div

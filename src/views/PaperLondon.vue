@@ -11,11 +11,10 @@
           />
         </div>
 
-        <div class="col-10 offset-1 col-md-7 offset-md-2 col-xl-5">
+        <div class="col-10 offset-1 col-xl-6 offset-xl-2">
           <p
-              data-aos="fade-in"
-              data-aos-duration="1000"
-              class="project__body"
+              data-aos="slide-up-body"
+              class="d-split project__body"
           >
             Paper is a fashion brand focusing on bold, bright and colourful collections of knitwear, outerwear, dresses and swimswear. The client wanted to update their site to closely reflect their brand guidelines, focusing on their bold, colourful and sustainable clothing. Using the Debut theme in Shopify as a base template, I was responsible for creating the site from the Sketch designs, with help from two other developers on the shopping cart, bug fixes and deployment to the live site. The website took three months to complete and the launch was a huge successs for the client resulting in increased sales.
           </p>
@@ -109,6 +108,7 @@ import FooterItem from '@/components/elements/FooterItem.vue';
 
 
 export default {
+  
   components: {
     Close,
     CustomCursor,
@@ -150,6 +150,11 @@ export default {
         ];
       },
     },
+  },
+
+  beforeCreate() {
+    document.body.style.backgroundColor = '#fde9ea';
+    document.body.style.color = '#e42536';
   },
 };
 </script>

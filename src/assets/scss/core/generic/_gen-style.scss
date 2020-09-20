@@ -10,7 +10,7 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  cursor: none;
+  // cursor: none;
   overflow-x: hidden;
 }
 
@@ -18,10 +18,11 @@ html {
 body {
   font-size: 10px;
   font-size: 1rem;
+  background-color: $c-grey-light;
 }
 
-.bg-body {
- transition: background-color .3s ease;
+.bg {
+  transition: background-color 1s ease;
 }
 
 .anchor {

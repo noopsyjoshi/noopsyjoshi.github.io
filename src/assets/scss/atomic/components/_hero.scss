@@ -4,7 +4,20 @@
   justify-content: flex-start;
   height: 100vh;
 
+  &__heading {
+    mix-blend-mode: difference;
+    color: $c-white;
+  }
+
   &__span {
     display: inline-block;
+  }
+
+  &__draw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
   }
 }

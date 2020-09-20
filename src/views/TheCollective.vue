@@ -55,7 +55,7 @@
           </figure>
         </div>
       </div>
-      <div class="col-12 col-md-8 offset-md-3">
+      <div class="col-10 offset-1 col-xl-8 offset-xl-2">
         <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
           <img
               class="project__image project__image--contain"
@@ -63,7 +63,7 @@
           >
         </figure>
       </div>
-      <div class="col-12 col-md-8 offset-md-3">
+      <div class="col-10 offset-1 col-xl-8 offset-xl-2">
         <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
           <img
               class="project__image project__image--contain"

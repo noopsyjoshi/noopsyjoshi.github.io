@@ -23,7 +23,7 @@ export default {
     this.cursorOuter = this.$refs.cursorOuter;
 
     this.navigations = Array.from(document.querySelectorAll('.link'));
-    this.projects = Array.from(document.querySelectorAll('.projects__project-image'));
+    this.projects = Array.from(document.querySelectorAll('.projects__figure'));
 
     this.navigations.forEach((nav) => {
       nav.addEventListener('mouseover', this.hoverCursor);
@@ -90,7 +90,7 @@ export default {
       });
       
       TweenMax.to(this.cursorOuter, 0.3, {
-        scale: 4,
+        scale: 5,
         opacity: 1,
       });
     },

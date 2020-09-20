@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-10 offset-1">
         <p class="contact__email d-split" data-aos="slide-up-body">
-          Drop me a line<br>
+          I'd love to chat, drop me a line at<br>
           <a class="contact__anchor link" href="mailto:noopur.joshi13@gmail.com">
             noopur.joshi13@gmail.com</a>
         </p>

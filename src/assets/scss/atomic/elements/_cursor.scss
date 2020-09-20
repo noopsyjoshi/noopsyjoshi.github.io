@@ -12,14 +12,14 @@
   }
 
   &--outer {
-    color: $c-grey-dark;
+    color: $c-blue;
     width: 30px;
     height: 30px;
-    font-family: 'nm-regular';
+    font-family: 'nm-medium';
     @include flex-pos;
     top: -15px;
     left: -15px;
-    background-color: $c-red-light;
+    background-color: $c-light-pink;
     mix-blend-mode: difference;
     border-radius: 50%;
     line-height: 100%;
@@ -27,7 +27,7 @@
     position: absolute;
 
     &.cursor--projects {
-      background-color: $c-red-light;
+      mix-blend-mode: difference;
 
       &:after {
         content: 'explore';
@@ -36,7 +36,6 @@
     }
 
     &.cursor--email {
-      background-color: $c-pink-light;
 
       &:after {
         content: 'email';
@@ -50,7 +49,7 @@
     height: 10px;
     left: -5px;
     top: -5px;
-    background-color: $c-grey-dark;
+    background-color: $c-blue;
     z-index: 1;
     position: absolute;
   }
