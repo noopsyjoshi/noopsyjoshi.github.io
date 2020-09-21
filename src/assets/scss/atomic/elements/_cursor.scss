@@ -12,23 +12,24 @@
   }
 
   &--outer {
-    color: $c-blue;
+    color: $c-pink-light;
     width: 30px;
     height: 30px;
     font-family: 'nm-medium';
     @include flex-pos;
     top: -15px;
     left: -15px;
-    background-color: $c-light-pink;
-    mix-blend-mode: difference;
+    background-color: $c-red;
     border-radius: 50%;
     line-height: 100%;
     z-index: 0;
     position: absolute;
 
-    &.cursor--projects {
-      mix-blend-mode: difference;
+    .body--dark & {
+      background-color: $c-pink-light;
+    }
 
+    &.cursor--projects {
       &:after {
         content: 'explore';
         font-size: 0.1rem;
@@ -49,8 +50,12 @@
     height: 10px;
     left: -5px;
     top: -5px;
-    background-color: $c-blue;
+    background-color: $c-pink-light;
     z-index: 1;
     position: absolute;
+
+    .body--dark & {
+      background-color: $c-red;
+    }
   }
 }

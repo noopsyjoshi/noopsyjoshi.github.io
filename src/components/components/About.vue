@@ -2,15 +2,23 @@
   <section id="about" data-color="bg--blue-dark" class="about">
     <div class="row">
       <div class="col-10 offset-1">
-        <h2 data-aos="slide-up-subheading" class="d-split section__title">About</h2>
+        <h2 data-aos="slide-up-heading" class="d-split section__title">The<br>story<br>so far</h2>
       </div>
-      <div class="col-10 offset-1 col-md-8 offset-xl-2">
+      <div class="col-10 offset-1 col-md-8 col-xl-6 offset-xl-2">
         <div class="about__body">
           <p
               class="d-split"
               data-aos="slide-up-body"
           >
-            Hi! I'm Noopur Joshi, a <span class="c--blue">front-end developer</span> living in <span class="c--blue">London</span>, fuelled by creative designs, clean code, chai, glitter & <span class="c--blue">pixel perfection</span>. Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including <span class="c--blue">e-commerce and hospitality.</span> I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.
+            Hi! I'm Noopur Joshi, a <span class="about__highlights">front-end developer</span> living in <span class="about__highlights">London</span>, fuelled by creative designs, clean code, chai, glitter & <span class="about__highlights">pixel perfection</span>. Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including <span class="about__highlights">e-commerce and hospitality.</span> I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.
+          </p>
+        </div>
+        <div class="about__body">
+          <p
+              class="d-split"
+              data-aos="slide-up-body"
+          >
+            In my free time I enjoy listening to music, <span class="about__highlights">travelling (my dream is to visit Japan)</span> keeping up with the wed design trends on awwwards,  <span class="about__highlights">photography</span> and resisting the urge to buy <span class="about__highlights">more plants</span>.
           </p>
         </div>
       </div>
@@ -110,7 +118,7 @@
                 <p class="about__timeline-body about__timeline-body--medium">{{ item.role }}</p>
               </div>
               <div class="col-12 col-lg-4">
-                <p class="about__timeline-body about__timeline-body--right">{{ item.location }}</p>
+                <p class="about__timeline-body about__timeline-body--right">@{{ item.location }}</p>
               </div>
             </div>
           </div>

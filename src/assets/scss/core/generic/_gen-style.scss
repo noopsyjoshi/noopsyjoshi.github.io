@@ -14,11 +14,21 @@ html {
   overflow-x: hidden;
 }
 
+.body {
+  &--light {
+    background-color: $c-grey-light;
+    color: $c-grey-dark;
+  }
+
+  &--dark {
+    background-color: $c-grey-dark;
+    color: $c-grey-light;
+  }
+}
 
 body {
   font-size: 10px;
   font-size: 1rem;
-  background-color: $c-grey-light;
 }
 
 .bg {

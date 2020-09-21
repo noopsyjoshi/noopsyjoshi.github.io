@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 // import BgColorFade from './utils/bgColorFade.js';
 import ProjectsAnimation from './utils/curtains.js';
 import SplittingAnimation from './utils/splitting.js';
-import Draw from './utils/draw.js';
+// import Draw from './utils/draw.js';
 import hoverEffect from './utils/hoverEffect.js';
 import VuePlyr from 'vue-plyr';
 
@@ -32,6 +32,8 @@ new Vue({
   mounted() {
     ProjectsAnimation();
     // SkewAnimation();
+
+    document.body.classList.add('body--dark');
 
 
     Array.from(document.querySelectorAll('.projects__figure')).forEach((el) => {
@@ -60,7 +62,7 @@ new Vue({
       // this.bgFadeInit();
 
       
-      Draw();
+      // Draw();
     });
 
     router.afterEach((to, from, next) => {

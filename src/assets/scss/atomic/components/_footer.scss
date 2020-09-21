@@ -4,9 +4,13 @@
   }
 
   &__flex {
-    border-top: 1px solid $c-grey-dark;
+    border-top: 2px solid $c-grey-dark;
     padding: 20px 0 30px;
     @include flex-pos(center, space-between);
+
+    .body--dark & {
+      border-top: 2px solid $c-white;
+    }
   }
 
   &__button {

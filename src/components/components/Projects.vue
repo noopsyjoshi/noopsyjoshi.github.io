@@ -1,30 +1,27 @@
 <template>
   <section id="projects" data-color="bg--grey-light" class="projects">
-    <!-- <div class="np--sm col-10 offset-1"> -->
-    <h2 data-scroll data-aos="slide-up-body" class="d-split section__title">Projects</h2>
-    <div v-for="(item, index) in projects" :key="index" class="projects__block">
-      <div :data-bg-color="item.bgColor" class="projects__item">
-        <router-link class="projects__link" :to="item.path">
-          <h3 class="projects__project-title">{{ item.title }}</h3>
-          <figure :data-displacement="images.displacement" class="projects__figure">
-            <img id="project" class="projects__image" :src="require(`@/assets/images/projects/${item.images.url1}`)" :alt="item.images.alt">
-            <img id="project" class="projects__image" :src="require(`@/assets/images/projects/${item.images.url2}`)" :alt="item.images.alt">
-          </figure>
-          <div class="projects__marquee">
-            <div class="projects__marquee-inner" aria-hidden="true">
-              <span>{{ item.title }}</span>
-              <span>{{ item.title }}</span>
-              <span>{{ item.title }}</span>
-              <span>{{ item.title }}</span>
+    <div class="row">
+      <div class="col-10 offset-1">
+        <h2 data-scroll data-aos="slide-up-heading" class="d-split section__title">Project<br>Showcase</h2>
+        <div class="projects__container">
+          <div v-for="(item, index) in projects" :key="index" class="projects__block">
+            <div :data-bg-color="item.bgColor" class="projects__item">
+              <router-link class="projects__link" :to="item.path">
+                <figure :data-displacement="images.displacement" class="projects__figure">
+                  <img id="project" class="projects__image" :src="require(`@/assets/images/projects/${item.images.url1}`)" :alt="item.images.alt">
+                  <img id="project" class="projects__image" :src="require(`@/assets/images/projects/${item.images.url2}`)" :alt="item.images.alt">
+                </figure>
+                <div class="projects__flex">
+                  <h3 data-aos="slide-up-body" class="d-split  projects__project-title">{{ item.title }}</h3>
+                  <div class="projects__project-description-wrapper">
+                    <p data-aos="slide-up-body" class="d-split projects__project-description">{{ item.description }}</p>
+                  </div>
+                </div>
+              </router-link>
             </div>
           </div>
-        </router-link>
+        </div>
       </div>
-      <!-- <div class="projects__flex">
-              <div class="projects__project-description-wrapper">
-                <p data-aos="slide-up-body" class="d-split projects__project-description">{{ item.description }}</p>
-              </div>
-            </div> -->
     </div>
   </section>
 </template>
@@ -48,7 +45,7 @@ export default {
             },
             description: 'Redesigned e-commerce site built for a sustainabile fashion brand in Shopify ',
             path: '/paperlondon',
-            bgColor: 'teal',
+            bgColor: 'pink-light',
           },
           {
             number: '02',
@@ -74,18 +71,21 @@ export default {
             description:
               'Three websites built for Cyprian luxury hotels using Handlebars.js',
             path: '/thanos',
-            bgColor: 'orange',
+            bgColor: 'pink-light',
           },
-          // {
-          //   number: '04',
-          //   title: 'General Assembly Work',
-          //   image: {
-          //     url: 'almyra.jpg',
-          //     alt: 'Image of Thanos Hotels website',
-          //   },
-          //   description: 'Selected projects during a three month coding bootcamp in London',
-          //   path: '/generalassembly',
-          // },
+          {
+            number: '04',
+            title: 'General Assembly Work',
+            images: {
+              url1: 'paper-01.jpg',
+              url2: 'paper-01.jpg',
+              alt: 'Image of Thanos Hotels website',
+            },
+            description: 'Selected projects during a three month coding bootcamp in London',
+            path: '/generalassembly',
+            bgColor: 'green-light',
+
+          },
         ];
       },
     },

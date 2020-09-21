@@ -14,6 +14,12 @@ $height: 70px;
 
   &__flex {
     @include flex-pos(flex-start, space-between);
+    border-bottom: 2px solid $c-grey-dark;
+    padding: 10px 0;
+
+    .body--dark & {
+      border-bottom: 2px solid $c-white;
+    }
 
     @include media-breakpoint-up(xl) {
       align-items: center;
@@ -21,11 +27,14 @@ $height: 70px;
   }
 
   &__icon {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    fill: $c-grey-dark;
+
+    .body--dark & {
+      fill: $c-white;
+    }
   }
 
   &__links {
@@ -53,8 +62,6 @@ $height: 70px;
 
   &__button {
     @include reset-button;
-    color: $c-grey-dark;
-    mix-blend-mode: exclusion;
     text-align: right;
     font-size: 1.6rem;
     line-height: 2rem;
@@ -62,13 +69,15 @@ $height: 70px;
     margin: 0;
     font-family: 'nm-medium';
     text-transform: lowercase;
-    mix-blend-mode: difference;
 
     &:focus,
     &:active {
       outline: none;
     }
-  
+
+    .body--dark & {
+      color: $c-white;
+    }
 
     @include media-breakpoint-up(xl) {
       font-size: 1.8rem;
@@ -87,25 +96,17 @@ $height: 70px;
   }
 
   .navigation__button {
-    &--light {
-      .char {
-        &:before,
-        &:after {
-          color: $c-grey-dark;
-          mix-blend-mode: exclusion;
-        }
-      }
-    }
-
     .char {
       overflow: hidden;
       color: transparent;
 
       &:before,
       &:after {
+        .body--dark & {
+          color: $c-white;
+        }
+
         visibility: visible;
-        color: $c-grey-dark;
-        mix-blend-mode: exclusion;
         transition: transform 0.3s cubic-bezier(0.9, 0, 0.2, 1);
         transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
       }

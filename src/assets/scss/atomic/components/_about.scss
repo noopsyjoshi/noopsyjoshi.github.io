@@ -3,7 +3,6 @@
   height: 100%;
   padding: 100px 0;
   overflow-x: hidden;
-  // background-color: $c-green;
 
   @include media-breakpoint-up(xl) {
     padding: 200px 0;
@@ -35,6 +34,10 @@
     }
   }
 
+  &__highlights {
+    color: $c-orange;
+  }
+
   &__intro {
     margin-bottom: 30px;
 
@@ -60,7 +63,10 @@
     }
 
     > p {
-      @include text--large;
+    font-size: 3rem;
+    font-family: 'nm-regular';
+    line-height: 3rem;
+    text-transform: uppercase;
     }
   }
 
@@ -97,11 +103,15 @@
     &:after {
       content: '';
       height: 1px;
-      background-color: rgba($c-grey-dark, 0.2);
+      background-color: rgba($c-grey-dark, 0.9);
       position: absolute;
       bottom: 0;
       right: 0;
       width: 0%;
+
+      .body--dark & {
+        background-color: rgba($c-white, 0.9);
+      }
     }
 
     &.aos-animate {
@@ -114,67 +124,21 @@
   }
 
   &__date {
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    text-transform: uppercase;
   }
 
   &__timeline-body {
     margin: 0;
-
-    &--medium {
-      @include media-breakpoint-down(sm) {
-      }
-    }
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    text-transform: uppercase;
 
     &--right {
       @include media-breakpoint-up(lg) {
         text-align: right;
       }
-    }
-  }
-
-  &__websites {
-    @include flex-pos(center, flex-start);
-    flex-wrap: wrap;
-
-    @include media-breakpoint-up(xl) {
-      font-size: 7rem;
-      line-height: 8rem;
-      margin-bottom: 100px;
-    }
-
-    p {
-      font-size: 6rem;
-      line-height: 7rem;
-      margin: 0 10px;
-    }
-
-    a {
-      transition: all 1s ease;
-
-      &:hover {
-        color: $c-white;
-        text-decoration: none;
-      }
-    }
-
-    &:hover {
-      .about__website {
-        opacity: 0.15;
-      }
-    }
-
-    .about__website {
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__website {
-    display: inline-block;
-    transition: all 1s ease;
-
-    &:hover {
-      opacity: 1;
     }
   }
 }

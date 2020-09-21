@@ -3,17 +3,22 @@
     <div class="row">
       <div class="col-10 offset-1">
         <div class="navigation__flex">
-          <button v-scroll-to="{ el: '#hero', duration: 2000, easing: [0.64, 0, 0.78, 0] }" class="link d-split navigation__button navigation__button--no-spacer">
-            noops
+          <button
+              v-scroll-to="{ el: '#hero', duration: 2000, easing: [0.64, 0, 0.78, 0] }"
+              class="link d-split navigation__button navigation__button--no-spacer"
+          >
+            <smiley class="navigation__icon" />noops
           </button>
           <div class="navigation__block">
             <ul class="navigation__links">
               <li v-for="(link, index) in links" :key="index" class="link navigation__link">
-                <button v-scroll-to="{ 
-                  el: link.path,
-                  duration: 2000,
-                  easing: [0.64, 0, 0.78, 0] 
-                }" class="d-split navigation__button"
+                <button
+                    v-scroll-to="{ 
+                      el: link.path,
+                      duration: 2000,
+                      easing: [0.64, 0, 0.78, 0] 
+                    }"
+                    class="d-split navigation__button"
                 >
                   {{ link.name }}
                 </button>
@@ -32,8 +37,13 @@
 
 <script>
 import ScrollTo from '@/utils/scrollTo.js';
+import Smiley from '@/assets/icons/smiley.svg';
+
 
 export default {
+  components: {
+    Smiley,
+  },
   props: {
     links: {
       type: Array,

@@ -1,42 +1,17 @@
 .contact {
-  color: $c-black;
+  color: $c-grey-dark;
   padding: 50px 0 100px;
 
   @include media-breakpoint-up(lg) {
     padding: 100px 0 200px;
   }
 
+  .body--dark & {
+    color: $c-white;
+  }
+
   &__heading {
     margin-bottom: 30px;
-    font-size: 2.6rem;
-    line-height: 3rem;
-  }
-
-  &__email {
-    font-family: 'nm-regular';
-    margin-bottom: 40px;
-    @include h4;
-    position: relative;
-    z-index: 10;
-
-    @include media-breakpoint-up(xl) {
-      margin-bottom: 100px;
-    }
-  }
-
-  &__icon {
-    width: 25px;
-    height: 25px;
-    fill: $c-black;
-    margin-right: 10px;
-
-    path {
-      fill: $c-black;
-    }
-  }
-
-  &__location {
-    @include flex-pos(flex-start, flex-start);
   }
 
   &__anchor {
@@ -47,68 +22,47 @@
       text-decoration: none;
       color: inherit;
     }
-  }
 
-  &__links {
-    display: flex;
-    position: relative;
-    z-index: 10;
-  }
-
-  &__link {
-    margin-right: 30px;
-    color: $c-black;
-    font-size: 2rem;
-    line-height: 3rem;
-
-    @include media-breakpoint-up(md) {
-      font-size: 1.8rem;
-      line-height: 2.2rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 3rem;
-      line-height: 3.4rem;
-      @include flex-pos;
-      margin-right: 50px;
+    .body--dark & {
+      color: $c-white;
     }
   }
 
-  .contact__link-span {
-    .char {
-      overflow: hidden;
-      color: transparent;
+  // .contact__link-span {
+  //   .char {
+  //     overflow: hidden;
+  //     color: transparent;
 
-      &:before,
-      &:after {
-        visibility: visible;
-        color: $c-black;
-        transition: transform 0.3s cubic-bezier(0.9, 0, 0.2, 1);
-        transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
-      }
+  //     &:before,
+  //     &:after {
+  //       visibility: visible;
+  //       color: $c-black;
+  //       transition: transform 0.3s cubic-bezier(0.9, 0, 0.2, 1);
+  //       transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
+  //     }
 
-      &:before {
-        transition-delay: calc(0.02s * (var(--char-index)));
-      }
-    }
+  //     &:before {
+  //       transition-delay: calc(0.02s * (var(--char-index)));
+  //     }
+  //   }
 
-    &:hover .char:before {
-      transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
-    }
-    &:hover .char:after {
-      transition-delay: calc(0.02s * (var(--char-index)));
-    }
-  }
+  //   &:hover .char:before {
+  //     transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
+  //   }
+  //   &:hover .char:after {
+  //     transition-delay: calc(0.02s * (var(--char-index)));
+  //   }
+  // }
 
-  .contact__link-span {
-    .char:before {
-      transform: translateY(-100%);
-    }
-    &:hover .char:before {
-      transform: translateY(0%);
-    }
-    &:hover .char:after {
-      transform: translateY(100%);
-    }
-  }
+  // .contact__link-span {
+  //   .char:before {
+  //     transform: translateY(-100%);
+  //   }
+  //   &:hover .char:before {
+  //     transform: translateY(0%);
+  //   }
+  //   &:hover .char:after {
+  //     transform: translateY(100%);
+  //   }
+  // }
 }

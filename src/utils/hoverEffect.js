@@ -78,24 +78,24 @@ void main() {
   var video = firstDefined(opts.video, false);
 
   const projects = Array.from(document.querySelectorAll('.projects__project-title'));
-  const bgBody = document.querySelector('.bg');
+  // const bgBody = document.querySelector('.bg');
 
   projects.forEach((project) => {
     project.onmouseover = function() {
-      const color = this.closest('.projects__item').dataset.bgColor;
+      // const color = this.closest('.projects__item').dataset.bgColor;
       this.closest('.projects__item').classList.add('active');
   
       userHover = true;
-      bgBody.classList.add(`bg--${color}`);
+      // bgBody.classList.add(`bg--${color}`);
     };
   });
 
   projects.forEach((project) => {
     project.onmouseout = function() {
-      const color = this.closest('.projects__item').dataset.bgColor;
+      // const color = this.closest('.projects__item').dataset.bgColor;
       this.closest('.projects__item').classList.remove('active');
 
-      bgBody.classList.remove(`bg--${color}`);
+      // bgBody.classList.remove(`bg--${color}`);
     };
   });
       
