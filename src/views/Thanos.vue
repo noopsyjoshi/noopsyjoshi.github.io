@@ -15,9 +15,9 @@
         </p>
       </div>
       <div class="col-10 offset-1 col-xl-6 offset-xl-2">
-        <a class="project__link project__link--block" target="_blank" href="https://anassa.com">&#8627;&nbsp;Go To Anassa</a>
-        <a class="project__link project__link--block" target="_blank" href="https://almyra.com">&#8627;&nbsp;Go To Almyra</a>
-        <a class="project__link project__link--block" target="_blank" href="https://annabelle.com.cy">&#8627;&nbsp;Go To Annabelle</a>
+        <a class="link project__link project__link--block" target="_blank" href="https://anassa.com">&#8627;&nbsp;Go To Anassa</a>
+        <a class="link project__link project__link--block" target="_blank" href="https://almyra.com">&#8627;&nbsp;Go To Almyra</a>
+        <a class="link project__link project__link--block" target="_blank" href="https://annabelle.com.cy">&#8627;&nbsp;Go To Annabelle</a>
       </div>
       <div class="col-10 offset-1">
         <div class="project__video">
@@ -35,8 +35,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-4 offset-2"><h4>&mdash; Technical and Soft Skills</h4></div>
-        <div class="col-xl-6">
+        <div class="col-10 offset-1 col-md-4 offset-md-1"><h4>Technical and Soft Skills</h4></div>
+        <div class="col-10 offset-1 col-md-6 offset-md-0">
           <div class="about__skills">
             <ul>
               <li v-for="(item, index) in items" :key="index" class="project__tech">

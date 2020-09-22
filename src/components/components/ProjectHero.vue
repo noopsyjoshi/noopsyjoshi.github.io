@@ -7,7 +7,7 @@
     </div>
     <figure
         data-aos="reveal-image-up"
-        class="project-hero__figure reveal-image-up reveal-image-up--grey"
+        class="reveal-image-up project-hero__figure"
     >
       <img
           data-aos="zoom-image"

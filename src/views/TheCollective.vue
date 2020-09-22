@@ -94,10 +94,9 @@
           </figure>
         </div>
       </div>
-      <!-- Tech -->
       <div class="row">
-        <div class="col-4 offset-2"><h4>&mdash; Technical and Soft Skills</h4></div>
-        <div class="col-xl-6">
+        <div class="col-10 offset-1 col-xl-4 offset-xl-2"><h4>Technical and Soft Skills</h4></div>
+        <div class="col-10 offset-1 col-xl-6 offset-xl-0">
           <div class="about__skills">
             <ul>
               <li v-for="(item, index) in items" :key="index" class="project__tech">
@@ -108,7 +107,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> 
       <footer-item link="#project" />
       <custom-cursor />
     </div>

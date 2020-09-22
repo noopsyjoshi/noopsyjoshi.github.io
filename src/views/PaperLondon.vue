@@ -40,7 +40,7 @@
         <vimeo-player video-id="456941337" />
         <figcaption>PDP</figcaption>
       </div> -->
-      <div class="col-10 offset-1 col-xl-6 offset-xl-3">
+      <div class="col-10 offset-1 col-xl-6 offset-xl-2">
         <p class="project__body">
           A vibrant page was designed and added to the site to reflect on the brands goals and process, as well as emit a powerful message on fashion and its repercussions on the environment. The page features customisable sticky images on the left and content on the right, transforming to accordions on smaller devices.
         </p>
@@ -51,8 +51,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-4 offset-2"><h4>&mdash; Technical and Soft Skills</h4></div>
-        <div class="col-xl-6">
+        <div class="col-10 offset-1 col-md-4 offset-md-2"><h4>Technical and Soft Skills</h4></div>
+        <div class="col-10 offset-1 col-md-6 offset-md-0">
           <div class="about__skills">
             <ul>
               <li v-for="(item, index) in items" :key="index" class="project__tech">
@@ -63,7 +63,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
     <footer-item link="#project" />
     <custom-cursor />

@@ -26,6 +26,24 @@
     top: 50%;
   }
 
+  .body--dark & {
+    border-color: $c-white;
+
+    &:after,
+    &:before {
+      border-color: $c-white;
+    }
+  }
+
+  .body--teal & {
+    border-color: $c-beige;
+
+    &:after,
+    &:before {
+      border-color: $c-beige;
+    }
+  }
+
   &__wrapper {
     @include flex-pos(center, flex-end);
   }

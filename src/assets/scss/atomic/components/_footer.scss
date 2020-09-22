@@ -6,6 +6,7 @@
   &__flex {
     border-top: 2px solid $c-grey-dark;
     padding: 20px 0 30px;
+    flex-direction: column;
     @include flex-pos(center, space-between);
 
     .body--dark & {
@@ -14,6 +15,10 @@
 
     .body--teal & {
       border-top: 2px solid $c-beige;
+    }
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
     }
   }
 
@@ -35,10 +40,15 @@
 }
 
 %footer-font {
-  font-size: 2rem;
-  line-height: 2.4rem;
   font-style: normal;
   color: inherit;
   font-family: 'nm-regular';
   text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
 }

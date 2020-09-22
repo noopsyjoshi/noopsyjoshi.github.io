@@ -5,6 +5,7 @@
 
   &__title {
     font-family: 'nm-regular';
+    text-transform: uppercase;
 
     @include media-breakpoint-up(xl) {
       margin-top: 50px;
@@ -16,6 +17,42 @@
     height: 250px;
     width: 100%;
     margin: 0;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $c-grey-light;
+    }
+
+    .body--light & {
+      &:after {
+        background-color: $c-grey-light;
+      }
+    }
+
+    .body--dark & {
+      &:after {
+        background-color: $c-grey-dark;
+      }
+    }
+
+    .body--teal & {
+      &:after {
+        background-color: $c-teal;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      height: 350px;
+    }
 
     @include media-breakpoint-up(lg) {
       height: 600px;

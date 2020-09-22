@@ -12,7 +12,13 @@
   }
 
   &__flex {
-    @include flex-pos(center, space-between);
+    flex-direction: column;
+    @include flex-pos(flex-start, center);
+
+    @include media-breakpoint-up(lg) {
+      @include flex-pos(center, space-between);
+      flex-direction: row;
+    }
   }
 
   &__container {
@@ -42,15 +48,25 @@
   }
 
   &__project-title {
-     z-index: z('projects__title');
-    font-size: 5rem;
-    line-height: 5rem;
-    font-family: 'nm-regular';
     text-transform: uppercase;
+    font-family: 'nm-regular';
+    z-index: z('projects__title');
     display: inline-block;
     cursor: pointer;
     position: relative;
     padding: 0 30px 0;
+    font-size: 3rem;
+    line-height: 3rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 5rem;
+      line-height: 5rem;
+    }
 
     &:before {
       all: initial;
@@ -105,13 +121,22 @@
   }
 
   &__project-description-wrapper {
-    max-width: 18%;
-    text-align: right;
+    text-align: left;
+    padding: 0 30px 0;
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+      max-width: 35%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 18%;
+    }
 
     p {
-      font-size: 1.6rem;
-      line-height: 1.6rem;
-      font-family: 'nm-medium';
+      font-family: 'nm-regular';
+      font-size: 2rem;
+      line-height: 2rem;
     }
   }
 }

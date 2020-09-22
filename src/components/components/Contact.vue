@@ -6,7 +6,7 @@
           Let's make<br>something great
         </h2>
         <h4 data-aos="rotate-in">
-          find me on 
+          Find me on 
           <span><a class="contact__link link contact__link-span" href="mailto:noopur.joshi13@gmail.com">
             email</a></span> / 
           <span><a target="_blank" class="link contact__link contact__link-span" href="https://github.com/noopsyjoshi/">GitHub</a></span> /

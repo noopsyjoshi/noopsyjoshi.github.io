@@ -20,6 +20,10 @@ $height: 70px;
       border-bottom: 2px solid $c-beige;
     }
 
+    @include media-breakpoint-up(md) {
+      padding: 20px 0 15px;
+    }
+
     @include media-breakpoint-up(xl) {
       align-items: center;
     }
@@ -72,6 +76,7 @@ $height: 70px;
     font-family: 'nm-regular';
     text-transform: lowercase;
     color: $c-grey-dark;
+    @include flex-pos(center, flex-start);
 
     &:focus,
     &:active {
