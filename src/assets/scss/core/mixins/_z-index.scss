@@ -7,7 +7,7 @@
     @return null;
   }
 }
-$z-indexes: ('link', 'navigation', 'cursor', 'projects__figure', 'loader');
+$z-indexes: ('navigation', 'projects__figure', 'projects__block', 'projects__title', 'cursor', 'loader');
 
 /* Usage example
   .header {

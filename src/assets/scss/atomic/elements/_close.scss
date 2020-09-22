@@ -1,5 +1,5 @@
 .close {
-  border: 2px solid $c-black;
+  border: 2px solid $c-grey-dark;
   width: 50px;
   height: 50px;
   position: relative;
@@ -8,7 +8,7 @@
   &:after {
     content: '';
     height: 25px;
-    border-left: 2px solid $c-black;
+    border-left: 2px solid $c-grey-dark;
     position: absolute;
     transform: translate(-50%, -50%) rotate(45deg);
     left: 50%;
@@ -18,7 +18,7 @@
   &:before {
     content: '';
     height: 25px;
-    border-left: 2px solid $c-black;
+    border-left: 2px solid $c-grey-dark;
     position: absolute;
     -webkit-transform: rotate(-45deg);
     transform: translate(-50%, -50%) rotate(-45deg);

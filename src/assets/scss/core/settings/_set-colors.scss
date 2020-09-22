@@ -9,17 +9,8 @@ $c-orange: #FF5722;
 $c-blue: #014093;
 $c-green: #15db95;
 $c-red: #e42536;
-$c-teal: #01b7af;
-
-.c {
-  &--orange {
-    color: $c-orange;
-  }
-
-  &--blue {
-    color: $c-blue;
-  }
-}
+$c-teal: #006e7b;
+$c-beige: #f5efdc;
 
 .bg {
   &--light {

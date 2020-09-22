@@ -11,6 +11,10 @@
     .body--dark & {
       border-top: 2px solid $c-white;
     }
+
+    .body--teal & {
+      border-top: 2px solid $c-beige;
+    }
   }
 
   &__button {
@@ -31,10 +35,10 @@
 }
 
 %footer-font {
-  font-size: 1.6rem;
-  line-height: 2rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
   font-style: normal;
   color: inherit;
-  font-family: 'nm-medium';
+  font-family: 'nm-regular';
   text-transform: uppercase;
 }

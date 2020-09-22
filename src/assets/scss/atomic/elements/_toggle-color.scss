@@ -1,0 +1,22 @@
+.toggle-color {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &__btn {
+    width: 25px;
+    height: 25px;
+    @include reset-button;
+    margin: 0 20px;
+
+    &.active {
+      border: 2px solid $c-white;
+      border-radius: 50%;
+    }
+
+    &:focus, &:active {
+      border: none;
+      outline: none;
+    }
+  }
+}

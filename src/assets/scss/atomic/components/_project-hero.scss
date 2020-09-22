@@ -4,6 +4,8 @@
   }
 
   &__title {
+    font-family: 'nm-regular';
+
     @include media-breakpoint-up(xl) {
       margin-top: 50px;
       margin-bottom: 100px;

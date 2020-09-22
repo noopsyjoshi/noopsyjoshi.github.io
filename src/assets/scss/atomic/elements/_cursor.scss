@@ -25,8 +25,8 @@
     z-index: 0;
     position: absolute;
 
-    .body--dark & {
-      background-color: $c-pink-light;
+    .body--teal & {
+      background-color: $c-orange;
     }
 
     &.cursor--projects {
@@ -54,8 +54,8 @@
     z-index: 1;
     position: absolute;
 
-    .body--dark & {
-      background-color: $c-red;
+    .body--teal & {
+      background-color: $c-red-light;
     }
   }
 }

@@ -73,29 +73,22 @@ void main() {
   const angle2 = firstDefined(opts.angle2, -commonAngle * 0);
   const speedIn = firstDefined(opts.speedIn, opts.speed, 2);
   const speedOut = firstDefined(opts.speedOut, opts.speed, 2);
-  let userHover = firstDefined(opts.hover, true);
+  const userHover = firstDefined(opts.hover, true);
   // const easing = firstDefined(opts.easing, Expo.easeOut);
   var video = firstDefined(opts.video, false);
 
-  const projects = Array.from(document.querySelectorAll('.projects__project-title'));
+  const projects = Array.from(document.querySelectorAll('.projects__block'));
   // const bgBody = document.querySelector('.bg');
 
   projects.forEach((project) => {
     project.onmouseover = function() {
-      // const color = this.closest('.projects__item').dataset.bgColor;
-      this.closest('.projects__item').classList.add('active');
-  
-      userHover = true;
-      // bgBody.classList.add(`bg--${color}`);
+      this.classList.add('active');
     };
   });
 
   projects.forEach((project) => {
     project.onmouseout = function() {
-      // const color = this.closest('.projects__item').dataset.bgColor;
-      this.closest('.projects__item').classList.remove('active');
-
-      // bgBody.classList.remove(`bg--${color}`);
+      this.classList.remove('active');
     };
   });
       
@@ -269,7 +262,6 @@ void main() {
   scene.add(object);
 
   function transitionIn() {
-    console.log('transition');
     TweenMax.to(mat.uniforms.dispFactor, speedIn, {
       value: 1,
       ease: 5,

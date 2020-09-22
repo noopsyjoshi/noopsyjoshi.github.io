@@ -9,6 +9,17 @@
           >
             <smiley class="navigation__icon" />noops
           </button>
+          <div class="toggle-color">
+            <button data-bg-color="light" class="link toggle-color__btn">
+              <Light />
+            </button>
+            <button data-bg-color="dark" class="link toggle-color__btn">
+              <Dark />
+            </button>
+            <button data-bg-color="teal" class="link toggle-color__btn">
+              <Teal />
+            </button>
+          </div>
           <div class="navigation__block">
             <ul class="navigation__links">
               <li v-for="(link, index) in links" :key="index" class="link navigation__link">
@@ -33,16 +44,19 @@
 
 <style lang="scss">
 @import '@/assets/scss/atomic/components/_navigation.scss';
+@import '@/assets/scss/atomic/elements/_toggle-color.scss';
 </style>
 
 <script>
 import ScrollTo from '@/utils/scrollTo.js';
 import Smiley from '@/assets/icons/smiley.svg';
-
+import Dark from '@/assets/images/swatches/dark.svg';
+import Light from '@/assets/images/swatches/light.svg';
+import Teal from '@/assets/images/swatches/teal.svg';
 
 export default {
   components: {
-    Smiley,
+    Smiley, Dark, Light, Teal,
   },
   props: {
     links: {

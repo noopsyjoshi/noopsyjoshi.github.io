@@ -1,38 +1,34 @@
 <template>
   <section id="about" data-color="bg--blue-dark" class="about">
+    <div class="col-10 offset-1">
+      <h2 data-aos="slide-up-heading" class="d-split section__title">A little<br>something about me</h2>
+    </div>
+    <div class="col-10 offset-1 col-md-8 col-xl-6 offset-xl-2">
+      <div class="about__body">
+        <p data-aos="rotate-in">
+          Hi, I'm Noopur Joshi, a <span class="about__highlights">front-end developer</span> living in <span class="about__highlights">London</span>, fuelled by creative designs, clean code, chai, glitter & <span class="about__highlights">pixel perfection</span>. Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including <span class="about__highlights">e-commerce and hospitality.</span> I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.<br><br>In my free time I enjoy listening to music, <span class="about__highlights">travelling</span> (my dream is to visit Japan), keeping up with web design trends on awwwards, <span class="about__highlights">photography</span> and resisting the urge to buy <span class="about__highlights">more plants</span>.<br><br>Portfolio created with Vue, GSAP & AOS. Typeface &mdash; Neue Montreal by Pangrampangram, Text animation &mdash; Splitting.js. Image effect &mdash; using Robin Dela's hover effect. &#169;Noopur Joshi.
+        </p>
+      </div>
+    </div>
     <div class="row">
-      <div class="col-10 offset-1">
-        <h2 data-aos="slide-up-heading" class="d-split section__title">The<br>story<br>so far</h2>
-      </div>
-      <div class="col-10 offset-1 col-md-8 col-xl-6 offset-xl-2">
-        <div class="about__body">
-          <p
-              class="d-split"
-              data-aos="slide-up-body"
-          >
-            Hi! I'm Noopur Joshi, a <span class="about__highlights">front-end developer</span> living in <span class="about__highlights">London</span>, fuelled by creative designs, clean code, chai, glitter & <span class="about__highlights">pixel perfection</span>. Over the last couple of years, I’ve had the privilege to collaborate with some of the most talented people in the industry on a range of projects including <span class="about__highlights">e-commerce and hospitality.</span> I pride myself with going above and beyond to bring creative designs to life with great design and technical accuracy.
-          </p>
-        </div>
-        <div class="about__body">
-          <p
-              class="d-split"
-              data-aos="slide-up-body"
-          >
-            In my free time I enjoy listening to music, <span class="about__highlights">travelling (my dream is to visit Japan)</span> keeping up with the wed design trends on awwwards,  <span class="about__highlights">photography</span> and resisting the urge to buy <span class="about__highlights">more plants</span>.
-          </p>
-        </div>
-      </div>
-      <div class="col-10 offset-1 col-md-8 offset-xl-2">
+      <div class="col-4 offset-2"><h4>&mdash; Technical and Soft Skills</h4></div>
+      <div class="col-xl-6">
         <div class="about__skills">
           <ul>
             <li>
-              <p data-aos="reveal">JS ES6, CSS3, HTML5</p>
-            </li>
-            <li>
-              <p data-aos="reveal">SASS</p>
+              <p data-aos="reveal">Javascript, SASS, HTML</p>
             </li>
             <li>
               <p data-aos="reveal">CSS Animations</p>
+            </li>
+            <li>
+              <p data-aos="reveal">Vue.js & Nuxt.js</p>
+            </li>
+            <li>
+              <p data-aos="reveal">Handlebars.js</p>
+            </li>
+            <li>
+              <p data-aos="reveal">Understanding of React.js</p>
             </li>
             <li>
               <p data-aos="reveal">Bootstrap</p>
@@ -42,13 +38,7 @@
             </li>
             <li>
               <p data-aos="reveal">Sketch</p>
-            </li>
-            <li>
-              <p data-aos="reveal">Proficient with Vue.js and Handlebars.js</p>
-            </li>
-            <li>
-              <p data-aos="reveal">Understanding of React.js</p>
-            </li>
+            </li>            
             <li>
               <p data-aos="reveal">Cross browser compatibility</p>
             </li>
@@ -82,48 +72,33 @@
             <li>
               <p data-aos="reveal">Lightroom</p>
             </li>
-            <li>
-              <p data-aos="reveal">GSAP</p>
-            </li>
           </ul>
         </div>
       </div>
-      <!-- <div class="about__websites">
-        <div class="col-10 offset-1 col-xl-8 offset-xl-1">
-          <p class="link about__website"><a href="https://paperlondon.com/">Paper London</a></p>
-          <p>/</p>
-          <p class="link about__website"><a href="https://www.anassa.com/">Anassa</a></p>
-          <p>/</p>
-          <p class="link about__website"><a href="https://www.almyra.com/">Almyra</a></p>
-          <p>/</p>
-          <p class="link about__website"><a href="https://www.annabelle.com.cy/">Annabelle</a></p>
-          <p>/</p>
-          <p class="link about__website"><a href="https://www.thecollective.com/">The Collective</a></p>
-        </div>
-      </div>-->
-      <div class="col-10 offset-1">
-        <div class="about__timeline">
-          <div
-              v-for="(item, index) in items"
-              :key="index"
-              data-aos="slide-in-right"
-              :class="item.class"
-              class="about__block"
-          >
-            <div class="row">
-              <div class="col-12 col-lg-4">
-                <p class="about__date">{{ item.date }}</p>
-              </div>
-              <div class="col-12 col-lg-4">
-                <p class="about__timeline-body about__timeline-body--medium">{{ item.role }}</p>
-              </div>
-              <div class="col-12 col-lg-4">
-                <p class="about__timeline-body about__timeline-body--right">@{{ item.location }}</p>
-              </div>
+    </div>
+    <div class="col-10 offset-1">
+      <div class="about__timeline">
+        <div
+            v-for="(item, index) in items"
+            :key="index"
+            data-aos="slide-in-right"
+            :class="item.class"
+            class="about__block"
+        >
+          <div class="align-items-end row">
+            <div class="col-12 col-lg-4">
+              <p class="about__date">{{ item.startDate }} &mdash; {{ item.endDate }}</p>
+            </div>
+            <div class="col-12 col-lg-4">
+              <p class="about__timeline-body about__timeline-body--medium">{{ item.role }}</p>
+            </div>
+            <div class="col-12 col-lg-4">
+              <p class="about__timeline-body about__timeline-body--right">@{{ item.location }}</p>
             </div>
           </div>
         </div>
       </div>
+      <div class="col-6 offset-3" />
     </div>
   </section>
 </template>
@@ -138,27 +113,32 @@ export default {
       default() {
         return [
           {
-            date: '2018 Nov - 2020 July',
+            startDate: '2018 Nov',
+            endDate: '2020 July',
             role: 'Junior Frontend Developer',
             location: 'Matter Of Form, London',
           },
           {
-            date: '2018 June - Sept',
+            startDate: '2018 June',
+            endDate: 'Sept',
             role: 'Web Development Immersive Course',
             location: 'General Assembly, London',
           },
           {
-            date: '2017 Nov - 2019 April',
+            startDate: '2017 Nov',
+            endDate: '2018 April',
             role: 'Associate Implementation Consultant',
             location: 'Confluence, London',
           },
           {
-            date: '2015 - 2017',
+            startDate: '2015 Oct',
+            endDate: '2017 Oct',
             role: 'Implementation Consultant',
             location: 'Concep, London',
           },
           {
-            date: '2012 - 2015',
+            startDate: '2012',
+            endDate: '2015',
             role: 'BSc Computer Science',
             location: 'University of Leicester',
             class: 'first',

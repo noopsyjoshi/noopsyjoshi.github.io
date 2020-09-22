@@ -17,15 +17,12 @@
   }
 
   &__title {
+    @include h2;
     margin-bottom: 50px;
-    color: $c-orange;
+    color: $c-grey-dark;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 75px;
-      text-transform: lowercase;
-      font-size: 10rem;
-      line-height: 10rem;
-      font-family: 'nm-bold';
     }
   }
 

@@ -3,13 +3,10 @@ import App from './App.vue';
 import router from './router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// import BgColorFade from './utils/bgColorFade.js';
-import ProjectsAnimation from './utils/curtains.js';
 import SplittingAnimation from './utils/splitting.js';
-// import Draw from './utils/draw.js';
 import hoverEffect from './utils/hoverEffect.js';
 import VuePlyr from 'vue-plyr';
-
+import BgColorFade from './utils/bgColorFade.js';
 
 Vue.use(VuePlyr, {
   plyr: {
@@ -17,7 +14,6 @@ Vue.use(VuePlyr, {
   },
   emit: ['ended'],
 });
-
 
 Vue.config.productionTip = false;
 
@@ -29,46 +25,26 @@ new Vue({
   //   },
   // },
 
-  mounted() {
-    ProjectsAnimation();
-    // SkewAnimation();
-
-    document.body.classList.add('body--dark');
-
-
-    Array.from(document.querySelectorAll('.projects__figure')).forEach((el) => {
-      const imgs = Array.from(el.querySelectorAll('img'));
-      new hoverEffect({
-        parent: el,
-        // intensity: el.dataset.intensity || undefined,
-        // speedIn: el.dataset.speedin || undefined,
-        // speedOut: el.dataset.speedout || undefined,
-        // easing: el.dataset.easing || undefined,
-        // hover: el.dataset.hover || undefined,
-        image1: imgs[0].src,
-        image2: imgs[1].src,
-        displacementImage: el.dataset.displacement,
-      });
-    });
-    
-
+  created() {
     AOS.init({
       startEvent: 'load',
       once: 'true',
     });
+  },
 
+  mounted() {
+    
     this.$nextTick(() => {
+      this.bgSwitchInit();
       this.splitInit();
-      // this.bgFadeInit();
-
-      
-      // Draw();
+      this.hoverEffectInit();
     });
 
     router.afterEach((to, from, next) => {
       this.$nextTick(() => {
         this.splitInit();
-        // this.bgFadeInit();
+        this.hoverEffectInit();
+        this.bgSwitchInit();
       });
 
       window.scrollTo(0, 0);
@@ -84,12 +60,24 @@ new Vue({
   },
 
   methods: {
+    hoverEffectInit() {
+      Array.from(document.querySelectorAll('.projects__figure')).forEach((el) => {
+        const imgs = Array.from(el.querySelectorAll('img'));
+        new hoverEffect({
+          parent: el,
+          image1: imgs[0].src,
+          image2: imgs[1].src,
+          displacementImage: el.dataset.displacement,
+        });
+      });
+    },
+
     splitInit() {
       SplittingAnimation();
     },
 
-    bgFadeInit() {
-      // BgColorFade();
+    bgSwitchInit() {
+      BgColorFade();
     },
   },
 

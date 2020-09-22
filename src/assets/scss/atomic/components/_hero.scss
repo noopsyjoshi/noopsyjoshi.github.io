@@ -6,11 +6,10 @@
 
   &__heading {
     color: inherit;
-    margin-top: 30px;
   }
 
   &__span {
-    display: inline-block;
+    display: block;
   }
 
   &__icon {
@@ -20,6 +19,10 @@
 
     .body--dark & {
       fill: $c-white;
+    }
+
+    .body--teal & {
+      fill: $c-beige;
     }
   }
 

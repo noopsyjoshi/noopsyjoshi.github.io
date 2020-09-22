@@ -6,19 +6,18 @@ $height: 70px;
   width: 100vw;
   z-index: z('navigation');
   top: 0;
-  padding: 20px 0;
-
-  @include media-breakpoint-up(lg) {
-    padding: 30px 0;
-  }
+  color: $c-grey-dark;
 
   &__flex {
     @include flex-pos(flex-start, space-between);
     border-bottom: 2px solid $c-grey-dark;
-    padding: 10px 0;
+    padding: 15px 0 10px;
 
     .body--dark & {
       border-bottom: 2px solid $c-white;
+    }
+    .body--teal & {
+      border-bottom: 2px solid $c-beige;
     }
 
     @include media-breakpoint-up(xl) {
@@ -34,6 +33,9 @@ $height: 70px;
 
     .body--dark & {
       fill: $c-white;
+    }
+    .body--teal & {
+      fill: $c-beige;
     }
   }
 
@@ -67,8 +69,9 @@ $height: 70px;
     line-height: 2rem;
     font-style: normal;
     margin: 0;
-    font-family: 'nm-medium';
+    font-family: 'nm-regular';
     text-transform: lowercase;
+    color: $c-grey-dark;
 
     &:focus,
     &:active {
@@ -77,6 +80,10 @@ $height: 70px;
 
     .body--dark & {
       color: $c-white;
+    }
+
+    .body--teal & {
+      color: $c-beige;
     }
 
     @include media-breakpoint-up(xl) {
@@ -102,8 +109,14 @@ $height: 70px;
 
       &:before,
       &:after {
+        color: $c-grey-dark;
+
         .body--dark & {
           color: $c-white;
+        }
+
+        .body--teal & {
+          color: $c-beige;
         }
 
         visibility: visible;

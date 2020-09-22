@@ -1,21 +1,15 @@
 <template>
-  <div id="app">
-    <!-- <Loader /> -->
-    <!-- <transition mode="out-in"> -->
+  <div id="app" class="main body--light">
     <router-view />
-    <!-- </transition> -->
   </div>
 </template>
 
 <script>
-// import CustomCursor from '@/components/elements/CustomCursor.vue';
-// import Loader from '@/components/components/Loader.vue';
 
 export default {
   name: 'App',
   components: {
-    // CustomCursor,
-    // Loader,
+
   },
 };
 </script>
