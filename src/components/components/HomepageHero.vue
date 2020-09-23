@@ -2,8 +2,11 @@
   <section id="hero" class="hero">
     <div class="np--sm col-10 offset-1 col-md-9 col-xl-10">
       <div class="hero__heading-wrapper">
-        <h1 data-scroll data-aos="slide-up-heading" class="d-split hero__heading">
-          FOLIO<br>OF NOOPS.<br>DEVELOPER<br>& PLANT MUM
+        <h1 data-scroll data-aos="slide-up-hero" class="d-split hero__heading">
+          folio
+          <br>of Noops.
+          <br>Developer
+          <br>& plant mum
         </h1>
       </div>
     </div>
@@ -13,15 +16,10 @@
 
 <script>
 export default {
-  components: {
-  },
+  components: {},
 };
 </script>
 
 <style lang="scss">
 @import '@/assets/scss/atomic/components/_hero.scss';
-
-.image-hover {
-  display: none;
-}
 </style>

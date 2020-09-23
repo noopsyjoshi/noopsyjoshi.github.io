@@ -1,55 +1,42 @@
-import _ from 'lodash';
+// /* eslint-disable no-undef */
+// // import _ from 'lodash';
 
-const SkewAnimation = ($el) => {
-  window.onload = function() {
-    // const projects = Array.from(document.querySelectorAll('.projects'));
-    const projects = document.querySelector('.projects');
-    let prevPos = window.pageYOffset;
+// const SkewAnimation = ($el) => {
+//   const body = document.body;
+//   const scrollWrap = document.getElementsByClassName('smooth-scroll-wrapper')[0];
+//   console.log(scrollWrap);
+//   const height = scrollWrap.getBoundingClientRect().height - 1;
+//   // const speed = 0.04;
 
-    const isMobile = function() {
-      return window.innerWidth < 768 ? true : false;
-    };
+//   // const offset = 0;
 
-    const isSafari = function() {
-      const safari = window.safari !== undefined; // will return true if safari
-      return safari;
-    };
+//   body.style.height = Math.floor(height) + 'px';
 
-    const disableSkew = function() {
-      // hero.forEach((project) => {
-      projects.style.transform = 'none';
-      // });
-    };
+//   // function smoothScroll() {
+//   //   offset += (window.pageYOffset - offset) * speed;
 
-    const enableSkew = function() {
-      const newPos = window.pageYOffset;
-      const diff = newPos - prevPos;
-      const speed = _.clamp(diff * 0.07, -10, 10);
-      // projects.forEach((project) => {
-      projects.style.transform = `skewY(${speed}deg)`;
-      // });
-      prevPos = newPos;
+//   //   const scroll = 'translateY(-' + offset + 'px) translateZ(0)';
+//   //   scrollWrap.style.transform = scroll;
 
-      requestAnimationFrame(enableSkew);
-    };
+//   //   requestAnimationFrame(smoothScroll);
+//   // }
 
-    // disable skew on mobile
-    // disable skew in safari
-    const initSkew = function() {
-      if (isMobile() || isSafari() ) {
-        disableSkew();
-      } else {
-        enableSkew();
-      }
-    };
+//   // smoothScroll();
+  
+//   const content = document.querySelector('section');
+//   let currentPos = window.pageYOffset;
 
-    window.onresize = (e) => {
-      initSkew();
-    };
-    
-    initSkew();
+//   const callDistort = function() {
+//     const newPos = window.pageYOffset;
+//     const diff = newPos - currentPos;
+//     const speed = diff * 0.35;
 
-  };
-};
+//     content.style.transform = 'skewY(' + speed + 'deg)';
+//     currentPos = newPos;
+//     requestAnimationFrame(callDistort);
+//   };
 
-export default SkewAnimation;
+//   callDistort();
+// };
+
+// export default SkewAnimation;

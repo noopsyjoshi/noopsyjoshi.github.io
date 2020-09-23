@@ -1,30 +1,26 @@
 <template>
   <section id="project">
     <div class="project">
-      <div class="row">
-        <div class="np--sm col-10 offset-1">
-          <close />
-          <project-hero title="Paper London" :image="{
-            url: 'paperlondon/paper.jpg',
-            description: 'alt'
-          }"
-          />
-        </div>
-        <div class="col-10 offset-1 col-xl-6 offset-xl-2">
-          <p class="project__body">
-            Paper is a fashion brand focusing on bold, bright and colourful collections of knitwear, outerwear, dresses and swimswear. The client wanted to update their site to closely reflect their brand guidelines, focusing on their bold, colourful and sustainable clothing. Using the Debut theme in Shopify as a base template, I was responsible for creating the site from the Sketch designs, with help from two other developers on the shopping cart, bug fixes and deployment to the live site. The website took three months to complete and the launch was a huge successs for the client resulting in increased sales.<br><br>Site's features include Instagram API integration, a shopping cart created with AJAX, product search bar and Mailchimp integration for newsletter sign ups. Responsive carousels were built to display product images using the plugin Swiper.js.
-          </p>
-        </div>
-        <!-- Link to website -->
-        <div class="col-10 offset-1 col-xl-6 offset-xl-2">
-          <a class="link project__link" target="_blank" href="https://paperlondon.com">&#8627;&nbsp;Go To Website</a>
-        </div>
-        <div class="col-10 offset-1 col-xl-8 offset-xl-2">
-          <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
-            <img class="project__image project__image--contain" src="@/assets/images/paperlondon/paper-navigation.png">
-          </figure>
-        </div>
-      </div>
+      <close />
+      <project-hero title="Paper London" :image="{
+        url: 'paperlondon/paper.jpg',
+        description: 'alt'
+      }"
+      />
+    </div>
+    <div class="col-10 offset-1 col-xl-6 offset-xl-2">
+      <p class="project__body">
+        Paper is a fashion brand focusing on bold, bright and colourful collections of knitwear, outerwear, dresses and swimswear. The client wanted to update their site to closely reflect their brand guidelines, focusing on their bold, colourful and sustainable clothing. Using the Debut theme in Shopify as a base template, I was responsible for creating the site from the Sketch designs, with help from two other developers on the shopping cart, bug fixes and deployment to the live site. The website took three months to complete and the launch was a huge successs for the client resulting in increased sales.<br><br>Site's features include Instagram API integration, a shopping cart created with AJAX, product search bar and Mailchimp integration for newsletter sign ups. Responsive carousels were built to display product images using the plugin Swiper.js.
+      </p>
+    </div>
+    <!-- Link to website -->
+    <div class="col-10 offset-1 col-xl-6 offset-xl-2">
+      <a class="link project__link" target="_blank" href="https://paperlondon.com">&#8627;&nbsp;Go To Website</a>
+    </div>
+    <div class="col-10 offset-1 col-xl-8 offset-xl-2">
+      <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
+        <img class="project__image project__image--contain" src="@/assets/images/paperlondon/paper-navigation.png">
+      </figure>
       <div class="col-10 offset-1 col-xl-8 offset-xl-2">
         <figure data-aos="fade-in" data-aos-duration="800" class="project__figure">
           <img class="project__image project__image--contain" src="@/assets/images/paperlondon/paper-instagram.png">

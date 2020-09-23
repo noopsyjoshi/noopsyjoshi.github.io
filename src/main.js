@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -7,6 +8,8 @@ import SplittingAnimation from './utils/splitting.js';
 import hoverEffect from './utils/hoverEffect.js';
 import VuePlyr from 'vue-plyr';
 import BgColorFade from './utils/bgColorFade.js';
+import ImageCursor from './utils/imageCursor.js';
+
 
 Vue.use(VuePlyr, {
   plyr: {
@@ -33,11 +36,12 @@ new Vue({
   },
 
   mounted() {
-    
+
     this.$nextTick(() => {
       this.bgSwitchInit();
       this.splitInit();
       this.hoverEffectInit();
+      this.cursorImageInit();
     });
 
     router.afterEach((to, from, next) => {
@@ -78,6 +82,10 @@ new Vue({
 
     bgSwitchInit() {
       BgColorFade();
+    },
+
+    cursorImageInit() {
+      ImageCursor();
     },
   },
 

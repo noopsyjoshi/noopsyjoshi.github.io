@@ -10,7 +10,7 @@ $height: 70px;
 
   &__flex {
     @include flex-pos(flex-start, space-between);
-    border-bottom: 2px solid $c-grey-dark;
+    // border-bottom: 2px solid $c-grey-dark;
     padding: 15px 0 10px;
 
     .body--dark & {
@@ -92,9 +92,9 @@ $height: 70px;
     }
 
     @include media-breakpoint-up(xl) {
-      font-size: 1.8rem;
-      line-height: 2rem;
       @include flex-pos;
+      font-family: 'nm-medium';
+      font-size: 2rem;
     }
 
     &--no-spacer {

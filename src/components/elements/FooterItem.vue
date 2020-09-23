@@ -4,9 +4,9 @@
       <div class="col-10 offset-1">
         <div class="footer__flex">
           <button v-scroll-to="{ el: 'link', duration: 2000, easing: [0.64, 0, 0.78, 0] }" class="link footer__button">
-            Back to top
+            top
           </button>
-          <p class="footer__body">Made by Noopur Joshi</p>
+          <p class="footer__body">created by noopur</p>
         </div>
       </div>
     </div>

@@ -71,27 +71,11 @@ void main() {
   const commonAngle = firstDefined(opts.angle, Math.PI / 4); // 45 degrees by default, so grayscale images work correctly
   const angle1 = firstDefined(opts.angle1, commonAngle);
   const angle2 = firstDefined(opts.angle2, -commonAngle * 0);
-  const speedIn = firstDefined(opts.speedIn, opts.speed, 2);
-  const speedOut = firstDefined(opts.speedOut, opts.speed, 2);
+  const speedIn = firstDefined(opts.speedIn, opts.speed, 0.8);
+  const speedOut = firstDefined(opts.speedOut, opts.speed, 1);
   const userHover = firstDefined(opts.hover, true);
   // const easing = firstDefined(opts.easing, Expo.easeOut);
   var video = firstDefined(opts.video, false);
-
-  const projects = Array.from(document.querySelectorAll('.projects__block'));
-  // const bgBody = document.querySelector('.bg');
-
-  projects.forEach((project) => {
-    project.onmouseover = function() {
-      this.classList.add('active');
-    };
-  });
-
-  projects.forEach((project) => {
-    project.onmouseout = function() {
-      this.classList.remove('active');
-    };
-  });
-      
 
   if (!parent) {
     console.warn('Parent missing');
@@ -280,15 +264,10 @@ void main() {
   }
 
   if (userHover) {
-    projects.forEach((project) => {
-      project.addEventListener('mouseenter', transitionIn);
-      project.addEventListener('mouseleave', transitionOut);
-    });
-
-
-    // parent.addEventListener('mouseenter', transitionIn);
-    // parent.addEventListener('touchstart', transitionIn);
-    // parent.addEventListener('touchend', transitionOut);
+    parent.addEventListener('mouseenter', transitionIn);
+    parent.addEventListener('mouseout', transitionOut);
+    parent.addEventListener('touchstart', transitionIn);
+    parent.addEventListener('touchend', transitionOut);
   }
 
   window.addEventListener('resize', function(e) {

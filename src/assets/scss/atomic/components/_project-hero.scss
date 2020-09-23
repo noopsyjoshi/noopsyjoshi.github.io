@@ -1,6 +1,6 @@
 .project-hero {
-  &__intro-block {
-    margin: 40px 0;
+  &__flex{
+    @include flex-pos;
   }
 
   &__title {

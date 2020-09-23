@@ -30,7 +30,7 @@ export default {
 
     this.navigations.forEach((nav) => {
       nav.addEventListener('mouseout', this.hoverCursorOut);
-    });
+    });    
   },
 
   methods: {

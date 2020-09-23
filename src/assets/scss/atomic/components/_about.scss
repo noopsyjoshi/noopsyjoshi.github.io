@@ -1,6 +1,4 @@
 .about {
-  min-height: 100vh;
-  height: 100%;
   padding: 100px 0;
   overflow-x: hidden;
 
@@ -8,78 +6,52 @@
     padding: 200px 0;
   }
 
-  &__title-wrapper {
-    margin-bottom: 20px;
+  &__title {
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 100px;
+    }
   }
 
-  &__title {
-    line-height: 7rem;
-    margin-bottom: 50px;
-    font-size: 5.6rem;
-    font-weight: 500;
-    font-style: normal;
+  &__skills {
+    @include flex-pos;
+  }
 
-    @include media-breakpoint-up(md) {
-      line-height: 11rem;
-      margin-bottom: 50px;
-      font-size: 10rem;
-    }
+  &__subtitle {
+    @include h3;
+    margin-bottom: 40px;
+    position: relative;
+    text-align: right;
+    display: inline-block;
 
-    @include media-breakpoint-up(xl) {
-      margin-top: 100px;
-      color: $c-white;
-      font-size: 12rem;
-      line-height: 14rem;
-      margin-bottom: 100px;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      background-color: $c-grey-dark;
+      height: 7px;
+      width: 20%;
+      left: 0;
     }
   }
 
   &__highlights {
     position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0px;
-      background-color: $c-grey-dark;
-      height: 2px;
-      width: 100%;
-      left: 0;
-    }
-
     @include media-breakpoint-up(lg) {
       &:after {
-        height: 3px;
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        background-color: $c-grey-dark;
+        height: 2px;
+        width: 100%;
+        left: 0;
       }
-    }
-
-    .body--dark & {
-      &:after {
-        background-color: $c-white;
-      }
-    }
-
-    .body--teal & {
-      &:after {
-        background-color: $c-beige;
-      }
-    }
-  }
-
-  &__intro {
-    margin-bottom: 30px;
-
-    @include media-breakpoint-up(md) {
-      @include text--large;
-      margin-bottom: 60px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      margin-bottom: 100px;
     }
   }
 
   &__body {
+    @include text--medium;
     margin-bottom: 70px;
 
     @include media-breakpoint-up(md) {
@@ -89,30 +61,21 @@
     @include media-breakpoint-up(xl) {
       margin-bottom: 150px;
     }
-
-    > p {
-      font-size: 2rem;
-      font-family: 'nm-regular';
-      line-height: 2.6rem;
-      text-transform: uppercase;
-
-      @include media-breakpoint-up(xl) {
-        font-size: 3rem;
-        line-height: 3.6rem;
-      }
-    }
   }
 
   &__skills-title {
     margin-bottom: 20px;
   }
 
-  &__skills {
+  &__skills-list {
     overflow: hidden;
-    margin-bottom: 70px;
+    padding-top: 10px;
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
 
     @include media-breakpoint-up(xl) {
-      margin-bottom: 180px;
+      margin-bottom: 100px;
     }
 
     ul {
@@ -124,15 +87,7 @@
     }
 
     p {
-      font-size: 2rem;
-      font-family: 'nm-regular';
-      line-height: 2.6rem;
-      vertical-align: middle;
-      position: relative;
-
-      @include media-breakpoint-up(lg) {
-        @include h4;
-      }
+      line-height: 3rem;
     }
   }
 
@@ -144,16 +99,6 @@
 
     @include media-breakpoint-up(md) {
       padding: 30px 0;
-    }
-
-    &:after {
-      content: '';
-      height: 1px;
-      background-color: rgba($c-grey-dark, 0.9);
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 0%;
     }
 
     .body--dark & {
@@ -177,23 +122,6 @@
     }
   }
 
-  &__date {
-    font-size: 2rem;
-    font-family: 'nm-regular';
-    line-height: 2.6rem;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 2rem;
-      line-height: 2.6rem;
-      text-transform: uppercase;
-    }
-
-    @include media-breakpoint-up(xl) {
-      font-size: 2.6rem;
-      line-height: 2.6rem;
-    }
-  }
-
   &__timeline {
     margin-bottom: 50px;
 
@@ -203,17 +131,7 @@
   }
 
   &__timeline-body {
-    margin: 0;
-    text-transform: uppercase;
-
-    font-size: 2rem;
-    font-family: 'nm-regular';
-    line-height: 2.6rem;
-
-    @include media-breakpoint-up(xl) {
-      font-size: 2.6rem;
-      line-height: 2.6rem;
-    }
+    @include text--body;
 
     &--right {
       @include media-breakpoint-up(lg) {
@@ -221,16 +139,20 @@
       }
     }
   }
+
+  &__block {
+    border-bottom: 1px solid rgba($c-grey-dark, 0.2)
+  }
 }
 
 @for $i from 1 to 6 {
   .about__block:nth-child(#{$i}) {
-    animation-delay: $i * 0.04s;
+    animation-delay: $i * 0.1s;
   }
 }
 
 @for $i from 1 to 6 {
   .about__block::after:nth-child(#{$i}) {
-    animation-delay: $i * 0.04s;
+    animation-delay: $i * 0.1s;
   }
 }

@@ -1,24 +1,24 @@
 <template>
-  <section id="projects" data-color="bg--grey-light" class="projects">
+  <section id="projects" data-color="bg--grey-light" class="body--dark projects">
     <div class="row">
       <div class="col-10 offset-1">
-        <h2 data-scroll data-aos="slide-up-heading" class="d-split section__title">Project<br>Showcase</h2>
+        <h2 data-scroll data-aos="rotate-in" class="projects__title">Project Showcase</h2>
         <div class="projects__container">
-          <div v-for="(item, index) in projects" :key="index" class="link link--pos projects__block">
-            <router-link class="projects__link" :to="item.path">
-              <div :data-bg-color="item.bgColor" class="projects__item">
-                <figure :data-displacement="images.displacement" class="projects__figure">
+          <div v-for="(item, index) in projects" :key="index" class="projects__block">
+            <div class="projects__item">
+              <router-link class="projects__link" :to="item.path">
+                <figure data-aos="reveal-image-up" :data-displacement="images.displacement" class="link reveal-image-up projects__figure">
                   <img id="project" class="projects__image" :src="require(`@/assets/images/projects/${item.images.url1}`)" :alt="item.images.alt">
                   <img id="project" class="projects__image" :src="require(`@/assets/images/projects/${item.images.url2}`)" :alt="item.images.alt">
                 </figure>
-                <div class="projects__flex">
-                  <h3 data-aos="slide-up-body" class="d-split  projects__project-title">{{ item.title }}</h3>
-                  <div class="projects__project-description-wrapper">
-                    <p data-aos="slide-up-body" class="d-split projects__project-description">{{ item.description }}</p>
-                  </div>
+              </router-link>
+              <div class="projects__flex">
+                <h3 data-aos="slide-up-body" class="d-split  projects__project-title">{{ item.title }}</h3>
+                <div class="projects__project-description-wrapper">
+                  <p data-aos="slide-up-body" class="d-split projects__project-description">{{ item.description }}</p>
                 </div>
               </div>
-            </router-link>
+            </div>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ export default {
               url2: 'paper-01.jpg',
               alt: 'Paper London Image',
             },
-            description: 'E-commerce, Fashion, Shopify',
+            description: 'E-commerce, Shopify',
             path: '/paperlondon',
           },
           {
@@ -77,7 +77,7 @@ export default {
               url2: 'assembly-01.jpg',
               alt: 'Image of Thanos Hotels website',
             },
-            description: 'Selected projects during a three month coding bootcamp in London',
+            description: 'Selected work during a coding bootcamp',
             path: '/generalassembly',
 
           },

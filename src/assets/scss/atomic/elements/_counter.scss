@@ -1,0 +1,7 @@
+.counter {
+  @include h2;
+
+  &__wrapper {
+    margin-bottom: 50px;
+  }
+}
