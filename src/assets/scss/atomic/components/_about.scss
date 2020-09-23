@@ -51,7 +51,7 @@
   }
 
   &__body {
-    @include text--medium;
+    @include text--large;
     margin-bottom: 70px;
 
     @include media-breakpoint-up(md) {

@@ -3,8 +3,7 @@
     <div class="row">
       <div class="col-10 offset-1">
         <h2 data-aos="rotate-in" class="about__title">
-          A little
-          <br>something about me
+          A little <br>something about me
         </h2>
       </div>
       <div class="col-10 offset-1">
@@ -34,19 +33,17 @@
             <img
                 src="https://images.pexels.com/photos/161251/senso-ji-temple-japan-kyoto-landmark-161251.jpeg?cs=srgb&dl=pexels-pixabay-161251.jpg&fm=jpg"
             >Japan
-          </span>)keeping up with web design trends on awwwards,
+          </span>), keeping up with web design trends on awwwards,
           <span class="hover-item">
             <img src="https://images.pexels.com/photos/4424567/pexels-photo-4424567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">photography
-          </span>and resisting the urge to buy
+          </span> and resisting the urge to buy
           <span class="hover-item">
             <img
                 src="https://images.pexels.com/photos/1831256/pexels-photo-1831256.jpeg?cs=srgb&dl=pexels-daria-shevtsova-1831256.jpg&fm=jpg"
             >more plants
-          </span>
+          </span>.
         </p>
       </div>
-      <br>
-      <br>Portfolio created with Vue, GSAP & AOS. Typeface &mdash; Neue Montreal by Pangrampangram, Text animation &mdash; Splitting.js. Image effect &mdash; using Robin Dela's hover effect. &#169;Noopur Joshi.
     </div>
     <div class="row">
       <div class="col-3 offset-2">
@@ -138,6 +135,16 @@
               <p data-aos="reveal">Sprint planning and Project Management</p>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 offset-2">
+        <h4 class="about__subtitle">Colophon</h4>
+      </div>
+      <div class="col-5 offset-1">
+        <div class="about__skills-list">
+          <p>Portfolio created with Vue.js, Splitting.js, GSAP & AOS. Typeface &mdash; Neue Montreal by Pangrampangram, &mdash; Image effect &mdash; using Robin Dela's hover effect. &#169; Noopur Joshi.</p>
         </div>
       </div>
     </div>
