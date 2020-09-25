@@ -1,12 +1,14 @@
 .about {
-  padding: 100px 0;
   overflow-x: hidden;
-
+  padding: 50px 0;
+  
   @include media-breakpoint-up(xl) {
     padding: 200px 0;
   }
 
   &__title {
+    margin-bottom: 50px;
+
     @include media-breakpoint-up(xl) {
       margin-bottom: 100px;
     }
@@ -17,8 +19,8 @@
   }
 
   &__subtitle {
-    @include h3;
-    margin-bottom: 40px;
+    @include h4;
+    margin-bottom: 20px;
     position: relative;
     text-align: right;
     display: inline-block;
@@ -28,7 +30,7 @@
       position: absolute;
       bottom: -10px;
       background-color: $c-grey-dark;
-      height: 7px;
+      height: 3px;
       width: 20%;
       left: 0;
     }
@@ -51,7 +53,6 @@
   }
 
   &__body {
-    @include text--large;
     margin-bottom: 70px;
 
     @include media-breakpoint-up(md) {
@@ -59,6 +60,7 @@
     }
 
     @include media-breakpoint-up(xl) {
+      @include text--large;
       margin-bottom: 150px;
     }
   }
@@ -68,13 +70,14 @@
   }
 
   &__skills-list {
+    margin-bottom: 50px;
     overflow: hidden;
-    padding-top: 10px;
     align-items: flex-start;
     display: flex;
     justify-content: flex-start;
-
+    
     @include media-breakpoint-up(xl) {
+      padding-top: 10px;
       margin-bottom: 100px;
     }
 
@@ -87,15 +90,26 @@
     }
 
     p {
-      line-height: 3rem;
+      line-height: 2.4rem;
     }
   }
 
   &__block {
+    @include media-breakpoint-up(xl) {
+      transform: translateX(25%);
+      opacity: 0;
+
+      &.aos-animate {
+        animation: slideInRight 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+
+        &:after {
+          animation: animateLineRight 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        }
+      }
+    }
+
     padding: 20px 0;
     position: relative;
-    transform: translateX(25%);
-    opacity: 0;
 
     @include media-breakpoint-up(md) {
       padding: 30px 0;
@@ -112,14 +126,6 @@
         background-color: rgba($c-beige, 0.9);
       }
     }
-
-    &.aos-animate {
-      animation: slideInRight 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-
-      &:after {
-        animation: animateLineRight 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-      }
-    }
   }
 
   &__timeline {
@@ -131,7 +137,12 @@
   }
 
   &__timeline-body {
+    margin-bottom: 5px;
     @include text--body;
+
+    @include media-breakpoint-up(xl) {
+      margin: 0;
+    }
 
     &--right {
       @include media-breakpoint-up(lg) {
@@ -141,18 +152,22 @@
   }
 
   &__block {
-    border-bottom: 1px solid rgba($c-grey-dark, 0.2)
+    border-bottom: 1px solid rgba($c-grey-dark, 0.2);
   }
 }
 
 @for $i from 1 to 6 {
-  .about__block:nth-child(#{$i}) {
-    animation-delay: $i * 0.1s;
+  @include media-breakpoint-up(xl) {
+    .about__block:nth-child(#{$i}) {
+      animation-delay: $i * 0.1s;
+    }
   }
 }
 
 @for $i from 1 to 6 {
-  .about__block::after:nth-child(#{$i}) {
-    animation-delay: $i * 0.1s;
+  @include media-breakpoint-up(xl) {
+    .about__block::after:nth-child(#{$i}) {
+      animation-delay: $i * 0.1s;
+    }
   }
 }

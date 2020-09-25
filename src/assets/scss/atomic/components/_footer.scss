@@ -6,7 +6,6 @@
   &__flex {
     border-top: 2px solid $c-grey-dark;
     padding: 20px 0 30px;
-    flex-direction: column;
     @include flex-pos(center, space-between);
 
     .body--dark & {

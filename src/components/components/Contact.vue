@@ -2,7 +2,7 @@
   <section id="contact" data-color="bg--green-light" class="contact">
     <div class="row">
       <div class="col-10 offset-1">
-        <h2 class="contact__title" data-aos="rotate-in">
+        <h2 class="d-split contact__title" data-aos="slide-up-heading">
           Let's make<br>something<br>great together
         </h2>
         <p class="contact__body d-split" data-aos="slide-up-body">

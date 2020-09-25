@@ -15,7 +15,11 @@
   }
 
   &__title {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 100px;
+    }
   }
 
   &__body {

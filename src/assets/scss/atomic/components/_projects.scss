@@ -1,6 +1,6 @@
 .projects {
   height: 100%;
-  padding: 50px 0;
+  padding: 100px 0;
   counter-reset: item;
 
   @include media-breakpoint-up(md) {
@@ -12,7 +12,11 @@
   }
 
   &__title {
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 200px;
+    }
   }
 
   &__flex {
@@ -37,13 +41,12 @@
   }
 
   &__block {
-    margin-bottom: 200px;
-   
-    display: flex;
-    align-items: flex-start;
-
-    @include media-breakpoint-up(lg) {
-       margin-bottom: 300px;
+    margin-bottom: 100px;
+    
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 300px;
 
       &:nth-child(1) {
         justify-content: flex-start;

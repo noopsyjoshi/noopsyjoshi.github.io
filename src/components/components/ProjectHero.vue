@@ -12,9 +12,17 @@
             :alt="image.description"
         >
       </figure>
-      <h1 data-aos="slide-up-heading" class="d-split project-hero__title">
-        {{ title }}
-      </h1>
+      <div class="project-hero__content-wrapper">
+        <span class="project-hero__index">
+          {{ number }}
+        </span>
+        <h1 data-aos="slide-up-heading" class="d-split project-hero__title">
+          {{ title }}
+        </h1>
+        <span data-aos="slide-up-body" class="d-split project-hero__tags">
+          {{ tags }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -23,6 +31,14 @@
 export default {
   props: {
     title: {
+      type: String,
+      required: true,
+    },
+    number: {
+      type: String,
+      required: true,
+    },
+    tags: {
       type: String,
       required: true,
     },

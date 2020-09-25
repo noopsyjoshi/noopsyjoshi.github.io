@@ -3,12 +3,13 @@ import 'splitting/dist/splitting-cells.css';
 import Splitting from 'splitting';
 
 const SplittingAnimation = ($el) => {
+  window.onload = function() {};
   
-  const animateText = Array.from(document.querySelectorAll('.d-split'));
+  const chars = Array.from(document.querySelectorAll('.d-split'));
 
-  animateText.forEach((text) => {
+  chars.forEach((el) => {
     Splitting({
-      target: text,
+      target: el,
       by: 'chars',
     });
   });

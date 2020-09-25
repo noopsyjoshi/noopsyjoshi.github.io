@@ -32,6 +32,7 @@ new Vue({
     AOS.init({
       startEvent: 'load',
       once: 'true',
+      disable: 'mobile',
     });
   },
 

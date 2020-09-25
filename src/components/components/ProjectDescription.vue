@@ -1,42 +1,34 @@
 <template>
-  <div class="project-description">
-    <div class="project-description__flex">
-      <figure
-          data-aos="reveal-image-up"
-          class="reveal-image-up project-description__figure"
-      >
-        <img
-            data-aos="zoom-image"
-            class="project-description__image project-description__image--showcase reveal-image"
-            :src="require(`@/assets/images/${image.url}`)"
-            :alt="image.description"
-        >
-      </figure>
-      <h1 data-aos="slide-up-heading" class="d-split project-description__title">
-        {{ title }}
-      </h1>
-    </div>
+  <div :class="`bg--${background}`" class="project-description">
+    <span class="project-description__tag">{{ tag }}</span>
+    <p data-aos="slide-up-body" class="d-split project-description__body">{{ body }}</p>
+    <a class="link project-description__link" target="_blank" :href="link">&#8627;&nbsp;Go To Website</a>
   </div>
 </template>
 
 <script>
 export default {
+  components: {
+  },
   props: {
-    title: {
+    background: {
+      type: String,
+      required: false,
+      default: '#fff',
+    },
+    tag: {
       type: String,
       required: true,
     },
-    image: {
-      type: Object,
-      default() {
-        return {
-          url: { type: String },
-          description: { type: String },
-        };
-      },
+    body: {
+      type: String,
+      required: true,
+    },
+    link: {
+      type: String,
+      required: true,
     },
   },
-
 };
 </script>
 

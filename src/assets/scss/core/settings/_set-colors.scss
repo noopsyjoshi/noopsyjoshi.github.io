@@ -12,6 +12,7 @@ $c-green: #15db95;
 $c-red: #e42536;
 $c-teal: #006e7b;
 $c-beige: #f5efdc;
+$c-lime: #E3F6E1;
 
 .bg {
   &--light {
@@ -26,6 +27,10 @@ $c-beige: #f5efdc;
 
   &--grey-light {
     background-color: $c-grey-light;
+  }
+
+  &--lime {
+    background-color: $c-lime;
   }
 
   &--blue {

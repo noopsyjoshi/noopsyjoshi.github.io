@@ -29,18 +29,10 @@
       background-color: $c-orange;
     }
 
-    &.cursor--projects {
+  &.cursor--project {
       &:after {
-        content: 'explore';
-        font-size: 0.1rem;
-      }
-    }
-
-    &.cursor--email {
-
-      &:after {
-        content: 'email';
-        font-size: 0.1rem;
+        content: '\2192';
+        font-size: 1rem;
       }
     }
   }

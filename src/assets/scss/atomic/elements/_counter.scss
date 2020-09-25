@@ -1,5 +1,7 @@
 .counter {
-  @include h2;
+  font-size: 5rem;
+  line-height: 5rem;
+  font-family: 'nm-medium';
 
   &__wrapper {
     margin-bottom: 50px;

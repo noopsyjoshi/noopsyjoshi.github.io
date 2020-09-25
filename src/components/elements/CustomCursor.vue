@@ -23,6 +23,7 @@ export default {
     this.cursorOuter = this.$refs.cursorOuter;
 
     this.navigations = Array.from(document.querySelectorAll('.link'));
+    this.projects = Array.from(document.querySelectorAll('.projects__figure'));
 
     this.navigations.forEach((nav) => {
       nav.addEventListener('mouseover', this.hoverCursor);
@@ -30,6 +31,14 @@ export default {
 
     this.navigations.forEach((nav) => {
       nav.addEventListener('mouseout', this.hoverCursorOut);
+    });
+
+    this.projects.forEach((project) => {
+      project.addEventListener('mouseover', this.hoverCursorProject);
+    });
+
+    this.projects.forEach((project) => {
+      project.addEventListener('mouseout', this.hoverCursorProjectOut);
     });    
   },
 
@@ -69,6 +78,33 @@ export default {
       TweenMax.to(this.cursorOuter, 0.3, {
         scale: 1,
       });
+    },
+
+    // Projects
+    hoverCursorProject() {
+      TweenMax.to(this.cursorInner, 0.1, {
+        opacity: 1,
+        scale: 0,
+      });
+      
+      TweenMax.to(this.cursorOuter, 0.3, {
+        scale: 5,
+      });
+      
+      this.cursorOuter.classList.add('cursor--project');
+    },
+      
+    hoverCursorProjectOut() {
+      TweenMax.to(this.cursorInner, 0.1, {
+        opacity: 1,
+        scale: 1,
+      });
+
+      TweenMax.to(this.cursorOuter, 0.3, {
+        scale: 1,
+      });
+      
+      this.cursorOuter.classList.remove('cursor--project');
     },
   },
 };

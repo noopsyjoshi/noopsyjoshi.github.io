@@ -1,17 +1,13 @@
 .project {
-  padding: 50px 0;
   overflow-x: hidden;
-
-  @include media-breakpoint-up(xl) {
-    padding: 100px 0 0;
-  }
+  padding-bottom: 100px;
 
   &__video {
     margin-bottom: 100px;
   }
 
   &__figure {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     position: relative;
     overflow: hidden;
   }

@@ -1,0 +1,24 @@
+.project-description {
+  width: 100vw;
+  padding: 15vw;
+  min-height: 80vh;
+  @include flex-pos(flex-start, center);
+  flex-direction: column;
+  margin-bottom: 100px;
+
+  &__tag {
+    @include text--small;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    margin: 20px 0;
+    @include text--body;
+    color: $c-grey-dark;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}

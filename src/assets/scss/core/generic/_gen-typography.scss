@@ -1,7 +1,6 @@
 // Hero
 @mixin h1 {
   font-family: 'nm-bold';
-  text-transform: uppercase;
   font-weight: 600;
   margin: 0;
   line-height: 5rem;
@@ -25,10 +24,11 @@
 }
 
 @mixin h2 {
-  font-size: 5rem;
-  line-height: 6rem;
-  font-family: 'nm-regular';
-  font-weight: 600;
+  font-size: 4rem;
+  line-height: 4.2rem;
+  font-family: 'nm-medium';
+  font-style: normal;
+  font-weight: normal;
 
   @include media-breakpoint-up(md) {
     font-size: 8rem;
@@ -37,7 +37,7 @@
 
   @include media-breakpoint-up(lg) {
     font-size: 10rem;
-    line-height: 9rem;
+    line-height: 10rem;
   }
 }
 
@@ -61,8 +61,7 @@
 
 @mixin text--body {
   font-family: 'nm-regular';
-  margin-bottom: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 2rem;
 }
 
@@ -94,14 +93,20 @@
 }
 
 @mixin text--small {
+  position: relative;
   font-size: 1.4rem;
-  margin-bottom: 20px;
+  font-family: 'nm-bold';
   text-transform: uppercase;
-  letter-spacing: 0.275rem;
 
-  @include media-breakpoint-up(md) {
-    font-size: 1.6rem;
-    letter-spacing: 0.3rem;
+  &:after {
+    content: '';
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4vw;
+    margin-left: 10px;
+    background-color: $c-grey-dark;
   }
 }
 

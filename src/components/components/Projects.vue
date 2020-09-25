@@ -2,7 +2,7 @@
   <section id="projects" data-color="bg--grey-light" class="body--dark projects">
     <div class="row">
       <div class="col-10 offset-1">
-        <h2 data-scroll data-aos="rotate-in" class="projects__title">Project Showcase</h2>
+        <h2 data-scroll data-aos="slide-up-heading" class="d-split projects__title">Project Showcase</h2>
         <div class="projects__container">
           <div v-for="(item, index) in projects" :key="index" class="projects__block">
             <div class="projects__item">

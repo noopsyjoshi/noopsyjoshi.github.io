@@ -46,5 +46,8 @@
 
   &__wrapper {
     @include flex-pos(center, flex-end);
+    position: absolute;
+    right: 5%;
+    top: 5%;
   }
 }
